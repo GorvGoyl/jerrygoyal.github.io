@@ -1,6 +1,6 @@
-theme: jekyll-theme-cayman
-title: Welcome to the Jerrygoyal's homepage!
-description: Feel free to bookmark this to keep an eye on my projects updates
-
-plugins:
-  - jekyll-redirect-from
+title: The title of your website, as you want it to appear in the header of the webpage.
+email: Your email address.
+description: A description of your website that will be used in search engine results and the site’s RSS feed.
+url: "localhost:4000"
+twitter_username: Your Twitter username (do not include @ symbol).
+github_username: Your GitHub username.
