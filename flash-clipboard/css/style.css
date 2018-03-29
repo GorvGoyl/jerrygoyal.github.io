@@ -3,101 +3,45 @@
 * {
     box-sizing: border-box;
 }
-/* html {
-  scroll-behavior: smooth
-} */
 body {
   margin:0;
   font-family: 'Oxygen', sans-serif;
   /* font: normal 10px Verdana, Arial, sans-serif; */
 }
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 
-/*****************************************************      
-                 NAV BAR START
-*****************************************************/
-.navbar-menu {
-  background-color: #005ec8;
-  width: calc(100%);
-  height: 55px;
-  border-bottom: solid 1px #10ade9d9;
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
-.navbar-menu a{
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  cursor: pointer;
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
 }
-.nav-homepage{
-  display: inline-block;  
-  font-weight: bold;
-  font-size: 20px !important;
-  letter-spacing: 1px;
-  line-height: 21px;
-  position: absolute;
-  z-index: 1;
-}
-
-.nav-menu-select {
-  margin: 0;
-  text-align: right;
-  height: inherit;
-}
-.nav-hamburger{
-  display: inline-block;
-}
-
-.nav-menu-options {
-  display: block;
-  text-align: right;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  background-color: inherit;
-  border-bottom: solid 1px #10ade9d9;
-  position: relative;
-  bottom: 1px;   /* equal to the bottom border of navbar */
-}
-
-.nav-menu-options li a {
-  display: block;
-  padding: 1rem 1.5rem;
-}
-
-
-@media screen and (min-width: 750px) {
-  .nav-menu-select{
-    display: none;
-  }
-  .nav-menu-options{
-    display: block !important;
-    border-bottom: 0;
-  }
-  .nav-menu-options li{
-    display: inline-block;
-  }
-}
-@media screen and (max-width: 750px) {
-  .navbar-menu {
-    margin: 0;
-  }
-  .nav-menu-options {
-    display: none;
-    position: relative;
-  }
-  .nav-menu-options li{
-    display: block;
-  }
-  
-}
-
-/*****************************************************      
-                 NAV BAR END
-*****************************************************/
-
-
-
 .row::after{
     content: "";
     clear: both;
@@ -130,7 +74,7 @@ h1 {
   color: #fff;
 
 }
-h2,h3,h4,p {
+h2,h3 {
   text-align: center;
   color: #fff;
 }
@@ -307,56 +251,3 @@ margin: 15px;
   vertical-align: top;
 }
 /* FOOTER */
-
-/* MAIN PAGE */
-
-/* CARD LAYOUT */
-.app_card_wrapper{
-  max-width: 300px;
-  overflow: hidden;
-  width: 85%;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  background-color: #ffa700;
-  display: inline-block;
-  margin: 50px 5% 100px 5%;
-  height: auto;
-  position: relative;
-  cursor: pointer;
-}
-.card_icon_img{
-  max-width: 100%;
-}
-
-.card_icon{
-  /* margin: 50px 0 50px 0; */
-  padding: 50px;
-  background-color: white;
-}
-
-.card_label{
-  margin: -5px;
-}
-.card_desc{
-  background-color: black;
-  position: absolute;
-  bottom: -100%;
-  width: 100%;
-  opacity: 0.5;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-   -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-       transition: all 0.4s ease;
-}
-
-.app_card_wrapper:hover .card_desc {
-  opacity: 1.0 !important;
-  bottom: 0;
- -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-   -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-       transition: all 0.4s ease;
-}
