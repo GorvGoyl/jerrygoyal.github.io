@@ -18,39 +18,20 @@ function scrollTo(hash) {
         //window.location.hash = hash;
     });
 }
-function toggleNav() {
-    var navEl = document.getElementById("myTopnav");
-    var dwEl = $('.downloaddiv');
-    if (navEl.className === "topnav") {
-        // $("#myTopnav").hide();
-        // $("#myTopnav").slideToggle("slow");
-        navEl.className += " responsive";
-       
-        dwEl.removeClass('topmargin')
-    } else {
-        
-        navEl.className = "topnav";
-        dwEl.addClass('topmargin')
-        // $("#myTopnav").slideToggle("slow");
-    }
-}
 
-function initNavbar(){
-    // 0 = hide, 1 = visible
-  var menuState = 0;
-  //if($(".mini-menu-options").is(":hidden")) {
-    /* Add a Click event listener to btn-select */
-    $(".nav-hamburger").on("click",function() {
-        // $(".navbar-menu").toggleClass('nav-border-bottom');
-      if(menuState === 0) {
-        $(".nav-menu-options").slideDown("slow");
-        menuState = 1;
-      } else {
-        $(".nav-menu-options").slideUp("slow");
-        menuState = 0;
-      }
+function initNavbar() {
+    var hidden = true;
+    $(".nav-hamburger").on("click", function () {
+        $(this).toggleClass('change');
+        var el = $(".nav-menu-options");
+        if (hidden === true) {
+            el.slideDown("slow");
+            hidden = false;
+        } else {
+            el.slideUp("slow");
+            hidden = true;
+        }
     });
-  //}
 }
 
 function enableSmoothScrolling() {

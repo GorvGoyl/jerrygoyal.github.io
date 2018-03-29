@@ -23,20 +23,30 @@ body {
 }
 .navbar-menu a{
   color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   cursor: pointer;
 }
+
+.navbar-menu a:hover {
+  background-color: #fff;
+  color: #005ec8;
+}
+
+.nav-menu-options li a {
+  display: block;
+  padding: 17px;
+}
+
 .nav-homepage{
   display: inline-block;  
   font-weight: bold;
   font-size: 20px !important;
   letter-spacing: 1px;
-  line-height: 21px;
   position: absolute;
   z-index: 1;
+  height: inherit;
+  padding: 14px 16px;
 }
 
 .nav-menu-select {
@@ -46,6 +56,8 @@ body {
 }
 .nav-hamburger{
   display: inline-block;
+  height: inherit;
+  padding: 15px;
 }
 
 .nav-menu-options {
@@ -60,12 +72,7 @@ body {
   bottom: 1px;   /* equal to the bottom border of navbar */
 }
 
-.nav-menu-options li a {
-  display: block;
-  padding: 1rem 1.5rem;
-}
-
-
+/* DESKTOP */
 @media screen and (min-width: 750px) {
   .nav-menu-select{
     display: none;
@@ -78,6 +85,7 @@ body {
     display: inline-block;
   }
 }
+/* MOBILE */
 @media screen and (max-width: 750px) {
   .navbar-menu {
     margin: 0;
@@ -85,6 +93,7 @@ body {
   .nav-menu-options {
     display: none;
     position: relative;
+    text-align: center;
   }
   .nav-menu-options li{
     display: block;
@@ -92,6 +101,46 @@ body {
   
 }
 
+/* *** ANIMATION HAMBURGER CLICK **** */
+.hamburger {
+  width: 25px;
+  height: 2px;
+  background-color: currentColor;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.nav-hamburger:before{
+  content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    top: 10px;
+    right: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+.nav-hamburger.change:before{
+  border: 2px solid currentColor;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 7px);
+  transform: rotate(-45deg) translate(-4px, 7px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-4px, -7px);
+  transform: rotate(45deg) translate(-4px, -7px);
+}
 /*****************************************************      
                  NAV BAR END
 *****************************************************/
@@ -139,78 +188,6 @@ h2,h3,h4,p {
       text-align: center;
 }
 
-a:link, a:visited {
-    color: #10ade9;
-    text-decoration: none;
-}
-
-/* NAVBAR */
-
-.topnav {
-  z-index: 100;
-  overflow: hidden;
-  background-color: #005ec8;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  border-bottom: solid 1px #10ade9d9;
-}
-
-.topnav a {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #fff;
-  color: #005ec8;
-}
-
-.active {
-  background-color: #005ec8;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none !important;
-    display: block;
-    text-align: left;
-  }
-
-}
-
-.right{
-    float: right;
-}
-.left{
-    float: left;
-}
-
-.topmargin{margin-top: 48px;}
-
 /* DOWNLOAD BUTTONS */
 
    .downloads .download {
@@ -244,7 +221,7 @@ a:link, a:visited {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/* GETTING STARTED */
+/* GETTING STARTED SECTION*/
 
 .row.started {
     background-color: #004385;
