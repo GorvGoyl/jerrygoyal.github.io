@@ -1,0 +1,19 @@
+<nav class="navbar-menu">
+    <a href={{ include.links.first[1] }} class="nav-homepage">
+        {{ include.links.first[0] }}
+    </a>
+    <div class="nav-menu-select">
+        <a class="nav-hamburger">
+            <div class="hamburger bar1"></div>
+            <div class="hamburger bar2"></div>
+            <div class="hamburger bar3"></div>
+        </a>
+    </div>
+    <ul class="nav-menu-options">
+        {% for link in include.links %} {% if forloop.index != 1 %}
+        <li>
+            <a href={{link[1]}}>{{link[0]}}</a>
+        </li>
+        {% endif %} {% endfor %}
+    </ul>
+</nav>

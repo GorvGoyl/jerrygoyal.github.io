@@ -1,4 +1,9 @@
 --- 
+navbar_links:
+  Jerry Factory : "/"
+  Apps : "#apps"
+  About Me : "#about-me"
+  Contact : "#contact"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,31 +19,8 @@
 </head>
 
 <body>
-    <nav class="navbar-menu">
-        <a href="/" class="nav-homepage">
-            Jerry Factory
-        </a>
-        <div class="nav-menu-select">
-            <a class="nav-hamburger">
-                <div class="hamburger bar1"></div>
-                <div class="hamburger bar2"></div>
-                <div class="hamburger bar3"></div>
-            </a>
-        </div>
-        <ul class="nav-menu-options">
-            <li>
-                <a href="#apps">Apps</a>
-            </li>
-            <li>
-                <a href="#about-me">About Me</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-
-    </nav>
-
+    
+    {% include navbar_template.html links = page.navbar_links %}
     <div class="row downloaddiv">
 
         <div align="center">
