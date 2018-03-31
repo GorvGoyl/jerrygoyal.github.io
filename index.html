@@ -1,26 +1,12 @@
 --- 
-navbar_links:
-  Jerry Factory : "/"
-  Apps : "#apps"
-  About Me : "#about-me"
-  Contact : "#contact"
 ---
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <title>Jerry Factory</title>
-
-    <link href="css/style.css" rel="stylesheet">
-</head>
+{% include header.html title="Jerry Factory" %}
 
 <body>
-    
-    {% include navbar_template.html links = page.navbar_links %}
+    {% assign homepage_links = site.data.navbar_links['homepage'] %}
+    {% include navbar_template.html links = homepage_links %}
     <div class="row downloaddiv">
 
         <div align="center">
@@ -40,8 +26,7 @@ navbar_links:
 
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/main_script.js"></script>
+    {% include scripts_include.html %}
 </body>
 
 </html>
