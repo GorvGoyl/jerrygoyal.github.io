@@ -24,7 +24,8 @@ a {
     text-decoration: none;
 }
 
-h1,h2,
+h1,
+h2,
 h3,
 h4,
 p {
@@ -32,12 +33,17 @@ p {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
+
+
 /*****************************************************      
                  NAV BAR START
 *****************************************************/
 
 .navbar-menu {
-    background-color: #005ec8;
+    background-color: #004385;
     width: calc(100%);
     height: 55px;
     border-bottom: solid 1px #10ade9d9;
@@ -50,9 +56,13 @@ p {
     cursor: pointer;
 }
 
-.navbar-menu a:hover {
+.navbar-menu .navbar-1 a {
+    transition: all 0.4s ease 0s;
+}
+
+.navbar-menu .navbar-1 a:hover {
     background-color: white;
-    color: #005ec8;
+    color: #004385;
 }
 
 .nav-menu-options li a {
@@ -68,19 +78,23 @@ p {
     position: absolute;
     z-index: 1;
     height: inherit;
-    padding: 14px 16px;
+    padding: 15px 16px;
 }
 
 .nav-menu-select {
     margin: 0;
     text-align: right;
-    height: inherit;
+    height: 55px;
+}
+
+.navbar-2 .nav-homepage {
+    font-size: 25px !important;
 }
 
 .nav-hamburger {
     display: inline-block;
     height: inherit;
-    padding: 15px;
+    padding: 14px;
 }
 
 .nav-menu-options {
@@ -89,17 +103,48 @@ p {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    background-color: inherit;
     border-bottom: solid 1px #10ade9d9;
     position: relative;
     bottom: 1px;
     /* equal to the bottom border of navbar */
 }
 
+.navbar-1 .nav-menu-options {
+    background-color: #004385;
+}
+
+.navbar-2 a {
+    padding: 15px !important;
+}
+
+.navbar-2 .nav-menu-options a {
+    font-size: 23px !important;
+    font-weight: bold;
+}
+
+.navbar-2 a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .4s ease, background-color .4s ease;
+}
+
+.navbar-2 a:hover:after {
+    width: 100%;
+    background: white;
+}
+
 
 /* DESKTOP */
 
 @media screen and (min-width: 750px) {
+    .nav-menu-options .label {
+        display: none;
+    }
     .nav-menu-select {
         display: none;
     }
@@ -116,6 +161,39 @@ p {
 /* MOBILE */
 
 @media screen and (max-width: 750px) {
+
+    .navbar-1 .nav-menu-options{
+        border-bottom: 0;
+    }
+    .navbar-2 .label {
+        display: block;
+        color: #004385;
+        background-color: white;
+        cursor: default;
+        border-bottom: 22px solid;
+    }
+    .navbar-2 .links-2 {
+        background-color: #004385;
+    }
+    .navbar-2 .nav-homepage {
+        display: none;
+    }
+    .navbar-2 .label:after {
+        pointer-events: none;
+        position: absolute;
+        content: '';
+        border-style: solid;
+        left: calc(50% - 30px);
+        top: 50px;
+        border-color: white transparent transparent transparent;
+        border-width: 30px;
+        margin: 0px !important;
+        height: 0;
+    }
+    .navbar-2 .label:hover:after {
+        width: 0;
+        background-color: transparent;
+    }
     .navbar-menu {
         margin: 0;
     }
@@ -163,8 +241,7 @@ p {
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-4px, 7px);
-    transform: rotate(-45deg) translate(-4px, 7px);
+    transform: rotate(-45deg) translate(-6px, 7px);
 }
 
 .change .bar2 {
@@ -172,8 +249,7 @@ p {
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-4px, -7px);
-    transform: rotate(45deg) translate(-4px, -7px);
+    transform: rotate(45deg) translate(-4px, -5px);
 }
 
 
@@ -395,4 +471,18 @@ img.sshots_img {
 
 /*****************************************************      
                  * CARD LAYOUT END *
+*****************************************************/
+
+
+/*****************************************************      
+                 FLASH CLIPBOARD
+*****************************************************/
+
+.toppadding {
+    padding-top: 100px;
+}
+
+
+/*****************************************************      
+                 FLASH CLIPBOARD END
 *****************************************************/

@@ -1,31 +1,40 @@
 <nav class="navbar-menu">
-    <a href={{ include.links.first['href'] }} class="nav-homepage">
-        {{ include.links.first['title'] }}
-    </a>
-    <div class="nav-menu-select">
-        <a class="nav-hamburger">
-            <div class="hamburger bar1"></div>
-            <div class="hamburger bar2"></div>
-            <div class="hamburger bar3"></div>
+    <span class='navbar-1'>
+        <a href={{ include.links.first[ 'href'] }} class="nav-homepage">
+            {{ include.links.first['title'] }}
         </a>
-    </div>
-    <ul class="nav-menu-options">
-        {% for link in include.links %} {% if forloop.index != 1 %}
-        <li>
-            <a href={{link['href']}}>{{link['title']}}</a>
-        </li>
-        {% endif %} {% endfor %}
-    </ul>
+        <div class="nav-menu-select">
+            <a class="nav-hamburger">
+                <div class="hamburger bar1"></div>
+                <div class="hamburger bar2"></div>
+                <div class="hamburger bar3"></div>
+            </a>
+        </div>
+        <ul class="nav-menu-options">
+            {% for link in include.links %} {% if forloop.index != 1 %}
+            <li>
+                <a href={{link[ 'href']}}>{{link['title']}}</a>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+    </span>
+
     {% if include.links2 != "" and include.links2 != nil %}
-    <a href={{ include.links2.first['href'] }} class="nav-homepage">
+    <span class='navbar-2'>
+        <a href={{ include.links2.first[ 'href'] }} class="nav-homepage">
             {{ include.links2.first['title'] }}
         </a>
         <ul class="nav-menu-options">
-                {% for link in include.links2 %} {% if forloop.index != 1 %}
-        <li>
-            <a href={{link['href']}}>{{link['title']}}</a>
-        </li>
-        {% endif %} {% endfor %}
-            </ul>
+            {% for link in include.links2 %} {% if forloop.index == 1 %}
+            <li>
+                <a class='label'>{{link['title']}}</a>
+            </li>
+            {% else %}
+            <li>
+                <a class='links-2' href={{link[ 'href']}}>{{link['title']}}</a>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+    </span>
     {% endif %}
 </nav>
