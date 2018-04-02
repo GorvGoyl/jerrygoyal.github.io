@@ -7,16 +7,18 @@ $(document).ready(function () {
 });
 function scrollTo(hash) {
     var stickyNavHeight = 0;
-    if ($('#myTopnav').length > 0) {
-        stickyNavHeight = $('#myTopnav').height();
+    if($(hash).length>0){
+        if ($('#myTopnav').length > 0) {
+            stickyNavHeight = $('#myTopnav').height();
+        }
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - stickyNavHeight
+        }, 500, function () {
+    
+            // Add hash (#) to URL when done scrolling
+            //window.location.hash = hash;
+        });
     }
-    $('html, body').animate({
-        scrollTop: $(hash).offset().top - stickyNavHeight
-    }, 500, function () {
-
-        // Add hash (#) to URL when done scrolling
-        //window.location.hash = hash;
-    });
 }
 
 function initNavbar() {

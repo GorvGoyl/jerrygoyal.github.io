@@ -6,3 +6,5 @@ twitter_username: Your Twitter username (do not include @ symbol).
 github_username: Your GitHub username.
 plugins:
   - jekyll-redirect-from
+# sass:
+#   style: compressed

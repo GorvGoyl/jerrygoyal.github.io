@@ -1,4 +1,12 @@
-/* WEBSITE CSS */
+---
+---
+
+/*****************************************************      
+                 * VARIABLES *
+*****************************************************/
+$nav-primary-color: #004385;
+$nav-second-color: white;
+$nav-bottom-border: solid 1px rgba(40, 93, 114, 0.851);
 
 
 /*****************************************************      
@@ -42,216 +50,7 @@ p {
                  NAV BAR START
 *****************************************************/
 
-.navbar-menu {
-    background-color: #004385;
-    width: calc(100%);
-    height: 55px;
-    border-bottom: solid 1px #10ade9d9;
-}
-
-.navbar-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-.navbar-menu .navbar-1 a {
-    transition: all 0.4s ease 0s;
-}
-
-.navbar-menu .navbar-1 a:hover {
-    background-color: white;
-    color: #004385;
-}
-
-.nav-menu-options li a {
-    display: block;
-    padding: 17px;
-}
-
-.nav-homepage {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 20px !important;
-    letter-spacing: 1px;
-    position: absolute;
-    z-index: 1;
-    height: inherit;
-    padding: 15px 16px;
-}
-
-.nav-menu-select {
-    margin: 0;
-    text-align: right;
-    height: 55px;
-}
-
-.navbar-2 .nav-homepage {
-    font-size: 25px !important;
-}
-
-.nav-hamburger {
-    display: inline-block;
-    height: inherit;
-    padding: 14px;
-}
-
-.nav-menu-options {
-    display: block;
-    text-align: right;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    border-bottom: solid 1px #10ade9d9;
-    position: relative;
-    bottom: 1px;
-    /* equal to the bottom border of navbar */
-}
-
-.navbar-1 .nav-menu-options {
-    background-color: #004385;
-}
-
-.navbar-2 a {
-    padding: 15px !important;
-}
-
-.navbar-2 .nav-menu-options a {
-    font-size: 23px !important;
-    font-weight: bold;
-}
-
-.navbar-2 a:after {
-    content: '';
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-    height: 2px;
-    width: 0px;
-    background: transparent;
-    transition: width .4s ease, background-color .4s ease;
-}
-
-.navbar-2 a:hover:after {
-    width: 100%;
-    background: white;
-}
-
-
-/* DESKTOP */
-
-@media screen and (min-width: 750px) {
-    .nav-menu-options .label {
-        display: none;
-    }
-    .nav-menu-select {
-        display: none;
-    }
-    .nav-menu-options {
-        display: block !important;
-        border-bottom: 0;
-    }
-    .nav-menu-options li {
-        display: inline-block;
-    }
-}
-
-
-/* MOBILE */
-
-@media screen and (max-width: 750px) {
-
-    .navbar-1 .nav-menu-options{
-        border-bottom: 0;
-    }
-    .navbar-2 .label {
-        display: block;
-        color: #004385;
-        background-color: white;
-        cursor: default;
-        border-bottom: 22px solid;
-    }
-    .navbar-2 .links-2 {
-        background-color: #004385;
-    }
-    .navbar-2 .nav-homepage {
-        display: none;
-    }
-    .navbar-2 .label:after {
-        pointer-events: none;
-        position: absolute;
-        content: '';
-        border-style: solid;
-        left: calc(50% - 30px);
-        top: 50px;
-        border-color: white transparent transparent transparent;
-        border-width: 30px;
-        margin: 0px !important;
-        height: 0;
-    }
-    .navbar-2 .label:hover:after {
-        width: 0;
-        background-color: transparent;
-    }
-    .navbar-menu {
-        margin: 0;
-    }
-    .nav-menu-options {
-        display: none;
-        position: relative;
-        text-align: center;
-    }
-    .nav-menu-options li {
-        display: block;
-    }
-}
-
-
-/* *** ANIMATION HAMBURGER CLICK **** */
-
-.hamburger {
-    width: 25px;
-    height: 2px;
-    background-color: currentColor;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.nav-hamburger:before {
-    content: "";
-    position: absolute;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 40px;
-    height: 40px;
-    border: 2px solid transparent;
-    top: 10px;
-    right: 6px;
-    border-radius: 100%;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    z-index: 1;
-}
-
-.nav-hamburger.change:before {
-    border: 2px solid currentColor;
-}
-
-.change .bar1 {
-    transform: rotate(-45deg) translate(-6px, 7px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-4px, -5px);
-}
-
+@import 'navbar';
 
 /*****************************************************      
                  NAV BAR END
@@ -270,13 +69,14 @@ p {
 
 .row.downloaddiv {
     background-color: #005ec8;
-    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #0f8afc80), color-stop(100%, #005ec8f5));
-    background-image: -webkit-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    background-image: -moz-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    background-image: -ms-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    background-image: -o-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    background-image: linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f8afc80', endColorstr='#005ec8f5', GradientType=1);
+    // background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #0f8afc80), color-stop(100%, #005ec8f5));
+    // background-image: -webkit-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
+    // background-image: -moz-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
+    // background-image: -ms-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
+    // background-image: -o-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
+    // background-image: linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f8afc80', endColorstr='#005ec8f5', GradientType=1);
+
 }
 
 .home {
