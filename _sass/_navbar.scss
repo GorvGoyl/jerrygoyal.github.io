@@ -1,12 +1,12 @@
 .navbar-menu {
-    background-color: $nav-primary-color;
+    background-color: $nav-color-prime;
     width: calc(100%);
     height: 55px;
-    border-bottom: $nav-bottom-border;
+    border-bottom: $nav-border-bottom;
     position: fixed;
     z-index: 10;
     a {
-        color: white;
+        color: $nav-color-second;
         text-decoration: none;
         font-size: 17px;
         cursor: pointer;
@@ -35,7 +35,7 @@
         width: 100%;
         margin: 0px;
         padding: 0px;
-        border-bottom: $nav-bottom-border;
+        border-bottom: $nav-border-bottom;
         position: relative;
         bottom: 1px;
         /* equal to the bottom border of navbar */
@@ -91,11 +91,11 @@
             transition: all 0.4s ease 0s;
         }
         a:not(.nav-hamburger):hover {
-            background-color: white;
-            color: $nav-primary-color;
+            background-color: $nav-color-second;
+            color: $nav-color-prime;
         }
         .nav-menu-options {
-            background-color: $nav-primary-color;
+            background-color: $nav-color-prime;
         }
     }
     .navbar-2 {
@@ -115,7 +115,7 @@
         }
         a:hover:after {
             width: 100%;
-            background: white;
+            background: $nav-color-second;
         }
         .nav-homepage {
             font-size: 25px !important;
@@ -126,6 +126,18 @@
                 font-weight: bold;
             }
         }
+    }
+}
+
+.nav-2-sticky {
+    position: fixed;
+    background-color: $nav-color-second;
+    top: 0;
+    z-index: 10;
+    border-bottom: $nav-border-bottom;
+    transition: 0.4s ease-out;
+    a {
+        color: $nav-color-prime;
     }
 }
 
@@ -156,13 +168,13 @@
         .navbar-2 {
             .label {
                 display: block;
-                color: $nav-primary-color;
-                background-color: white;
+                color: $nav-color-prime;
+                background-color: $nav-color-second;
                 cursor: default;
                 border-bottom: 22px solid;
             }
             .links-2 {
-                background-color: $nav-primary-color;
+                background-color: $nav-color-prime;
             }
             .nav-homepage {
                 display: none;
@@ -178,7 +190,7 @@
                 border-style: solid;
                 left: calc(50% - 30px);
                 top: 50px;
-                border-color: white transparent transparent transparent;
+                border-color: $nav-color-second transparent transparent transparent;
                 border-width: 30px;
                 margin: 0px !important;
                 height: 0;

@@ -1,20 +1,22 @@
 $(document).ready(function () {
     enableSmoothScrolling();
     initNavbar();
+
+    // scroll to #link on page load
     if (window.location.hash) {
         scrollTo(window.location.hash);
     }
 });
 function scrollTo(hash) {
     var stickyNavHeight = 0;
-    if($(hash).length>0){
+    if ($(hash).length > 0) {
         if ($('#myTopnav').length > 0) {
             stickyNavHeight = $('#myTopnav').height();
         }
         $('html, body').animate({
             scrollTop: $(hash).offset().top - stickyNavHeight
         }, 500, function () {
-    
+
             // Add hash (#) to URL when done scrolling
             //window.location.hash = hash;
         });
@@ -34,8 +36,27 @@ function initNavbar() {
             hidden = true;
         }
     });
-}
 
+    // make 2nd navbar sticky when scroll down in desktop
+    if ($('.navbar-2 .nav-homepage').is(":visible")) {
+        var navbar = $(".navbar-menu");
+        navbar.css('position','static')
+        var navHeight = navbar.height();
+        stickNavbar(navHeight, navbar)
+        window.onscroll = function () { stickNavbar(navHeight, navbar) };
+    }
+}
+function stickNavbar(navHeight, navbar) {
+    if ($('.navbar-2 .nav-homepage').is(":visible")) {
+        var nav2 = $('.navbar-2');
+        if (window.pageYOffset >= navHeight) {
+
+            nav2.addClass("nav-2-sticky");
+        } else {
+            nav2.removeClass("nav-2-sticky");
+        }
+    }
+}
 function enableSmoothScrolling() {
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
@@ -45,3 +66,4 @@ function enableSmoothScrolling() {
         }
     });
 }
+
