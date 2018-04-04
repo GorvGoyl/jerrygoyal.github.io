@@ -51,9 +51,12 @@ function stickNavbar(navHeight, navbar) {
         var nav2 = $('.navbar-2');
         if (window.pageYOffset >= navHeight) {
 
+            nav2.removeClass("nav-2-un-sticky");
             nav2.addClass("nav-2-sticky");
+            
         } else {
             nav2.removeClass("nav-2-sticky");
+            nav2.addClass("nav-2-un-sticky");
         }
     }
 }

@@ -8,7 +8,6 @@
     a {
         color: $nav-color-second;
         text-decoration: none;
-        font-size: 17px;
         cursor: pointer;
         /* remove click feedback */
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -17,7 +16,6 @@
     .nav-homepage {
         display: inline-block;
         font-weight: bold;
-        font-size: 20px !important;
         letter-spacing: 1px;
         position: absolute;
         z-index: 1;
@@ -87,8 +85,11 @@
         transform: rotate(45deg) translate(-4px, -5px);
     }
     .navbar-1 {
-        a {
-            transition: all 0.4s ease 0s;
+        .nav-homepage {
+            font-size: 20px;
+        }
+        .nav-menu-options a {
+            font-size: 17px;
         }
         a:not(.nav-hamburger):hover {
             background-color: $nav-color-second;
@@ -102,6 +103,7 @@
         width: 100%;
         a {
             padding: 15px !important;
+            opacity: 0.8;
         }
         a:after {
             content: '';
@@ -118,26 +120,36 @@
             background: $nav-color-second;
         }
         .nav-homepage {
-            font-size: 25px !important;
+            font-size: 18px;
         }
         .nav-menu-options {
             a {
-                font-size: 23px !important;
-                font-weight: bold;
+                font-size: 17px;
             }
         }
     }
 }
 
 .nav-2-sticky {
-    position: fixed;
+    position: fixed !important;
     background-color: $nav-color-second;
     top: 0;
     z-index: 10;
     border-bottom: $nav-border-bottom;
-    transition: 0.4s ease-out;
+    transition: 0.4s all ease-out;
     a {
         color: $nav-color-prime;
+        font-size: 130% !important;
+        transition: 0.4s all ease-out;
+        opacity: 1 !important;
+    }
+}
+
+.nav-2-un-sticky {
+    position: absolute;
+    transition: 0.2s all ease-out;
+    a {
+        transition: 0.4s all ease-out;
     }
 }
 
@@ -166,12 +178,17 @@
 @media screen and (max-width: 750px) {
     .navbar-menu {
         .navbar-2 {
+            a{
+                opacity: 1;
+            }
             .label {
                 display: block;
-                color: $nav-color-prime;
+                color: rgba($nav-color-prime, 0.8);
                 background-color: $nav-color-second;
                 cursor: default;
-                border-bottom: 22px solid;
+                font-size: 20px !important;
+                letter-spacing: 2px;
+                border-bottom: 22px solid $nav-color-prime;
             }
             .links-2 {
                 background-color: $nav-color-prime;
