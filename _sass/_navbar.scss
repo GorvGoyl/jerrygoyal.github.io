@@ -199,6 +199,7 @@
             .nav-menu-options {
                 /* hide bottom border of 1st navbar */
                 bottom: 2px;
+                z-index: 10;
             }
             .label:after {
                 pointer-events: none;
