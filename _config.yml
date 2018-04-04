@@ -1,8 +1,6 @@
 title: The title of your website, as you want it to appear in the header of the webpage.
 email: Your email address.
 description: A description of your website that will be used in search engine results and the site’s RSS feed.
-host: 0.0.0.0
-port: 4000
 twitter_username: Your Twitter username (do not include @ symbol).
 github_username: Your GitHub username.
 plugins:
