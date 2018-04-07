@@ -1,6 +1,6 @@
 {% for card in include.card_data %}
 <a class='app_card_wrapper' href="{{card.href}}">
-    <h2>{{ card.title }}</h2>
+    <div class='card_title'><h2>{{ card.title }}</h2></div>
     <div class='card_icon'>
         <img class='card_icon_img' src="{{card.image}}" alt="{{ card.title }}">
     </div>

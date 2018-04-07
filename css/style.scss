@@ -216,57 +216,7 @@ img.sshots_img {
                  * CARD LAYOUT *
 *****************************************************/
 
-.app_card_wrapper {
-    max-width: 300px;
-    overflow: hidden;
-    width: 85%;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    background-color: #ffa700;
-    display: inline-block;
-    margin: 50px 5% 100px 5%;
-    height: auto;
-    position: relative;
-    cursor: pointer;
-}
-
-.card_icon_img {
-    max-width: 100%;
-}
-
-.card_icon {
-    /* margin: 50px 0 50px 0; */
-    padding: 50px;
-    background-color: white;
-}
-
-.card_label {
-    margin: -5px;
-}
-
-.card_desc {
-    background-color: black;
-    position: absolute;
-    bottom: -100%;
-    width: 100%;
-    opacity: 0.5;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-.app_card_wrapper:hover .card_desc {
-    opacity: 1.0 !important;
-    bottom: 0;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
+@import 'card';
 
 
 /*****************************************************      

@@ -143,6 +143,10 @@
         transition: 0.4s all ease-out;
         opacity: 1 !important;
     }
+  
+    a:hover:after{
+        background: $nav-color-prime !important;
+    }
 }
 
 .nav-2-un-sticky {
