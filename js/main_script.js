@@ -10,8 +10,8 @@ $(document).ready(function () {
 function scrollTo(hash) {
     var stickyNavHeight = 0;
     if ($(hash).length > 0) {
-        if ($('#myTopnav').length > 0) {
-            stickyNavHeight = $('#myTopnav').height();
+        if ($('.navbar-menu').length > 0) {
+            stickyNavHeight = $('.navbar-menu').height();
         }
         $('html, body').animate({
             scrollTop: $(hash).offset().top - stickyNavHeight
