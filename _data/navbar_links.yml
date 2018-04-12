@@ -1,5 +1,5 @@
 homepage:
   - {title: Jerry Factory, href: "/"}
   - {title: Apps, href: "#apps"}
-  - {title: About Me, href: "#about-me"}
+  - {title: About Me, href: "/about-me"}
   - {title: Contact, href: "#contact"}

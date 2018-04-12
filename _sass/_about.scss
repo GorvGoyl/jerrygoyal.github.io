@@ -1,0 +1,132 @@
+.about-me {
+    .h1,
+    .h2,
+    .h3,
+    h1,
+    h2,
+    h3 {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+    h1 {
+        margin: .67em 0;
+        font-size: 2em;
+    }
+    .h4,
+    .h5,
+    .h6,
+    h4,
+    h5,
+    h6 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    p {
+        margin: 0 0 10px;
+    }
+    .intro {
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100vh; // min-height: 720px;
+        display: table;
+        position: relative;
+        text-align: center;
+        background: url($baseurl + '/about-me/img/wood.jpg') no-repeat center bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111111;
+            opacity: .85;
+        }
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            -webkit-transform: translateY(-2.1rem);
+            -ms-transform: translateY(-2.1rem);
+            transform: translateY(-2.1rem);
+            color: #ffffff;
+            .hello-world {
+                color: #cc005f;
+                font-size: 22px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: 500;
+                line-height: 1.1;
+            }
+            .my-name {
+                font-size: 64px;
+                font-weight: 700;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                line-height: 1.1;
+                color: inherit;
+                margin: .67em 0;
+            }
+            .typewrite {
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                font-size: 20px;
+                margin-bottom: 30px;
+                .wrap {
+                    animation: caret 1s steps(1) infinite;
+                    border-right: 0.08em solid #fff;
+                    padding-right: 1px;
+                }
+                @keyframes caret {
+                    50% {
+                        border-color: transparent;
+                    }
+                }
+            }
+            .scroll-down {
+                position: absolute;
+                left: 50%;
+                bottom: 10px; 
+                margin-left: -20px; // half of image width
+                cursor: pointer;
+                animation: down 3s ease infinite;
+                i {
+                    padding: 50px 20px 0px 20px;
+                    position: absolute;
+                    background: url($baseurl + '/about-me/img/chevron-down.svg') no-repeat center;
+                }
+            }
+            @keyframes down {
+                0% {
+                    bottom: 30px;
+                }
+                50% {
+                    bottom: 60px;
+                }
+                100% {
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
