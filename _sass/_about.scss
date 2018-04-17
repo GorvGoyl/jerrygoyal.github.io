@@ -106,13 +106,14 @@
             .scroll-down {
                 position: absolute;
                 left: 50%;
-                bottom: 10px; 
+                bottom: 10px;
                 margin-left: -20px; // half of image width
                 cursor: pointer;
                 animation: down 3s ease infinite;
                 i {
                     padding: 50px 20px 0px 20px;
                     position: absolute;
+                    opacity: 0.7;
                     background: url($baseurl + '/about-me/img/chevron-down.svg') no-repeat center;
                 }
             }
@@ -127,6 +128,39 @@
                     bottom: 30px;
                 }
             }
+        }
+    }
+    .section-card{
+        height: 100vh;
+        position: relative;
+        .v-card {
+            width: 600px;
+            height: 380px;
+            background: lightslategray;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            .dp {
+                height: inherit;
+                float: left;
+                width: 170px;
+                background: url($baseurl + '/about-me/img/profile.png') no-repeat center bottom;
+            }
+            .info {
+            }
+            
+        }
+        .v-card:before{
+            content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 18px 380px 76px;
+    border-color: transparent lightslategrey lightslategrey transparent;
+    top: 0;
+    left: 81px;
         }
     }
 }
