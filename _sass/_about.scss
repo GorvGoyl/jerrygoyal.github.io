@@ -41,7 +41,12 @@
     p {
         margin: 0 0 10px;
     }
-    .intro {
+    .section {
+        text-align: center;
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+    .section.intro {
         background-size: cover;
         background-attachment: fixed;
         width: 100%;
@@ -130,8 +135,7 @@
             }
         }
     }
-    .section-card{
-        height: 100vh;
+    .section.card {
         position: relative;
         .v-card {
             width: 600px;
@@ -149,18 +153,202 @@
                 width: 170px;
                 background: url($baseurl + '/about-me/img/profile.png') no-repeat center bottom;
             }
-            .info {
-            }
-            
+            .info {}
         }
-        .v-card:before{
+        .v-card:before {
             content: '';
-    position: absolute;
-    border-style: solid;
-    border-width: 0 18px 380px 76px;
-    border-color: transparent lightslategrey lightslategrey transparent;
-    top: 0;
-    left: 81px;
+            position: absolute;
+            border-style: solid;
+            border-width: 0 18px 380px 76px;
+            border-color: transparent lightslategrey lightslategrey transparent;
+            top: 0;
+            left: 81px;
+        }
+    }
+    .section.expertise {
+        background: lightslategray;
+        .content {
+            display: flex;
+            div {}
+        }
+    }
+    .section.skills {
+        background: #eeeeee;
+        .card {
+            background: #fefefe;
+            border-radius: 2px;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+            width: 500px;
+            margin-top: 150px;
+            display: inline-block;
+            .title {}
+            .skillbar-container {
+                .skill-container {
+                    padding: 30px;
+                    .skill-name {
+                        h4 {
+                            text-align: left;
+                        }
+                    }
+                    .skill-bar {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        height: 8px;
+                        background: rgba(0, 0, 0, 0.1);
+                        border-radius: 2px;
+                        .percent {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 70%;
+                            height: 8px;
+                            background: #304fff;
+                            border-radius: 2px;
+                        }
+                        .percent:after {
+                            content: '';
+                            border: solid 10px blue;
+                            border-radius: 66%;
+                            position: absolute;
+                            right: -8px;
+                            top: -6px;
+                            box-shadow: 0 0 4px #304fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section.experience {
+        background: bisque;
+        text-align: center;
+        .start {
+            position: relative;
+            z-index: 10;
+            .circle {
+                position: relative;
+                display: inline-block;
+                border: solid 20px blue;
+                border-radius: 51%;
+            }
+            .line {
+                margin: 0 0 0 -2px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 3px;
+                height: 700px;
+                background: #304fff;
+                z-index: -1;
+            }
+        }
+        .timeline {
+            margin: 30px 0 0 0;
+            padding: 50px 0 0 0;
+            position: relative;
+            .block {
+                margin: 30px 0;
+                position: relative;
+                .content {
+                    position: relative;
+                    width: 46%;
+                    .box {
+                        padding: 25px;
+                        position: relative;
+                        background: #fefefe;
+                        border-radius: 2px;
+                        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+                        .date {
+                            margin: 0;
+                            position: absolute;
+                            top: 13px;
+                            right: -154px;
+                            padding: 1px 5px;
+                            display: inline-block;
+                            vertical-align: top;
+                            background: #304fff;
+                            font-size: 13px;
+                            color: #fefefe;
+                            border-radius: 2px;
+                        }
+                        .date:before {
+                            content: '';
+                            margin: -6px 0 0 0;
+                            position: absolute;
+                            top: 50%;
+                            right: 100%;
+                            height: 0;
+                            width: 0;
+                            border: 6px solid transparent;
+                            border-right: 6px solid #304fff;
+                        }
+                        .name {
+                            margin: 0 0 10px 0;
+                            padding: 0;
+                            display: block;
+                            font-size: 17px;
+                            color: #363636;
+                            font-weight: 400;
+                        }
+                        .role {
+                            margin: 0 0 10px 0;
+                            padding: 1px 5px;
+                            display: inline-block;
+                            vertical-align: top;
+                            background: #efefef;
+                            font-size: 13px;
+                            color: #363636;
+                            border-radius: 2px;
+                        }
+                        p {
+                            color: black;
+                            margin: 0;
+                            font-size: 16px;
+                            line-height: 25px;
+                            padding: 0;
+                        }
+                    }
+                }
+                .content:before {
+                    content: '';
+                    position: absolute;
+                    top: 19px;
+                    left: 100%;
+                    height: 0;
+                    width: 0;
+                    border: 7px solid transparent;
+                    border-left: 7px solid #fefefe;
+                    z-index: 2;
+                }
+                .content:after {
+                    content: '';
+                    position: absolute;
+                    top: 18px;
+                    left: 100%;
+                    height: 16px;
+                    width: 9px;
+                    z-index: 1;
+                }
+                .point {
+                    margin: 0 0 0 -13px;
+                    position: absolute;
+                    top: 12px;
+                    left: 50%;
+                    width: 26px;
+                    height: 26px;
+                    line-height: 26px;
+                    text-align: center;
+                    background: #304fff;
+                    border-radius: 26px;
+                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+                }
+            }
+            .block:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
         }
     }
 }

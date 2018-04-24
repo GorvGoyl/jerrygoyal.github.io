@@ -7,18 +7,29 @@ redirect_from:
   - /About-me
   - /aboutme
   - /resume
-navbar_links:
-  - {title: Flash Clipboard, href: "/flash-clipboard"}
-  - {title: Getting Started, href: "#started"}
-  - {title: Features, href: "#features"}
-  - {title: Download, href: "#download"}
+
+skillset:
+  Professional:
+  - - C#
+    - 70%
+  - - JAVA
+    - 60%
+  - - js
+    - 90%
+  Personal:
+  - - lang
+    - 40%
+  - - creativity
+    - 80%
+  - - as
+    - 20%
 ---
 <!DOCTYPE html>
 <html lang="en">
 
 {% include header.html title="Jerry Factory" %}
 <body class='about-me'>
-    <div class='intro'>
+    <div class='section intro'>
         <div class="overlay"></div>
         <div class='content'>
             <h5 class="hello-world">Hello, World.</h5>
@@ -32,7 +43,8 @@ navbar_links:
         </div>
         
     </div>
-    <div class='section-card'>
+
+    <div class='section card'>
         <div class='v-card'>
             <div class='dp'></div>
             <div class='info'>
@@ -48,6 +60,88 @@ navbar_links:
         </div>
     </div>
 
+
+<div class='section expertise'>
+<div>
+    <div class='subject'>
+        <h1>My Expertise</h1>
+        <h3>I've got chops in all phases of the development process.</h3>
+    </div>
+
+    <div class='content'>
+        <div>
+            <h3>icon</h3>
+            <h2>Strategy</h2>
+            <p>I collaborate with clients and peers to nurture 
+                and transform ideas into well thought out design specs. 
+                After all,
+                 that's where the majority of amazing user experiences start.
+                </p>
+        </div>
+        <div>
+                <h3>icon</h3>
+            
+            <h2>UX/UI</h2>
+            <p>
+                    I sketch and wireframe interfaces focusing on content structure,
+                     intuitive UI patterns and simple interactions.
+                     I'm a minimalist who truly believes that less is more.
+            </p>
+
+        </div>
+        <div>
+                <h3>icon</h3>
+            
+            <h2>Code</h2>
+            <p>Having industrial experience of various programming languages and frameworks, 
+                I write well structured and optimised code which is the building block of a great product.
+            </p>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="section skills">
+    <div><h1>Skills</h1></div>
+        {% include skills_template.html skillset = page.skillset %}
+    
+
+</div>
+<div class="section experience">
+<div><h1> Experience</h1></div>
+<div class='start'>
+    <div class='circle'></div>
+    <div class='line'></div>
+</div>
+
+<div class='timeline'>
+    <div class='block'>
+        <div class='content'>
+            <div class='box'>
+                <div class='date'>2017-present</div>
+                <div class='name'>samasung</div>
+                <div class='role'>software developer</div>
+                <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.</p>
+            </div>
+        </div>
+        <div class='point'></div>
+    </div>
+</div>
+
+
+</div>
+
+
+<div class="section portfolio">
+
+</div>
+<div class="section hobbies">
+
+</div>
+<div class="section contact">
+
+</div>
     {% include scripts_include.html %}
 </body>
     
