@@ -223,30 +223,49 @@
     .section.experience {
         background: bisque;
         text-align: center;
-        .start {
+        position: relative;
+        padding: 35px;
+        .title {
             position: relative;
-            z-index: 10;
-            .circle {
-                position: relative;
-                display: inline-block;
-                border: solid 20px blue;
-                border-radius: 51%;
+            height: 70px;
+            text-align: center;
+            color: #363636;
+            font-size: 36px;
+            font-weight: 100;
+            z-index: 3;
+        }
+        .circle {
+            margin: 0 0 0 -31px;
+            position: absolute;
+            left: 50%;
+            bottom: -45px;
+            width: 62px;
+            height: 62px;
+            background: #304fff;
+            text-align: center;
+            line-height: 62px;
+            padding-left: 1px;
+            border-radius: 62px;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 720px) {
+            .title {
+                padding: 20px 0 0 80px;
+                text-align: left;
             }
-            .line {
-                margin: 0 0 0 -2px;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 3px;
-                height: 700px;
-                background: #304fff;
-                z-index: -1;
+            .circle {
+                margin: 0;
+                bottom: 0;
+                left: 0;
             }
         }
         .timeline {
             margin: 30px 0 0 0;
             padding: 50px 0 0 0;
             position: relative;
+            .block:first-child {
+                margin-top: 0;
+            }
             .block {
                 margin: 30px 0;
                 position: relative;
@@ -259,11 +278,11 @@
                         background: #fefefe;
                         border-radius: 2px;
                         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+                        text-align: left;
                         .date {
                             margin: 0;
                             position: absolute;
                             top: 13px;
-                            right: -154px;
                             padding: 1px 5px;
                             display: inline-block;
                             vertical-align: top;
@@ -271,6 +290,11 @@
                             font-size: 13px;
                             color: #fefefe;
                             border-radius: 2px;
+                            line-height: 22px;
+                            letter-spacing: 0.01em;
+                            font-weight: 300;
+                            left: 380px;
+                            width: fit-content;
                         }
                         .date:before {
                             content: '';
@@ -283,13 +307,21 @@
                             border: 6px solid transparent;
                             border-right: 6px solid #304fff;
                         }
-                        .name {
+                        @media (max-width: 720px) {
+                            .date {
+                                right: auto;
+                                left: 0;
+                                top: -46px;
+                            }
+                        }
+                        .company {
                             margin: 0 0 10px 0;
                             padding: 0;
                             display: block;
                             font-size: 17px;
                             color: #363636;
                             font-weight: 400;
+                            text-align: left;
                         }
                         .role {
                             margin: 0 0 10px 0;
@@ -307,6 +339,7 @@
                             font-size: 16px;
                             line-height: 25px;
                             padding: 0;
+                            text-align: left;
                         }
                     }
                 }
@@ -330,6 +363,18 @@
                     width: 9px;
                     z-index: 1;
                 }
+                @media (max-width: 720px) {
+                    .content {
+                        margin-left: 60px;
+                        padding-top: 60px;
+                        position: relative;
+                        width: auto;
+                    }
+                    .content:before,
+                    .content:after {
+                        display: none;
+                    }
+                }
                 .point {
                     margin: 0 0 0 -13px;
                     position: absolute;
@@ -343,11 +388,79 @@
                     border-radius: 26px;
                     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
                 }
+                @media (max-width: 720px) {
+                    .point {
+                        margin: 0;
+                        left: 17px;
+                    }
+                }
+            }
+            .block:nth-child(even) {
+                .content {
+                    float: right;
+                    .date {
+                        left: auto;
+                        right:380px;
+                    }
+                    .date::before {
+                        right: auto;
+                        left: 100%;
+                        border-right: none;
+                        border-left: 6px solid #304fff;
+                    }
+                }
+                .content:before {
+                    top: 19px;
+                    left: auto;
+                    right: 100%;
+                    border-left: none;
+                    border-right: 7px solid #fefefe;
+                }
+                .content:after {
+                    top: 19px;
+                    left: auto;
+                    right: 100%;
+                }
             }
             .block:after {
                 content: "";
                 display: table;
                 clear: both;
+            }
+            @media (max-width: 720px) {
+                .block:nth-child(even) {
+                    .content .box .date {
+                        right: auto;
+                        left: 0;
+                        top: -46px;
+                    }
+                }
+                .block:nth-child(even) {
+                    .content .box .date:before {
+                        left: auto;
+                        right: 100%;
+                        border-left: none;
+                        border-right: 6px solid #304fff;
+                    }
+                }
+            }
+        }
+        .timeline:before {
+            content: '';
+            margin: 0 0 0 -2px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background: #304fff;
+        }
+        @media (max-width: 720px) {
+            .timeline {
+                margin: 0;
+            }
+            .timeline:before {
+                left: 31px;
             }
         }
     }

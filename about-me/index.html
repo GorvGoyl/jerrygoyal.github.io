@@ -23,6 +23,41 @@ skillset:
     - 80%
   - - as
     - 20%
+
+experience:
+- date: 2017-present
+  company: samasung
+  role: software developer
+  desc: Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem
+    an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire suavitate has, ei quodsi tacimates sapientem
+    sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.
+- date: 2016-2017
+  company: Honeywell
+  role: software developer
+  desc: Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem
+    an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audiresuavitate has, ei quodsi tacimates sapientem
+    sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.
+- date: 2015-2016
+  company: Leadsquared
+  role: software developer
+  desc:   Ius illum vocent mediocritatem
+    an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audiresuavitate has, ei quodsi tacimates sapientem
+    sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.
+- date: 2014-2015
+  company: Air India Airline Company
+  role: software developer
+  desc:   Ius illum vocent mediocritatem
+    an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audirere at. Ubique maluisset vel te, his dico vituperata ut. Pro
+    ei phaedrum maluisset. Ex audire re at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audiresuavitate has, ei quodsi tacimates sapientem
+    sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.
+
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -109,24 +144,11 @@ skillset:
 
 </div>
 <div class="section experience">
-<div><h1> Experience</h1></div>
-<div class='start'>
-    <div class='circle'></div>
-    <div class='line'></div>
-</div>
+<div class='title'> Experience
+    <span class='circle'></span></div>
 
 <div class='timeline'>
-    <div class='block'>
-        <div class='content'>
-            <div class='box'>
-                <div class='date'>2017-present</div>
-                <div class='name'>samasung</div>
-                <div class='role'>software developer</div>
-                <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an, cule dicta iriure at. Ubique maluisset vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Lorem ipsum dolor sit amet, in quodsi.</p>
-            </div>
-        </div>
-        <div class='point'></div>
-    </div>
+     {% include timeline_template.html experience = page.experience %}
 </div>
 
 
