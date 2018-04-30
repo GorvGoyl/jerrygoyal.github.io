@@ -184,7 +184,7 @@
             .title {}
             .skillbar-container {
                 .skill-container {
-                    padding: 30px;
+                    padding: 15px 30px;
                     .skill-name {
                         h4 {
                             text-align: left;
@@ -293,7 +293,7 @@
                             line-height: 22px;
                             letter-spacing: 0.01em;
                             font-weight: 300;
-                            left: 380px;
+                            left: calc(100% + 80px);
                             width: fit-content;
                         }
                         .date:before {
@@ -400,7 +400,7 @@
                     float: right;
                     .date {
                         left: auto;
-                        right:380px;
+                        right:calc(100% + 80px);;
                     }
                     .date::before {
                         right: auto;
