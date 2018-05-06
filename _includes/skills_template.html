@@ -1,21 +1,12 @@
-{% for skillset in include.skillset %}
-<div class="card">
-    <div class='title'>
-        <h2>{{skillset[0]}}</h2>
-    </div>
-    <div class='skillbar-container'>
-        {% for skill in skillset[1] %}
-        <div class='skill-container'>
-            <div class='skill-name'>
-                <h4>{{skill[0]}}</h4>
-            </div>
-            <div class='skill-bar'>
-                <div class='percent' style='width:{{skill[1]}};'></div>
+ {% for skill in include.skillset %}
+    <div class='skill-container'>
+        <div class='skill-name'>
+            {{skill[0]}}
+        </div>
+        <div class='skill-bar'>
+            <div class='percent' style='width:{{skill[1]}};'>
+                <span class='dot'></span>
             </div>
         </div>
-
-        {% endfor %}
-
     </div>
-</div>
 {% endfor %}

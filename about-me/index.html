@@ -74,6 +74,7 @@ experience:
 <html lang="en">
 
 {% include header.html title="Jerry Factory" %}
+
 <body class='about-me'>
     <div class='section intro'>
         <div class="overlay"></div>
@@ -84,12 +85,12 @@ experience:
                 <span class="wrap"></span>
             </p>
             <a class="scroll-down">
-					<i></i>
-				</a>
+                <i></i>
+            </a>
         </div>
-        
+
     </div>
-<!-- social links:
+    <!-- social links:
 LinkedIn
 Github
 Stackoverflow
@@ -97,101 +98,154 @@ Medium
 Instagram
 Add location
 -->
-    <div class='section card'>
-        <div class='v-card'>
-            <div class='dp'></div>
-            <div class='info'>
-                <h1>Gourav GOYAL</h1>
-                <h2>Full Stack Developer & UI/UX Designer</h2>
+    <div class='main-container'>
+        <div class='row'>
+            <div class='col-12'>
+<div class='section card'>
+    <div class='v-card material'>
+        <div class='dp'></div>
+        <div class='info'>
+            <div class='name'>Gourav Goyal</div>
+            <div class='profile'>Full Stack Developer & UI/UX Designer</div>
+            <div class='social'>LinkedIn Github Stackoverflow</div>
             <p>
-                Namaste, My name is Gourav Goyal. I've 3+ years of experience in 
-                building dynamic web projects, mobile apps and, desktop software.
-                I love to code, create great user experiences and contribute to the open source software community.
-                 I am always hungry for new challenges and innovations. 
-                </p>
+                Namaste, My name is Gourav Goyal. I've 3+ years of experience in building dynamic web projects, mobile apps and, desktop
+                software. I love to code, create great user experiences and contribute to the open source software community.
+                <br>I am always hungry for new challenges and innovations.
+            </p>
+        </div>
+    </div>
+</div>
             </div>
         </div>
-    </div>
+        
 
 
-<div class='section expertise'>
-<div>
-    <div class='subject'>
-        <h1>My Expertise</h1>
-        <h3>I've got chops in all phases of the development process.</h3>
-    </div>
+        <div class='section expertise'>
+            <div>
+                <div class='subject'>
+                    <div class='title'>Expertise</div>
+                    <!-- <div class='subtitle'>I've got chops in all phases of the development process.</div> -->
+                </div>
 
-    <div class='content'>
-        <div>
-            <h3>icon</h3>
-            <h2>Strategy</h2>
-            <p>I collaborate with clients and peers to nurture 
-                and transform ideas into well thought out design specs. 
-                After all,
-                 that's where the majority of amazing user experiences start.
-                </p>
+                <div class='content row'>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>icon</div>
+                                <div class='card-name'>Strategy</div>
+                            </div>
+                            <p class='card-content'>I collaborate with clients and peers to nurture and transform ideas into well thought out design
+                                specs. After all, that's where the majority of amazing user experiences start.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>icon</div>
+                                <div class='card-name'>UI/UX</div>
+                            </div>
+                            <p class='card-content'>
+                                I sketch and wireframe interfaces focusing on content structure, intuitive UI patterns and simple interactions. I'm a minimalist
+                                who truly believes that less is more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>icon</div>
+                                <div class='card-name'>Code</div>
+                            </div>
+                            <p class='card-content'>Having industrial experience of various programming languages and frameworks, I write well structured
+                                and optimised code which is the building block of a great product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-                <h3>icon</h3>
-            
-            <h2>UX/UI</h2>
-            <p>
-                    I sketch and wireframe interfaces focusing on content structure,
-                     intuitive UI patterns and simple interactions.
-                     I'm a minimalist who truly believes that less is more.
-            </p>
+
+        <div class="section skills">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Skills</div>
+                </div>
+                <div class='content row'>
+                    <div class='col-6'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>icon</div>
+                                <div class='card-name'>Professional</div>
+                            </div>
+                            <div class='skills'>
+                                {% include skills_template.html skillset = page.skillset.Professional %}
+
+                            </div>
+                                    
+                        </div>
+                    </div>
+                    <div class='col-6'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>icon</div>
+                                <div class='card-name'>Personal</div>
+                            </div>
+                            <div class='skills'>
+                            {% include skills_template.html skillset = page.skillset.Personal %}
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
 
         </div>
-        <div>
-                <h3>icon</h3>
-            
-            <h2>Code</h2>
-            <p>Having industrial experience of various programming languages and frameworks, 
-                I write well structured and optimised code which is the building block of a great product.
-            </p>
+        <div class="section experience">
+            <div class='title'> Experience
+                <span class='circle'></span>
+            </div>
 
+            <div class='timeline'>
+                {% include timeline_template.html experience = page.experience %}
+            </div>
         </div>
-    </div>
-</div>
-</div>
-
-<div class="section skills">
-    <div><h1>Skills</h1></div>
-        {% include skills_template.html skillset = page.skillset %}
-    
-
-</div>
-<div class="section experience">
-<div class='title'> Experience
-    <span class='circle'></span></div>
-
-<div class='timeline'>
-     {% include timeline_template.html experience = page.experience %}
-</div>
-</div>
-<!-- 
+        <!-- 
 
 <div class="section portfolio">
 
 </div>
-<div class="section hobbies">
-
-</div> -->
-<div class="section contact">
-<div class='title'><h1>Let's Connect</h1></div>
-<div class='wrapper'>
-    <div class='pitch'>
-        <h4>Got something exciting to work for? or maybe a casual chat. I'm up!</h4>
-    </div>
-    <div class='mail'>
-        <h2>1gouravgg@gmail.com</h2>
-    </div>
-    <div class='links'>social links</div>
+<div class="section interest">
+http://preview.themeforest.net/item/matresume-material-cv-resume-vcard-portfolio-html-template/full_screen_preview/19309564
+</div> 
+<div class='section blog>
+    
 </div>
+-->
+        <div class="section contact">
+            <div class='title'>
+                <h1>Let's Connect</h1>
+            </div>
+            <div class='wrapper'>
+                <div class='pitch'>
+                    <h4>Got something exciting to work for? or maybe a casual chat. I'm up!</h4>
+                </div>
+                <div class='mail'>
+                    <h2>1gouravgg@gmail.com</h2>
+                </div>
+                <div class='links'>social links</div>
+            </div>
 
-<div class='name'><h1>GOURAV GOYAL</h1></div>
-</div>
+            <div class='name'>
+                <h1>GOURAV GOYAL</h1>
+            </div>
+        </div>
+    </div>
     {% include scripts_include.html %}
 </body>
-    
-    </html>
+
+</html>

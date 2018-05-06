@@ -1,4 +1,10 @@
-.about-me {
+body.about-me {
+    background: #eeeeee;
+    font-size: 16px;
+    color: #868686;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    font-weight: 300;
     .h1,
     .h2,
     .h3,
@@ -39,18 +45,83 @@
         color: inherit;
     }
     p {
-        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 0;
+        margin: 0 0 15px 0;
+        text-align: left;
+    }
+    .material {
+        background: #fefefe;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+        padding: 25px;
+        margin: 0 0 30px 0;
+        .card-title {
+            position: relative;
+            margin: -57px 0 0 0;
+            text-align: center;
+            .card-icon {
+                margin: 0 auto;
+                position: relative;
+                display: block;
+                overflow: hidden;
+                width: 62px;
+                height: 62px;
+                line-height: 62px;
+                background: #304fff;
+                border-radius: 62px;
+                box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+                color: white;
+            }
+            .card-name {
+                margin: 20px 0;
+                display: block;
+                font-weight: 400;
+                font-size: 17px;
+                color: #363636;
+            }
+        }
+        .card-content {
+            margin-bottom: 0;
+        }
     }
     .section {
         text-align: center;
-        min-height: 100vh !important;
-        height: auto !important;
+        padding: 35px 0;
+        .title {
+            height: 90px;
+            text-align: center;
+            color: #363636;
+            font-size: 36px;
+            font-weight: 100;
+        }
+    }
+    .main-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+    @media (max-width: 1080px) {
+        .main-container {
+            margin: 0 20px;
+        }
+    }
+    @media (max-width: 420px) {
+        .main-container {
+            margin: 0 10px;
+        }
+    }
+    .row {
+        padding-bottom: 0;
+        margin: 0 -10px;
+        padding: 0 0 30px 0;
     }
     .section.intro {
         background-size: cover;
         background-attachment: fixed;
         width: 100%;
-        height: 100vh; // min-height: 720px;
+        height: 100vh; // min-height: 768px;
         display: table;
         position: relative;
         text-align: center;
@@ -97,6 +168,7 @@
                 letter-spacing: .2rem;
                 font-size: 20px;
                 margin-bottom: 30px;
+                text-align: center;
                 .wrap {
                     animation: caret 1s steps(1) infinite;
                     border-right: 0.08em solid #fff;
@@ -138,10 +210,9 @@
     .section.card {
         position: relative;
         .v-card {
-            width: 600px;
-            height: 380px;
-            background: lightslategray;
-            position: absolute;
+            width: 700px;
+            height: 350px;
+            position: relative;
             top: 0;
             bottom: 0;
             right: 0;
@@ -150,81 +221,92 @@
             .dp {
                 height: inherit;
                 float: left;
-                width: 170px;
+                width: 200px;
+                position: relative;
+                bottom: 25px;
+                right: 25px;
                 background: url($baseurl + '/about-me/img/profile.png') no-repeat center bottom;
             }
-            .info {}
+            .info {
+                .name {
+                    font-size: 42px;
+                    font-weight: 100;
+                    line-height: 44px;
+                    color: #363636;
+                }
+                .profile {
+                    margin: 15px 0 0 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #363636;
+                }
+                .social {
+                    margin: 25px 0;
+                }
+            }
         }
         .v-card:before {
-            content: '';
+            //content: '';
             position: absolute;
             border-style: solid;
             border-width: 0 18px 380px 76px;
-            border-color: transparent lightslategrey lightslategrey transparent;
+            border-color: transparent white white transparent;
             top: 0;
-            left: 81px;
+            left: 123px;
+            z-index: 1;
         }
     }
     .section.expertise {
-        background: lightslategray;
-        .content {
-            display: flex;
-            div {}
+        .material {
+            min-height: 200px;
         }
     }
     .section.skills {
-        background: #eeeeee;
-        .card {
-            background: #fefefe;
-            border-radius: 2px;
-            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-            width: 500px;
-            margin-top: 150px;
-            display: inline-block;
-            .title {}
-            .skillbar-container {
-                .skill-container {
-                    padding: 15px 30px;
-                    .skill-name {
-                        h4 {
-                            text-align: left;
-                        }
-                    }
-                    .skill-bar {
-                        position: relative;
-                        display: block;
-                        width: 100%;
-                        height: 8px;
-                        background: rgba(0, 0, 0, 0.1);
-                        border-radius: 2px;
-                        .percent {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 70%;
-                            height: 8px;
-                            background: #304fff;
-                            border-radius: 2px;
-                        }
-                        .percent:after {
-                            content: '';
-                            border: solid 10px blue;
-                            border-radius: 66%;
-                            position: absolute;
-                            right: -8px;
-                            top: -6px;
-                            box-shadow: 0 0 4px #304fff;
-                        }
+        .skill-container {
+            padding: 12px 0 14px 0;
+            .skill-name {
+                margin: 0 0 6px 0;
+                position: relative;
+                display: block;
+                font-size: 14px;
+                color: #363636;
+                font-weight: 400;
+                text-align: left;
+            }
+            .skill-bar {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+                .percent {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 70%;
+                    height: 8px;
+                    background: #304fff;
+                    border-radius: 2px;
+                    .dot {
+                        position: absolute;
+                        top: -9px;
+                        right: 0;
+                        height: 26px;
+                        width: 26px;
+                        line-height: 26px;
+                        text-align: center;
+                        background: #304fff;
+                        border-radius: 26px;
+                        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
                     }
                 }
             }
         }
     }
     .section.experience {
-        background: bisque;
         text-align: center;
         position: relative;
-        padding: 35px;
         .title {
             position: relative;
             height: 70px;
@@ -248,7 +330,7 @@
             border-radius: 62px;
             box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
         }
-        @media (max-width: 720px) {
+        @media (max-width: 768px) {
             .title {
                 padding: 20px 0 0 80px;
                 text-align: left;
@@ -272,12 +354,8 @@
                 .content {
                     position: relative;
                     width: 46%;
-                    .box {
-                        padding: 25px;
-                        position: relative;
-                        background: #fefefe;
-                        border-radius: 2px;
-                        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+                    .material {
+                        margin: 0;
                         text-align: left;
                         .date {
                             margin: 0;
@@ -290,11 +368,9 @@
                             font-size: 13px;
                             color: #fefefe;
                             border-radius: 2px;
-                            line-height: 22px;
-                            letter-spacing: 0.01em;
-                            font-weight: 300;
+                            border-color: transparent;
                             left: calc(100% + 80px);
-                            width: fit-content;
+                            white-space: nowrap;
                         }
                         .date:before {
                             content: '';
@@ -307,11 +383,11 @@
                             border: 6px solid transparent;
                             border-right: 6px solid #304fff;
                         }
-                        @media (max-width: 720px) {
+                        @media (max-width: 768px) {
                             .date {
                                 right: auto;
                                 left: 0;
-                                top: -46px;
+                                
                             }
                         }
                         .company {
@@ -334,12 +410,7 @@
                             border-radius: 2px;
                         }
                         p {
-                            color: black;
                             margin: 0;
-                            font-size: 16px;
-                            line-height: 25px;
-                            padding: 0;
-                            text-align: left;
                         }
                     }
                 }
@@ -363,7 +434,7 @@
                     width: 9px;
                     z-index: 1;
                 }
-                @media (max-width: 720px) {
+                @media (max-width: 768px) {
                     .content {
                         margin-left: 60px;
                         padding-top: 60px;
@@ -388,7 +459,7 @@
                     border-radius: 26px;
                     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
                 }
-                @media (max-width: 720px) {
+                @media (max-width: 768px) {
                     .point {
                         margin: 0;
                         left: 17px;
@@ -400,7 +471,8 @@
                     float: right;
                     .date {
                         left: auto;
-                        right:calc(100% + 80px);;
+                        right: calc(100% + 80px);
+                        ;
                     }
                     .date::before {
                         right: auto;
@@ -427,16 +499,15 @@
                 display: table;
                 clear: both;
             }
-            @media (max-width: 720px) {
+            @media (max-width: 768px) {
                 .block:nth-child(even) {
-                    .content .box .date {
+                    .content .date {
                         right: auto;
                         left: 0;
-                        top: -46px;
                     }
                 }
                 .block:nth-child(even) {
-                    .content .box .date:before {
+                    .content .date:before {
                         left: auto;
                         right: 100%;
                         border-left: none;
@@ -455,7 +526,7 @@
             height: 100%;
             background: #304fff;
         }
-        @media (max-width: 720px) {
+        @media (max-width: 768px) {
             .timeline {
                 margin: 0;
             }
