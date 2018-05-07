@@ -1,3 +1,16 @@
+%vcard-width {
+    width: 100%;
+    max-width: 700px;
+}
+
+$color-main:#fefefe;
+$color-accent:#304fff;
+
+%color-invert {
+    background: $color-accent;
+    color: $color-main;
+}
+
 body.about-me {
     background: #eeeeee;
     font-size: 16px;
@@ -52,7 +65,7 @@ body.about-me {
         text-align: left;
     }
     .material {
-        background: #fefefe;
+        background: $color-main;
         border-radius: 2px;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         padding: 25px;
@@ -61,26 +74,36 @@ body.about-me {
             position: relative;
             margin: -57px 0 0 0;
             text-align: center;
-            .card-icon {
-                margin: 0 auto;
-                position: relative;
-                display: block;
-                overflow: hidden;
-                width: 62px;
-                height: 62px;
-                line-height: 62px;
-                background: #304fff;
-                border-radius: 62px;
-                box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
-                color: white;
-            }
-            .card-name {
-                margin: 20px 0;
-                display: block;
-                font-weight: 400;
-                font-size: 17px;
-                color: #363636;
-            }
+        }
+        .card-icon {
+            margin: 0 auto;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            width: 62px;
+            height: 62px;
+            line-height: 62px;
+            background: $color-accent;
+            border-radius: 62px;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        .card-name {
+            margin: 20px 0;
+            display: block;
+            font-weight: 400;
+            font-size: 17px;
+            color: #363636;
+        }
+        .card-subname {
+            margin: 0 0 10px 0;
+            padding: 1px 5px;
+            display: inline-block;
+            vertical-align: top;
+            background: #efefef;
+            font-size: 13px;
+            color: #363636;
+            border-radius: 2px;
         }
         .card-content {
             margin-bottom: 0;
@@ -209,15 +232,10 @@ body.about-me {
     }
     .section.card {
         position: relative;
-        .v-card {
-            width: 700px;
+        .vcard {
+            @extend %vcard-width;
             height: 350px;
-            position: relative;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin: auto;
+            display: inline-block;
             .dp {
                 height: inherit;
                 float: left;
@@ -245,7 +263,7 @@ body.about-me {
                 }
             }
         }
-        .v-card:before {
+        .vcard:before {
             //content: '';
             position: absolute;
             border-style: solid;
@@ -286,7 +304,7 @@ body.about-me {
                     left: 0;
                     width: 70%;
                     height: 8px;
-                    background: #304fff;
+                    background: $color-accent;
                     border-radius: 2px;
                     .dot {
                         position: absolute;
@@ -296,7 +314,7 @@ body.about-me {
                         width: 26px;
                         line-height: 26px;
                         text-align: center;
-                        background: #304fff;
+                        background: $color-accent;
                         border-radius: 26px;
                         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
                     }
@@ -323,7 +341,7 @@ body.about-me {
             bottom: -45px;
             width: 62px;
             height: 62px;
-            background: #304fff;
+            background: $color-accent;
             text-align: center;
             line-height: 62px;
             padding-left: 1px;
@@ -364,9 +382,9 @@ body.about-me {
                             padding: 1px 5px;
                             display: inline-block;
                             vertical-align: top;
-                            background: #304fff;
+                            background: $color-accent;
                             font-size: 13px;
-                            color: #fefefe;
+                            color: $color-main;
                             border-radius: 2px;
                             border-color: transparent;
                             left: calc(100% + 80px);
@@ -381,33 +399,18 @@ body.about-me {
                             height: 0;
                             width: 0;
                             border: 6px solid transparent;
-                            border-right: 6px solid #304fff;
+                            border-right: 6px solid $color-accent;
                         }
                         @media (max-width: 768px) {
                             .date {
                                 right: auto;
                                 left: 0;
-                                
                             }
                         }
-                        .company {
+                        .card-name {
                             margin: 0 0 10px 0;
                             padding: 0;
-                            display: block;
-                            font-size: 17px;
-                            color: #363636;
-                            font-weight: 400;
                             text-align: left;
-                        }
-                        .role {
-                            margin: 0 0 10px 0;
-                            padding: 1px 5px;
-                            display: inline-block;
-                            vertical-align: top;
-                            background: #efefef;
-                            font-size: 13px;
-                            color: #363636;
-                            border-radius: 2px;
                         }
                         p {
                             margin: 0;
@@ -422,7 +425,7 @@ body.about-me {
                     height: 0;
                     width: 0;
                     border: 7px solid transparent;
-                    border-left: 7px solid #fefefe;
+                    border-left: 7px solid $color-main;
                     z-index: 2;
                 }
                 .content:after {
@@ -455,7 +458,7 @@ body.about-me {
                     height: 26px;
                     line-height: 26px;
                     text-align: center;
-                    background: #304fff;
+                    background: $color-accent;
                     border-radius: 26px;
                     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
                 }
@@ -478,7 +481,7 @@ body.about-me {
                         right: auto;
                         left: 100%;
                         border-right: none;
-                        border-left: 6px solid #304fff;
+                        border-left: 6px solid $color-accent;
                     }
                 }
                 .content:before {
@@ -486,7 +489,7 @@ body.about-me {
                     left: auto;
                     right: 100%;
                     border-left: none;
-                    border-right: 7px solid #fefefe;
+                    border-right: 7px solid $color-main;
                 }
                 .content:after {
                     top: 19px;
@@ -511,7 +514,7 @@ body.about-me {
                         left: auto;
                         right: 100%;
                         border-left: none;
-                        border-right: 6px solid #304fff;
+                        border-right: 6px solid $color-accent;
                     }
                 }
             }
@@ -524,7 +527,7 @@ body.about-me {
             left: 50%;
             width: 3px;
             height: 100%;
-            background: #304fff;
+            background: $color-accent;
         }
         @media (max-width: 768px) {
             .timeline {
@@ -532,6 +535,46 @@ body.about-me {
             }
             .timeline:before {
                 left: 31px;
+            }
+        }
+    }
+    .section.contact {
+        .content {
+            .material {
+                @extend %vcard-width;
+                display: inline-block;
+            }
+        }
+        .vcard.content {
+            .material {
+                position: relative;
+                top: 15px;
+                .card-icon {
+                    background: url($baseurl + '/about-me/img/rev1.jpg') no-repeat center bottom;
+                    width: 100px;
+                    height: 100px;
+                    bottom: 20px;
+                }
+                .card-name {
+                    margin-top: 0px;
+                }
+                .card-subname {
+                    padding: 2px 5px;
+                    background: $color-accent;
+                    color: $color-main;
+                    font-weight: 400;
+                }
+            }
+        }
+        .social.content {
+            position: relative;
+            bottom: 45px;
+            .material {
+                @extend %color-invert;
+                .social-icon {
+                    display: inline-block;
+                    width: 15%;
+                }
             }
         }
     }
