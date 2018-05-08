@@ -5,7 +5,6 @@
 
 $color-main:#fefefe;
 $color-accent:#304fff;
-
 %color-invert {
     background: $color-accent;
     color: $color-main;
@@ -243,7 +242,7 @@ body.about-me {
                 position: relative;
                 bottom: 25px;
                 right: 25px;
-                background: url($baseurl + '/about-me/img/profile.png') no-repeat center bottom;
+                background: url($baseurl + '/about-me/img/profile.png') no-repeat center;
             }
             .info {
                 .name {
@@ -550,7 +549,7 @@ body.about-me {
                 position: relative;
                 top: 15px;
                 .card-icon {
-                    background: url($baseurl + '/about-me/img/rev1.jpg') no-repeat center bottom;
+                    background: url($baseurl + '/about-me/img/rev1.jpg') no-repeat center;
                     width: 100px;
                     height: 100px;
                     bottom: 20px;
@@ -574,6 +573,28 @@ body.about-me {
                 .social-icon {
                     display: inline-block;
                     width: 15%;
+                    height: 20px;
+                    position: relative;
+                    top: 3px;
+                    background-size: contain !important;
+                }
+                .social-icon.ml {
+                    background: url($baseurl + '/about-me/img/mail.svg') no-repeat center;
+                }
+                .social-icon.in {
+                    background: url($baseurl + '/about-me/img/linkedin.svg') no-repeat center;
+                }
+                .social-icon.so {
+                    background: url($baseurl + '/about-me/img/so.svg') no-repeat center;
+                }
+                .social-icon.gh {
+                    background: url($baseurl + '/about-me/img/github.svg') no-repeat center;
+                }
+                .social-icon.md {
+                    background: url($baseurl + '/about-me/img/medium.svg') no-repeat center;
+                }
+                .social-icon.ig {
+                    background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
                 }
             }
         }
