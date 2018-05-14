@@ -110,7 +110,9 @@ Add location
                                 <div class='info'>
                                     <div class='name'>Gourav Goyal</div>
                                     <div class='profile'>Full Stack Developer & UI/UX Designer</div>
-                                    <div class='social'>LinkedIn Github Stackoverflow</div>
+                                    <div class='social'>
+                                {% include social_links_template.html %}                                        
+                                    </div>
                                     <p>
                                         Namaste, My name is Gourav Goyal. I've 3+ years of experience in building dynamic web projects, mobile apps and, desktop
                                         software. I love to code, create great user experiences and contribute to the open source software
@@ -256,12 +258,7 @@ http://preview.themeforest.net/item/matresume-material-cv-resume-vcard-portfolio
                 <div class='social content row'>
                     <div class='col-12'>
                         <div class='material'>
-                            <div class='social-icon ml'></div>
-                            <div class='social-icon in'></div>
-                            <div class='social-icon so'></div>
-                            <div class='social-icon gh'></div>
-                            <div class='social-icon md'></div>
-                            <div class='social-icon ig'></div>
+                       {% include social_links_template.html %}
                         </div>
                     </div>
                 </div>

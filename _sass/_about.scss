@@ -1,10 +1,11 @@
+$color-main:#fefefe;
+$color-accent:#304fff;
+$box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 %vcard-width {
     width: 100%;
     max-width: 700px;
 }
 
-$color-main:#fefefe;
-$color-accent:#304fff;
 %color-invert {
     background: $color-accent;
     color: $color-main;
@@ -60,8 +61,32 @@ body.about-me {
         font-size: 16px;
         line-height: 25px;
         padding: 0;
-        margin: 0 0 15px 0;
+        margin: 0;
         text-align: left;
+    }
+    .social-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: contain !important;
+    }
+    .social-icon.ml {
+        background: url($baseurl + '/about-me/img/mail.svg') no-repeat center;
+    }
+    .social-icon.in {
+        background: url($baseurl + '/about-me/img/linkedin.svg') no-repeat center;
+    }
+    .social-icon.so {
+        background: url($baseurl + '/about-me/img/so.svg') no-repeat center;
+    }
+    .social-icon.gh {
+        background: url($baseurl + '/about-me/img/github.svg') no-repeat center;
+    }
+    .social-icon.md {
+        background: url($baseurl + '/about-me/img/medium.svg') no-repeat center;
+    }
+    .social-icon.ig {
+        background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
     }
     .material {
         background: $color-main;
@@ -84,7 +109,7 @@ body.about-me {
             line-height: 62px;
             background: $color-accent;
             border-radius: 62px;
-            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: $box-shadow;
             color: white;
         }
         .card-name {
@@ -236,7 +261,7 @@ body.about-me {
             height: 350px;
             display: inline-block;
             .dp {
-                height: inherit;
+                height: 350px;
                 float: left;
                 width: 200px;
                 position: relative;
@@ -259,6 +284,27 @@ body.about-me {
                 }
                 .social {
                     margin: 25px 0;
+                    .container {
+                        width: 10%;
+                        display: inline-block;
+                        a {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: top;
+                            overflow: hidden;
+                            width: 40px;
+                            height: 40px;
+                            line-height: 46px;
+                            text-align: center;
+                            background: $color-accent;
+                            border-radius: 52px;
+                            box-shadow: $box-shadow;
+                        }
+                        .social-icon {
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
                 }
             }
         }
@@ -271,6 +317,24 @@ body.about-me {
             top: 0;
             left: 123px;
             z-index: 1;
+        }
+        @media (max-width: $width-mobile) {
+            .vcard {
+                height: auto;
+                .dp {
+                    float: none;
+                    width: inherit;
+                    position: static;
+                    margin-bottom: 30px;
+                }
+                .info{
+                    .social{
+                        .container{
+                            width: 15%;
+                        }
+                    }
+                }
+            }
         }
     }
     .section.expertise {
@@ -315,7 +379,7 @@ body.about-me {
                         text-align: center;
                         background: $color-accent;
                         border-radius: 26px;
-                        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+                        box-shadow: $box-shadow;
                     }
                 }
             }
@@ -345,9 +409,9 @@ body.about-me {
             line-height: 62px;
             padding-left: 1px;
             border-radius: 62px;
-            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: $box-shadow;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $width-mobile) {
             .title {
                 padding: 20px 0 0 80px;
                 text-align: left;
@@ -400,7 +464,7 @@ body.about-me {
                             border: 6px solid transparent;
                             border-right: 6px solid $color-accent;
                         }
-                        @media (max-width: 768px) {
+                        @media (max-width: $width-mobile) {
                             .date {
                                 right: auto;
                                 left: 0;
@@ -436,7 +500,7 @@ body.about-me {
                     width: 9px;
                     z-index: 1;
                 }
-                @media (max-width: 768px) {
+                @media (max-width: $width-mobile) {
                     .content {
                         margin-left: 60px;
                         padding-top: 60px;
@@ -459,9 +523,9 @@ body.about-me {
                     text-align: center;
                     background: $color-accent;
                     border-radius: 26px;
-                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+                    box-shadow: $box-shadow;
                 }
-                @media (max-width: 768px) {
+                @media (max-width: $width-mobile) {
                     .point {
                         margin: 0;
                         left: 17px;
@@ -474,7 +538,6 @@ body.about-me {
                     .date {
                         left: auto;
                         right: calc(100% + 80px);
-                        ;
                     }
                     .date::before {
                         right: auto;
@@ -501,7 +564,7 @@ body.about-me {
                 display: table;
                 clear: both;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $width-mobile) {
                 .block:nth-child(even) {
                     .content .date {
                         right: auto;
@@ -528,7 +591,7 @@ body.about-me {
             height: 100%;
             background: $color-accent;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $width-mobile) {
             .timeline {
                 margin: 0;
             }
@@ -570,31 +633,15 @@ body.about-me {
             bottom: 45px;
             .material {
                 @extend %color-invert;
-                .social-icon {
-                    display: inline-block;
+                .container {
                     width: 15%;
-                    height: 20px;
-                    position: relative;
-                    top: 3px;
-                    background-size: contain !important;
-                }
-                .social-icon.ml {
-                    background: url($baseurl + '/about-me/img/mail.svg') no-repeat center;
-                }
-                .social-icon.in {
-                    background: url($baseurl + '/about-me/img/linkedin.svg') no-repeat center;
-                }
-                .social-icon.so {
-                    background: url($baseurl + '/about-me/img/so.svg') no-repeat center;
-                }
-                .social-icon.gh {
-                    background: url($baseurl + '/about-me/img/github.svg') no-repeat center;
-                }
-                .social-icon.md {
-                    background: url($baseurl + '/about-me/img/medium.svg') no-repeat center;
-                }
-                .social-icon.ig {
-                    background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
+                    display: inline-block;
+                    a {
+                        .social-icon {
+                            position: relative;
+                            top: 3px;
+                        }
+                    }
                 }
             }
         }
