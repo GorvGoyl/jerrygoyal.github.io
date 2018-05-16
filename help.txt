@@ -1,15 +1,18 @@
 install jekyll 
     -(Installation via Bash on Windows 10)
     https://jekyllrb.com/docs/windows/
-    - thne add gem support for github pages to jekyll
+    - then add gem support for github pages to jekyll
     - follow "Nokogiri gem installation for ubuntu" refer same jekyll page for nokagiri version
     - sudo gem install nokogiri -v '1.8.2'
     https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
 
-To update pkg's in Bash avoid IPv6
-    - use -o Acquire::ForceIPv4=true
+UPDATE PKGs (avoid IPv6)
+    - bash
+    - jekyll -v
+    -- use -o Acquire::ForceIPv4=true
     -sudo apt-get update -y && sudo apt-get upgrade -y -o Acquire::ForceIPv4=true
-    - bundle update
+    - sudo bundle update
+    - sudo gem update jekyll
 
 To RUN:
     -run in VScode: 

@@ -88,6 +88,47 @@ body.about-me {
     .social-icon.ig {
         background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
     }
+    .tooltip {
+        .tooltiptext {
+            transform: scale(0);
+            z-index: 999;
+            transform-origin: bottom center;
+            min-width: 60px;
+            text-transform: capitalize;
+            background: #444;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            border-radius: 2px;
+            color: #fff;
+            padding: 8px;
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            margin-left: -30px;
+        }
+    }
+    .tooltip:hover .tooltiptext {
+        animation: tooltipPulse 200ms cubic-bezier(0, 0, .2, 1)forwards;
+    }
+    @keyframes tooltipPulse {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0
+        }
+        50% {
+            -webkit-transform: scale(.99);
+            transform: scale(.99)
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible
+        }
+    }
     .material {
         background: $color-main;
         border-radius: 2px;
@@ -291,7 +332,6 @@ body.about-me {
                             position: relative;
                             display: inline-block;
                             vertical-align: top;
-                            overflow: hidden;
                             width: 40px;
                             height: 40px;
                             line-height: 46px;
@@ -299,10 +339,13 @@ body.about-me {
                             background: $color-accent;
                             border-radius: 52px;
                             box-shadow: $box-shadow;
-                        }
-                        .social-icon {
-                            position: relative;
-                            top: 1px;
+                            .tooltiptext {
+                                bottom: 40px;
+                            }
+                            .social-icon {
+                                position: relative;
+                                top: 1px;
+                            }
                         }
                     }
                 }
@@ -327,9 +370,9 @@ body.about-me {
                     position: static;
                     margin-bottom: 30px;
                 }
-                .info{
-                    .social{
-                        .container{
+                .info {
+                    .social {
+                        .container {
                             width: 15%;
                         }
                     }
