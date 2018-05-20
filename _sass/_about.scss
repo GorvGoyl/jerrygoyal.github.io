@@ -172,19 +172,6 @@ body.about-me {
             margin: -57px 0 0 0;
             text-align: center;
         }
-        .card-icon {
-            margin: 0 auto;
-            position: relative;
-            display: block;
-            overflow: hidden;
-            width: 62px;
-            height: 62px;
-            line-height: 62px;
-            background: $color-accent;
-            border-radius: 62px;
-            box-shadow: $box-shadow;
-            color: white;
-        }
         .card-name {
             margin: 20px 0;
             display: block;
@@ -206,6 +193,30 @@ body.about-me {
             margin-bottom: 0;
         }
     }
+    .card-icon {
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 62px;
+        height: 62px;
+        line-height: 62px;
+        background: $color-accent;
+        border-radius: 62px;
+        box-shadow: $box-shadow;
+        color: white;
+        .icon-url {
+            width: 30px;
+            height: 30px;
+            background-size: contain !important;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin: auto;
+        }
+    }
     .section {
         text-align: center;
         padding: 35px 0;
@@ -221,15 +232,11 @@ body.about-me {
         max-width: 1100px;
         margin: 0 auto;
         max-width: 1100px;
-    }
-    @media (max-width: 1080px) {
-        .main-container {
+        @media (max-width: $width-desktop) {
             margin: 0 20px;
         }
-    }
-    @media (max-width: 420px) {
-        .main-container {
-            margin: 0 10px;
+        @media (max-width: $width-mobile-xs) {
+            margin: 0 15px;
         }
     }
     .row {
@@ -246,9 +253,7 @@ body.about-me {
         position: relative;
         text-align: center;
         background: url($baseurl + '/about-me/img/wood.jpg') no-repeat center bottom;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background-size: cover;
         .overlay {
             position: absolute;
             top: 0;
@@ -415,9 +420,30 @@ body.about-me {
     .section.expertise {
         .material {
             min-height: 200px;
+            .card-title {
+                .card-icon {
+                    .icon-url.strategy {
+                        background: url($baseurl + '/about-me/img/chess.svg') no-repeat center;
+                    }
+                    .icon-url.ux {
+                        background: url($baseurl + '/about-me/img/design-tool.svg') no-repeat center;
+                    }
+                    .icon-url.code {
+                        background: url($baseurl + '/about-me/img/code-programing-symbol.svg') no-repeat center;
+                    }
+                }
+            }
         }
     }
     .section.skills {
+        .card-icon {
+            .icon-url.pro {
+                background: url($baseurl + '/about-me/img/programming-code-signs.svg') no-repeat center;
+            }
+            .icon-url.personal {
+                background: url($baseurl + '/about-me/img/business-suit.svg') no-repeat center;
+            }
+        }
         .skill-container {
             padding: 12px 0 14px 0;
             .skill-name {
@@ -463,38 +489,29 @@ body.about-me {
     .section.experience {
         text-align: center;
         position: relative;
-        .title {
-            position: relative;
-            height: 70px;
-            text-align: center;
-            color: #363636;
-            font-size: 36px;
-            font-weight: 100;
-            z-index: 3;
+        @media (max-width: $width-mobile) {
+            bottom: 40px;
         }
-        .circle {
+        .card-icon {
             margin: 0 0 0 -31px;
             position: absolute;
             left: 50%;
             bottom: -45px;
-            width: 62px;
-            height: 62px;
-            background: $color-accent;
-            text-align: center;
-            line-height: 62px;
-            padding-left: 1px;
-            border-radius: 62px;
-            box-shadow: $box-shadow;
-        }
-        @media (max-width: $width-mobile) {
-            .title {
-                padding: 20px 0 0 80px;
-                text-align: left;
+            .icon-url.exp {
+                background: url($baseurl + '/about-me/img/suitcase.svg') no-repeat center;
             }
-            .circle {
-                margin: 0;
-                bottom: 0;
-                left: 0;
+        }
+        .title {
+            position: relative;
+            z-index: 3;
+            @media (max-width: $width-mobile) {
+                padding: 50px 0 0 80px;
+                text-align: left;
+                .card-icon {
+                    margin: 0;
+                    bottom: 0;
+                    left: 0;
+                }
             }
         }
         .timeline {
@@ -510,6 +527,12 @@ body.about-me {
                 width: 3px;
                 height: 100%;
                 background: $color-accent;
+            }
+            @media (max-width: $width-mobile) {
+                margin: 0;
+                &:before {
+                    left: 31px;
+                }
             }
             .block:first-child {
                 margin-top: 0;
@@ -545,6 +568,16 @@ body.about-me {
                         width: 9px;
                         z-index: 1;
                     }
+                    @media (max-width: $width-mobile) {
+                        margin-left: 60px;
+                        padding-top: 60px;
+                        position: relative;
+                        width: auto;
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
+                    }
                     .material {
                         margin: 0;
                         text-align: left;
@@ -573,9 +606,7 @@ body.about-me {
                                 border: 6px solid transparent;
                                 border-right: 6px solid $color-accent;
                             }
-                        }
-                        @media (max-width: $width-mobile) {
-                            .date {
+                            @media (max-width: $width-mobile) {
                                 right: auto;
                                 left: 0;
                             }
@@ -587,18 +618,6 @@ body.about-me {
                         }
                         p {
                             margin: 0;
-                        }
-                    }
-                }
-                @media (max-width: $width-mobile) {
-                    .content {
-                        margin-left: 60px;
-                        padding-top: 60px;
-                        position: relative;
-                        width: auto;
-                        &:before,
-                        &:after {
-                            display: none;
                         }
                     }
                 }
@@ -614,9 +633,7 @@ body.about-me {
                     background: $color-accent;
                     border-radius: 26px;
                     box-shadow: $box-shadow;
-                }
-                @media (max-width: $width-mobile) {
-                    .point {
+                    @media (max-width: $width-mobile) {
                         margin: 0;
                         left: 17px;
                     }
@@ -646,29 +663,17 @@ body.about-me {
                             border-right: none;
                             border-left: 6px solid $color-accent;
                         }
-                    }
-                }
-            }
-            @media (max-width: $width-mobile) {
-                .block:nth-child(even) {
-                    .content .date {
-                        right: auto;
-                        left: 0;
-                        &:before {
-                            left: auto;
-                            right: 100%;
-                            border-left: none;
-                            border-right: 6px solid $color-accent;
+                        @media (max-width: $width-mobile) {
+                            right: auto;
+                            left: 0;
+                            &:before {
+                                left: auto;
+                                right: 100%;
+                                border-left: none;
+                                border-right: 6px solid $color-accent;
+                            }
                         }
                     }
-                }
-            }
-        }
-        @media (max-width: $width-mobile) {
-            .timeline {
-                margin: 0;
-                &:before {
-                    left: 31px;
                 }
             }
         }
