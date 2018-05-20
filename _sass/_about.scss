@@ -89,6 +89,29 @@ body.about-me {
         background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
     }
     .tooltip {
+        display: inline-block;
+        position: relative;
+        &:focus,
+        &:active,
+        &:hover {
+            &:before {
+                animation: ripple-out 1s;
+            }
+            .tooltiptext {
+                animation: tooltipPulse 600ms cubic-bezier(0, 0, .2, 1)forwards;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            border: $color-accent solid 6px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 51%;
+            opacity: 0;
+        }
         .tooltiptext {
             transform: scale(0);
             z-index: 999;
@@ -109,24 +132,33 @@ body.about-me {
             margin-left: -30px;
         }
     }
-    .tooltip:hover .tooltiptext {
-        animation: tooltipPulse 200ms cubic-bezier(0, 0, .2, 1)forwards;
+    /* Ripple Out */
+    @keyframes ripple-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.35);
+            opacity: 0;
+        }
     }
     @keyframes tooltipPulse {
         0% {
-            -webkit-transform: scale(0);
             transform: scale(0);
             opacity: 0
         }
         50% {
-            -webkit-transform: scale(.99);
-            transform: scale(.99)
+            opacity: 0;
+            transform: scale(0);
+        }
+        70% {
+            opacity: 1;
+            transform: scale(0.9);
         }
         100% {
-            -webkit-transform: scale(1);
             transform: scale(1);
             opacity: 1;
-            visibility: visible
+            visibility: visible;
         }
     }
     .material {
@@ -301,6 +333,16 @@ body.about-me {
             @extend %vcard-width;
             height: 350px;
             display: inline-block;
+            &:before {
+                //content: '';
+                position: absolute;
+                border-style: solid;
+                border-width: 0 18px 380px 76px;
+                border-color: transparent white white transparent;
+                top: 0;
+                left: 123px;
+                z-index: 1;
+            }
             .dp {
                 height: 350px;
                 float: left;
@@ -337,7 +379,7 @@ body.about-me {
                             line-height: 46px;
                             text-align: center;
                             background: $color-accent;
-                            border-radius: 52px;
+                            border-radius: 51%;
                             box-shadow: $box-shadow;
                             .tooltiptext {
                                 bottom: 40px;
@@ -350,16 +392,6 @@ body.about-me {
                     }
                 }
             }
-        }
-        .vcard:before {
-            //content: '';
-            position: absolute;
-            border-style: solid;
-            border-width: 0 18px 380px 76px;
-            border-color: transparent white white transparent;
-            top: 0;
-            left: 123px;
-            z-index: 1;
         }
         @media (max-width: $width-mobile) {
             .vcard {
@@ -469,15 +501,50 @@ body.about-me {
             margin: 30px 0 0 0;
             padding: 50px 0 0 0;
             position: relative;
+            &:before {
+                content: '';
+                margin: 0 0 0 -2px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 3px;
+                height: 100%;
+                background: $color-accent;
+            }
             .block:first-child {
                 margin-top: 0;
             }
             .block {
                 margin: 30px 0;
                 position: relative;
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
                 .content {
                     position: relative;
                     width: 46%;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 19px;
+                        left: 100%;
+                        height: 0;
+                        width: 0;
+                        border: 7px solid transparent;
+                        border-left: 7px solid $color-main;
+                        z-index: 2;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 18px;
+                        left: 100%;
+                        height: 16px;
+                        width: 9px;
+                        z-index: 1;
+                    }
                     .material {
                         margin: 0;
                         text-align: left;
@@ -495,17 +562,17 @@ body.about-me {
                             border-color: transparent;
                             left: calc(100% + 80px);
                             white-space: nowrap;
-                        }
-                        .date:before {
-                            content: '';
-                            margin: -6px 0 0 0;
-                            position: absolute;
-                            top: 50%;
-                            right: 100%;
-                            height: 0;
-                            width: 0;
-                            border: 6px solid transparent;
-                            border-right: 6px solid $color-accent;
+                            &:before {
+                                content: '';
+                                margin: -6px 0 0 0;
+                                position: absolute;
+                                top: 50%;
+                                right: 100%;
+                                height: 0;
+                                width: 0;
+                                border: 6px solid transparent;
+                                border-right: 6px solid $color-accent;
+                            }
                         }
                         @media (max-width: $width-mobile) {
                             .date {
@@ -523,36 +590,16 @@ body.about-me {
                         }
                     }
                 }
-                .content:before {
-                    content: '';
-                    position: absolute;
-                    top: 19px;
-                    left: 100%;
-                    height: 0;
-                    width: 0;
-                    border: 7px solid transparent;
-                    border-left: 7px solid $color-main;
-                    z-index: 2;
-                }
-                .content:after {
-                    content: '';
-                    position: absolute;
-                    top: 18px;
-                    left: 100%;
-                    height: 16px;
-                    width: 9px;
-                    z-index: 1;
-                }
                 @media (max-width: $width-mobile) {
                     .content {
                         margin-left: 60px;
                         padding-top: 60px;
                         position: relative;
                         width: auto;
-                    }
-                    .content:before,
-                    .content:after {
-                        display: none;
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
                 .point {
@@ -578,68 +625,51 @@ body.about-me {
             .block:nth-child(even) {
                 .content {
                     float: right;
+                    &:before {
+                        top: 19px;
+                        left: auto;
+                        right: 100%;
+                        border-left: none;
+                        border-right: 7px solid $color-main;
+                    }
+                    &:after {
+                        top: 19px;
+                        left: auto;
+                        right: 100%;
+                    }
                     .date {
                         left: auto;
                         right: calc(100% + 80px);
+                        &:before {
+                            right: auto;
+                            left: 100%;
+                            border-right: none;
+                            border-left: 6px solid $color-accent;
+                        }
                     }
-                    .date::before {
-                        right: auto;
-                        left: 100%;
-                        border-right: none;
-                        border-left: 6px solid $color-accent;
-                    }
                 }
-                .content:before {
-                    top: 19px;
-                    left: auto;
-                    right: 100%;
-                    border-left: none;
-                    border-right: 7px solid $color-main;
-                }
-                .content:after {
-                    top: 19px;
-                    left: auto;
-                    right: 100%;
-                }
-            }
-            .block:after {
-                content: "";
-                display: table;
-                clear: both;
             }
             @media (max-width: $width-mobile) {
                 .block:nth-child(even) {
                     .content .date {
                         right: auto;
                         left: 0;
-                    }
-                }
-                .block:nth-child(even) {
-                    .content .date:before {
-                        left: auto;
-                        right: 100%;
-                        border-left: none;
-                        border-right: 6px solid $color-accent;
+                        &:before {
+                            left: auto;
+                            right: 100%;
+                            border-left: none;
+                            border-right: 6px solid $color-accent;
+                        }
                     }
                 }
             }
-        }
-        .timeline:before {
-            content: '';
-            margin: 0 0 0 -2px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 3px;
-            height: 100%;
-            background: $color-accent;
         }
         @media (max-width: $width-mobile) {
             .timeline {
                 margin: 0;
-            }
-            .timeline:before {
-                left: 31px;
+                &:before {
+                    left: 31px;
+                }
             }
         }
     }
