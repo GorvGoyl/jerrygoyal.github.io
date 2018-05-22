@@ -1,6 +1,9 @@
+/* COLORS */
+
 $color-main:#fefefe;
 $color-accent:#304fff;
-$font-color:#868686;
+$font-color:#363636;
+$para-color:#868686;
 $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 %vcard-width {
     width: 100%;
@@ -12,20 +15,50 @@ $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
     color: $color-main;
 }
 
+/* FONTS */
+
+%main-title-font {
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 44px;
+    color: $font-color;
+}
+
+%title-font {
+    height: 90px;
+    text-align: center;
+    color: $font-color;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+%subtitle-font {
+    margin: 20px 0;
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    color: $font-color;
+}
+
+%sub-subtitle-font {}
+
+%para-font {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
 
 body.about-me {
     background: #eeeeee;
     font-size: 16px;
-    color: $font-color;
+    color: $para-color;
     line-height: 20px;
     letter-spacing: 0.01em;
     font-weight: 300;
     p {
-        font-size: 16px;
-        line-height: 25px;
-        padding: 0;
-        margin: 0;
-        text-align: left;
+        @extend %para-font;
     }
     .social-icon {
         display: inline-block;
@@ -130,17 +163,16 @@ body.about-me {
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
         padding: 25px;
         margin: 0 0 30px 0;
+        .main-title {
+            @extend %main-title-font;
+        }
         .card-title {
             position: relative;
             margin: -57px 0 0 0;
             text-align: center;
         }
-        .card-name {
-            margin: 20px 0;
-            display: block;
-            font-weight: 400;
-            font-size: 17px;
-            color: #363636;
+        .card-subtitle {
+            @extend %subtitle-font;
         }
         .card-subname {
             margin: 0 0 10px 0;
@@ -149,7 +181,7 @@ body.about-me {
             vertical-align: top;
             background: #efefef;
             font-size: 13px;
-            color: #363636;
+            color: $font-color;
             border-radius: 2px;
         }
         .card-content {
@@ -184,11 +216,7 @@ body.about-me {
         text-align: center;
         padding: 35px 0;
         .title {
-            height: 90px;
-            text-align: center;
-            color: #363636;
-            font-size: 36px;
-            font-weight: 100;
+            @extend %title-font;
         }
     }
     .main-container {
@@ -241,12 +269,12 @@ body.about-me {
                 letter-spacing: 2px;
             }
             .my-name {
-                font-size: 64px;
+                font-size: 75px;
                 font-weight: 700;
                 margin-top: 20px;
                 margin-bottom: 10px;
                 line-height: 1.1;
-                color: inherit;
+                letter-spacing: 2px;
             }
             .typewrite {
                 text-transform: uppercase;
@@ -319,17 +347,9 @@ body.about-me {
                 background: url($baseurl + '/about-me/img/profile.png') no-repeat center;
             }
             .info {
-                .name {
-                    font-size: 42px;
-                    font-weight: 100;
-                    line-height: 44px;
-                    color: #363636;
-                }
-                .profile {
+                .card-subtitle {
                     margin: 15px 0 0 0;
                     font-size: 16px;
-                    font-weight: 400;
-                    color: #363636;
                 }
                 .social {
                     margin: 25px 0;
@@ -412,7 +432,7 @@ body.about-me {
                 position: relative;
                 display: block;
                 font-size: 14px;
-                color: #363636;
+                color: $font-color;
                 font-weight: 400;
                 text-align: left;
             }
@@ -572,7 +592,7 @@ body.about-me {
                                 left: 0;
                             }
                         }
-                        .card-name {
+                        .card-subtitle {
                             margin: 0 0 10px 0;
                             padding: 0;
                             text-align: left;
@@ -656,7 +676,7 @@ body.about-me {
                     height: 100px;
                     bottom: 20px;
                 }
-                .card-name {
+                .card-subtitle {
                     margin-top: 0px;
                 }
                 .card-subname {
