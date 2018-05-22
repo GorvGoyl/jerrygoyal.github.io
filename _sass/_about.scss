@@ -1,5 +1,6 @@
 $color-main:#fefefe;
 $color-accent:#304fff;
+$font-color:#868686;
 $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 %vcard-width {
     width: 100%;
@@ -11,52 +12,14 @@ $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
     color: $color-main;
 }
 
+
 body.about-me {
     background: #eeeeee;
     font-size: 16px;
-    color: #868686;
+    color: $font-color;
     line-height: 20px;
     letter-spacing: 0.01em;
     font-weight: 300;
-    .h1,
-    .h2,
-    .h3,
-    h1,
-    h2,
-    h3 {
-        margin-top: 20px !important;
-        margin-bottom: 10px !important;
-    }
-    h1 {
-        margin: .67em 0;
-        font-size: 2em;
-    }
-    .h4,
-    .h5,
-    .h6,
-    h4,
-    h5,
-    h6 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .h1,
-    .h2,
-    .h3,
-    .h4,
-    .h5,
-    .h6,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: inherit;
-        font-weight: 500;
-        line-height: 1.1;
-        color: inherit;
-    }
     p {
         font-size: 16px;
         line-height: 25px;
@@ -245,14 +208,13 @@ body.about-me {
         padding: 0 0 30px 0;
     }
     .section.intro {
-        background-size: cover;
         background-attachment: fixed;
         width: 100%;
         height: 100vh; // min-height: 768px;
         display: table;
         position: relative;
         text-align: center;
-        background: url($baseurl + '/about-me/img/wood.jpg') no-repeat center bottom;
+        background: url($baseurl + '/about-me/img/intro.jpg') no-repeat center bottom;
         background-size: cover;
         .overlay {
             position: absolute;
@@ -272,12 +234,11 @@ body.about-me {
             transform: translateY(-2.1rem);
             color: #ffffff;
             .hello-world {
-                color: #cc005f;
+                color: $color-accent;
                 font-size: 22px;
                 margin-top: 10px;
                 margin-bottom: 10px;
-                font-weight: 500;
-                line-height: 1.1;
+                letter-spacing: 2px;
             }
             .my-name {
                 font-size: 64px;
@@ -286,7 +247,6 @@ body.about-me {
                 margin-bottom: 10px;
                 line-height: 1.1;
                 color: inherit;
-                margin: .67em 0;
             }
             .typewrite {
                 text-transform: uppercase;
@@ -294,6 +254,7 @@ body.about-me {
                 font-size: 20px;
                 margin-bottom: 30px;
                 text-align: center;
+                font-weight: 400;
                 .wrap {
                     animation: caret 1s steps(1) infinite;
                     border-right: 0.08em solid #fff;

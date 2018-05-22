@@ -79,55 +79,49 @@ experience:
     <div class='section intro'>
         <div class="overlay"></div>
         <div class='content'>
-            <h5 class="hello-world">Hello, World.</h5>
-            <h1 class="my-name">I'm Gourav Goyal</h1>
+            <div class="hello-world">Hello, World.</div>
+            <div class="my-name">I'm Gourav Goyal</div>
             <p class="typewrite" data-period="2000" data-type='[ "FULL STACK DEVELOPER","UI/UX DESIGNER" ]'>
                 <span class="wrap"></span>
             </p>
-            <a class="scroll-down">
+            <a href='#profile' class="scroll-down">
                 <i></i>
             </a>
         </div>
 
     </div>
     <!-- social links:
-Mail
-LinkedIn
-Stackoverflow
-Github
-Medium
-Instagram
--
-
 Add location
+
+<div class="section portfolio">
+
+<div class='section blog>
 -->
     <div class='main-container'>
-                <div class='section card'>
-                    <div class='content row'>
-                        <div class='col-12'>
-                            <div class='vcard material'>
-                                <div class='dp'></div>
-                                <div class='info'>
-                                    <div class='name'>Gourav Goyal</div>
-                                    <div class='profile'>Full Stack Developer & UI/UX Designer</div>
-                                    <div class='social'>
-                                {% include social_links_template.html %}                                        
-                                    </div>
-                                    <p>
-                                        Namaste, My name is Gourav Goyal. I've 3+ years of experience in building dynamic web projects, mobile apps and, desktop
-                                        software. I love to code, create great user experiences and contribute to the open source software
-                                        community.
-                                        <br>I am always hungry for new challenges and innovations.
-                                    </p>
-                                </div>
-                
+        <div class='section card'>
+            <div class='content row'>
+                <div class='col-12'>
+                    <div class='vcard material'>
+                        <div class='dp'></div>
+                        <div class='info'>
+                            <div class='name'>Gourav Goyal</div>
+                            <div class='profile'>Full Stack Developer & UI/UX Designer</div>
+                            <div class='social'>
+                                {% include social_links_template.html %}
                             </div>
+                            <p>
+                                Namaste, My name is Gourav Goyal. I've 3+ years of experience in building dynamic web projects, mobile apps and, desktop
+                                software. I love to code, create great user experiences and contribute to the open source
+                                software community.
+                                <br>I am always hungry for new challenges and innovations.
+                            </p>
                         </div>
+
                     </div>
-                
                 </div>
+            </div>
 
-
+        </div>
 
         <div class='section expertise'>
             <div>
@@ -156,7 +150,7 @@ Add location
                             <div class='card-title'>
                                 <div class='card-icon'>
                                     <div class='icon-url ux'></div>
-                                    
+
                                 </div>
                                 <div class='card-name'>UI/UX</div>
                             </div>
@@ -221,8 +215,6 @@ Add location
                 </div>
             </div>
 
-
-
         </div>
         <div class="section experience">
             <div class='title'> Experience
@@ -235,18 +227,7 @@ Add location
                 {% include timeline_template.html experience = page.experience %}
             </div>
         </div>
-        <!-- 
-
-<div class="section portfolio">
-
-</div>
-<div class="section interest">
-http://preview.themeforest.net/item/matresume-material-cv-resume-vcard-portfolio-html-template/full_screen_preview/19309564
-</div> 
-<div class='section blog>
-    
-</div>
--->
+   
         <div class="section contact">
             <div>
                 <div class='subject'>
@@ -271,7 +252,7 @@ http://preview.themeforest.net/item/matresume-material-cv-resume-vcard-portfolio
                 <div class='social content row'>
                     <div class='col-12'>
                         <div class='material'>
-                       {% include social_links_template.html %}
+                            {% include social_links_template.html %}
                         </div>
                     </div>
                 </div>
