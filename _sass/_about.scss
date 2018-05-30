@@ -1,7 +1,8 @@
 /* COLORS */
 
 $color-main:#fefefe;
-$color-accent:#304fff;
+$color-accent: #2948ff;
+$color-gradient:linear-gradient(to right, #396afc, #2948ff);
 $font-color:#363636;
 $para-color:#868686;
 $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
@@ -11,7 +12,7 @@ $box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 %color-invert {
-    background: $color-accent;
+    background: $color-gradient;
     color: $color-main;
 }
 
@@ -84,6 +85,21 @@ body.about-me {
     .social-icon.ig {
         background: url($baseurl + '/about-me/img/instagram.svg') no-repeat center;
     }
+    .ripple-effect {
+        .tooltip {
+            &:before {
+                content: '';
+                position: absolute;
+                border: $color-accent solid 6px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 51%;
+                opacity: 0;
+            }
+        }
+    }
     .tooltip {
         display: inline-block;
         position: relative;
@@ -96,17 +112,6 @@ body.about-me {
             .tooltiptext {
                 animation: tooltipPulse 600ms cubic-bezier(0, 0, .2, 1)forwards;
             }
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            border: $color-accent solid 6px;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border-radius: 51%;
-            opacity: 0;
         }
         .tooltiptext {
             transform: scale(0);
@@ -196,7 +201,7 @@ body.about-me {
         width: 62px;
         height: 62px;
         line-height: 62px;
-        background: $color-accent;
+        background: $color-gradient;
         border-radius: 62px;
         box-shadow: $box-shadow;
         color: white;
@@ -250,8 +255,8 @@ body.about-me {
             left: 0;
             width: 100%;
             height: 100%;
-            background: #111111;
-            opacity: .85;
+            background: rgba(0, 6, 45, 0.9);
+            overflow: hidden;
         }
         .content {
             display: table-cell;
@@ -344,7 +349,8 @@ body.about-me {
                 position: relative;
                 bottom: 25px;
                 right: 25px;
-                background: url($baseurl + '/about-me/img/profile.png') no-repeat center;
+                background-size: cover !important;
+                background: url($baseurl + '/about-me/img/me.jpg') no-repeat center;
             }
             .info {
                 .card-subtitle {
@@ -449,7 +455,7 @@ body.about-me {
                     left: 0;
                     width: 70%;
                     height: 8px;
-                    background: $color-accent;
+                    background: $color-gradient;
                     border-radius: 2px;
                     .dot {
                         position: absolute;
@@ -498,7 +504,7 @@ body.about-me {
         .timeline {
             margin: 30px 0 0 0;
             padding: 50px 0 0 0;
-            position: relative;
+            position: relative; //verticle line
             &:before {
                 content: '';
                 margin: 0 0 0 -2px;
@@ -671,7 +677,8 @@ body.about-me {
                 position: relative;
                 top: 15px;
                 .card-icon {
-                    background: url($baseurl + '/about-me/img/rev1.jpg') no-repeat center;
+                    background: url($baseurl + '/about-me/img/me_round.jpg') no-repeat center;
+                    background-size: contain;
                     width: 100px;
                     height: 100px;
                     bottom: 20px;
@@ -681,7 +688,7 @@ body.about-me {
                 }
                 .card-subname {
                     padding: 2px 5px;
-                    background: $color-accent;
+                    background: $color-gradient;
                     color: $color-main;
                     font-weight: 400;
                 }
