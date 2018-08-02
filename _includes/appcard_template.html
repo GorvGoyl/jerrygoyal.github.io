@@ -1,0 +1,42 @@
+<div class='appcard-container'>
+    <a class='appcard material' target="_blank" href="{{include.card_data.href}}">
+        <div class='appcard-title'>
+            <div class='appcard-name'>
+                {{ include.card_data.title }}
+            </div>
+        </div>
+        <div class='appcard-content'>
+            <div class='appcard-logo'>
+                <img class='appcard-img' src="{{include.card_data.image}}" alt="{{ include.card_data.title }}">
+            </div>
+            <div class='appcard-platforms'>
+
+                {% for platform in include.card_data .downloads %} {% case platform %} {% when 'win' %}
+                <div class='card-platform'>
+                    <img src="/img/win.svg" title="Windows">
+                    <div class='platform-name'>Windows</div>
+                </div>
+                {% when 'mac' %}
+                <div class='card-platform'>
+                    <img src="img/mac.svg" title="Mac">
+                    <div class='platform-name'>Mac</div>
+                </div>
+                {% when 'linux' %}
+                <div class='card-platform'>
+                    <img src="img/linux.svg" title="Linux">
+                    <div class='platform-name'>Linux</div>
+                </div>
+                {% when 'chrome' %}
+                <div class='card-platform'>
+                    <img src="img/chrome.svg" title="Chrome Extension">
+                    <div class='platform-name'>Chrome Extension</div>
+                </div>
+                {% endcase %} {% endfor %}
+                <div class='card-desc'>
+                    <p>{{include.card_data.desc}}</p>
+                </div>
+            </div>
+
+        </div>
+    </a>
+</div>

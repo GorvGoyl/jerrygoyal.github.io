@@ -4,26 +4,49 @@
 <html lang="en">
 {% include header.html title="Jerry Factory" %}
 
-<body>
-    {% assign homepage_links = site.data.navbar_links['homepage'] %}
-    {% include navbar_template.html links = homepage_links %}
-    <div class="row downloaddiv toppadding">
-
-        <div align="center">
-            <img class='mainimg' src="./img/jf335.png" alt="Flash Clipboard">
+<body class='home'>
+    {% assign homepage_links = site.data.navbar_links['homepage'] %} {% include navbar_template.html links = homepage_links %}
+    <div class="intro">
+        <div class='background'>
         </div>
-        <h1>
-            Jerry Factory</h1>
-        <h3>Free and Open Source Apps</h3>
-
-
     </div>
-    <div class="row started" id="apps">
-        <h1>Apps & Software</h1>
-        <div class='app_cards_container'>
-            {% include card_template.html card_data = site.data.cards_data %}
+    <div class='main-container'>
+        <div class='section name'>
+            <div class='content row'>
+                <div class='col-12'>
+                    <div class='card-icon'></div>
+                    <div class="main-title">Jerry Factory</div>
+                    <div class="card-subtitle">Free and Open Source Apps</div>
+                </div>
+            </div>
         </div>
+        <div class="section apps" id="apps">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Apps & Software</div>
+                </div>
+            </div>
+            <div class='content row'>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[0] %} {% include appcard_template.html card_data = cards_data %}
+                </div>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[1] %} {% include appcard_template.html card_data = cards_data %}
+                </div>
+            </div>
+            <div class='content row'>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[2] %} {% include appcard_template.html card_data = cards_data %}
 
+                </div>
+                <!-- <div class='col-6'>
+                     {% assign cards_data = site.data.cards_data[3] %} 
+                     {% include appcard_template.html card_data = cards_data %}
+
+                </div> -->
+            </div>
+
+        </div>
     </div>
 
     {% include scripts_include.html %}

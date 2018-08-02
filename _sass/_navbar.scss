@@ -4,6 +4,7 @@
     height: 55px;
     border-bottom: $nav-border-bottom;
     position: fixed;
+    top: 0;
     z-index: 10;
     a {
         color: $nav-color-second;

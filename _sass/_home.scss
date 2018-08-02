@@ -1,0 +1,117 @@
+body.home {
+    .intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 320px;
+        background: $color-accent;
+        @media (max-width: $width-mobile) {
+            height: 202px;
+        }
+        .background {
+            background: url($baseurl + '/img/slide-bg.jpg') no-repeat center;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+    .main-container {
+        margin: 320px 0 0 0;
+        @media (max-width: $width-mobile) {
+            margin: 202px 0 0 0;
+        }
+        .name {
+            padding-top: 0;
+            .col-12 {
+                margin-top: -90px;
+                .card-icon {
+                    background: url(/img/jf335.png) no-repeat center;
+                    background-size: 100px;
+                    width: 148px;
+                    height: 148px;
+                    background-color: $font-color;
+                }
+                .main-title {
+                    margin-top: 25px;
+                }
+                .card-subtitle {
+                    margin: 15px 0 0 0;
+                    font-size: 16px;
+                }
+            }
+        }
+        .apps {
+            .appcard-container {
+                position: relative;
+            }
+            .appcard.material {
+                display: inline-block;
+                padding: 0;
+                border-radius: 19px;
+                box-shadow: $box-shadow-heavy;
+                overflow: hidden;
+                .appcard-title {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    .appcard-name {
+                        @extend %app-title-font;
+                        @extend %color-invert;
+                        display: inline-block;
+                        padding: 10px;
+                        position: relative;
+                        bottom: 20px;
+                        box-shadow: $box-shadow-heavy;
+                    }
+                }
+                .appcard-content {
+                    position: relative;
+                    .appcard-logo {
+                        margin: 75px 60px 145px 60px;
+                        .appcard-img {
+                            width: 150px;
+                            height: 150px;
+                            background-size: contain;
+                        }
+                    }
+                    .appcard-platforms {
+                        border-radius: 0 0 19px 19px;
+                        background: $color-gradient;
+                        position: absolute;
+                        width: 100%;
+                        bottom: -40px;
+                        transform: translateY(100%);
+                        transition: all 0.5s ease;
+                        .card-platform {
+                            padding: 25px;
+                            display: inline-block;
+                            img {
+                                width: 30px;
+                            }
+                            .platform-name {
+                                @extend %app-platform-font;
+                            }
+                        }
+                    }
+                    .card-desc p {
+                        @extend %desc-font;
+                        color: $color-main;
+                        margin: 0 15px 15px 15px;
+                    }
+                }
+                &:focus,
+                &:active,
+                &:hover {
+                    .appcard-platforms {
+                        bottom: -145px;
+                        transform: translateY(0%);
+                    }
+                }
+            }
+        }
+    }
+}

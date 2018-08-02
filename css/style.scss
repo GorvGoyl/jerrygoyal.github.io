@@ -1,7 +1,7 @@
 --- 
 ---
 /*****************************************************      
-                 * VARIABLES *
+                 * COMMON VARIABLES *
 *****************************************************/
 
 $baseurl:"{{ site.baseurl }}";
@@ -11,8 +11,79 @@ $nav-border-bottom: solid 1px rgba(16, 173, 233, 0.851);
 $width-mobile-xs: 420px;
 $width-mobile: 768px;
 $width-desktop: 1080px;
+$page-max-width:1100px;
+// COLORS //
+$color-main:#fefefe;
+$color-accent: #2948ff;
+$color-gradient:linear-gradient(to right, #396afc, #2948ff);
+$font-color:#363636;
+$para-color:#868686;
+$color-background:#eeeeee;
+$box-shadow-heavy:0 6px 10px 0 rgba(0, 0, 0, 0.2);
+$box-shadow-light:0 1px 4px 0 rgba(0, 0, 0, 0.14);
+%color-invert {
+    background: $color-gradient;
+    color: $color-main;
+}
+
+// FONT //
+%main-title-font {
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 44px;
+    color: $font-color;
+}
+
+%title-font {
+    height: 90px;
+    text-align: center;
+    color: $font-color;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+%app-title-font {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+%app-platform-font {
+    font-size: 16px;
+    line-height: 25px;
+    color: $color-main;
+}
+
+%subtitle-font {
+    margin: 20px 0;
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    color: $font-color;
+}
+
+%para-font {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+%desc-font {
+    font-size: 15px;
+    line-height: 23px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
 /*****************************************************      
-                 * COMMON *
+                 * COMMON VARIABLES END *
+*****************************************************/
+
+/*****************************************************      
+                 * COMMON CSS START *
 *****************************************************/
 
 * {
@@ -27,20 +98,19 @@ body {
     font-family: 'Roboto', sans-serif, helvetica;
     margin: 0;
     padding: 0;
+    background: $color-background;
+    font-size: 16px;
+    color: $para-color;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+    p {
+        @extend %para-font;
+    }
 }
 
 a {
     text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-    {
-    text-align: center;
 }
 
 .hidden {
@@ -48,8 +118,106 @@ h6,
 }
 
 /*****************************************************      
+                 * COMMON CSS END*
+*****************************************************/
+
+/*****************************************************      
+                 MATERIAL START
+*****************************************************/
+
+.material {
+    background: $color-main;
+    border-radius: 2px;
+    box-shadow: $box-shadow-light;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    .card-subname {
+        margin: 0 0 10px 0;
+        padding: 1px 5px;
+        display: inline-block;
+        vertical-align: top;
+        background: #efefef;
+        font-size: 13px;
+        color: $font-color;
+        border-radius: 2px;
+    }
+    .card-content {
+        margin-bottom: 0;
+    }
+}
+
+.main-container {
+    margin: 0 auto;
+    position: relative;
+    background: $color-background;
+}
+
+.main-title {
+    @extend %main-title-font;
+}
+
+.card-title {
+    position: relative;
+    margin: -57px 0 0 0;
+    text-align: center;
+}
+
+.card-subtitle {
+    @extend %subtitle-font;
+}
+
+.card-icon {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    background: $color-gradient;
+    border-radius: 51%;
+    box-shadow: $box-shadow-heavy;
+    color: white;
+    .icon-url {
+        width: 30px;
+        height: 30px;
+        background-size: contain !important;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        margin: auto;
+    }
+}
+
+.section {
+    text-align: center;
+    padding: 35px 0;
+    .title {
+        @extend %title-font;
+    }
+}
+
+/*****************************************************      
+                 MATERIAL END
+*****************************************************/
+
+/*****************************************************      
                  BOOTSTRAP START
 *****************************************************/
+
+.row {
+    margin: 0 auto;
+    padding: 0 0 30px 0;
+    max-width: $page-max-width;
+    @media (max-width: $width-desktop) {
+        margin: 0 10px;
+    }
+    @media (max-width: $width-mobile-xs) {
+        margin: 0 5px;
+    }
+}
 
 .row:after {
     content: '';
@@ -117,37 +285,12 @@ h6,
                  NAV BAR END
 *****************************************************/
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+@import 'home';
 
-.row {
-    height: auto;
-    padding: 10px;
-}
+/*****************************************************      
+                 FLASH CLIPBOARD
+*****************************************************/
 
-.row.downloaddiv {
-    background-color: #005ec8; // background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #0f8afc80), color-stop(100%, #005ec8f5));
-    // background-image: -webkit-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    // background-image: -moz-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    // background-image: -ms-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    // background-image: -o-linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    // background-image: linear-gradient(45deg, #0f8afc80 0, #005ec8f5 100%);
-    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f8afc80', endColorstr='#005ec8f5', GradientType=1);
-}
-
-.home {
-    font-weight: bold;
-    font-size: 20px !important;
-    letter-spacing: 1px;
-    line-height: 21px;
-}
-
-.downloads {
-    text-align: center;
-}
 
 /*****************************************************      
                  * DOWNLOAD BUTTONS *
@@ -262,6 +405,14 @@ img.sshots_img {
 
 /* MAIN PAGE */
 
+
+
+
+
+
+/*****************************************************      
+                 FLASH CLIPBOARD END
+*****************************************************/
 /*****************************************************      
                  * CARD LAYOUT *
 *****************************************************/
@@ -270,19 +421,6 @@ img.sshots_img {
 /*****************************************************      
                  * CARD LAYOUT END *
 *****************************************************/
-
-/*****************************************************      
-                 FLASH CLIPBOARD
-*****************************************************/
-
-.toppadding {
-    padding-top: 150px;
-}
-
-/*****************************************************      
-                 FLASH CLIPBOARD END
-*****************************************************/
-
 /*****************************************************      
                  ABOUT-ME
 *****************************************************/

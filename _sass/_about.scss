@@ -1,66 +1,9 @@
-/* COLORS */
-
-$color-main:#fefefe;
-$color-accent: #2948ff;
-$color-gradient:linear-gradient(to right, #396afc, #2948ff);
-$font-color:#363636;
-$para-color:#868686;
-$box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 %vcard-width {
     width: 100%;
     max-width: 700px;
 }
 
-%color-invert {
-    background: $color-gradient;
-    color: $color-main;
-}
-
-/* FONTS */
-
-%main-title-font {
-    font-size: 42px;
-    font-weight: 100;
-    line-height: 44px;
-    color: $font-color;
-}
-
-%title-font {
-    height: 90px;
-    text-align: center;
-    color: $font-color;
-    font-size: 36px;
-    font-weight: 100;
-}
-
-%subtitle-font {
-    margin: 20px 0;
-    display: block;
-    font-weight: 400;
-    font-size: 17px;
-    color: $font-color;
-}
-
-%sub-subtitle-font {}
-
-%para-font {
-    font-size: 16px;
-    line-height: 25px;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
 body.about-me {
-    background: #eeeeee;
-    font-size: 16px;
-    color: $para-color;
-    line-height: 20px;
-    letter-spacing: 0.01em;
-    font-weight: 300;
-    p {
-        @extend %para-font;
-    }
     .social-icon {
         display: inline-block;
         width: 20px;
@@ -161,84 +104,6 @@ body.about-me {
             opacity: 1;
             visibility: visible;
         }
-    }
-    .material {
-        background: $color-main;
-        border-radius: 2px;
-        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-        padding: 25px;
-        margin: 0 0 30px 0;
-        .main-title {
-            @extend %main-title-font;
-        }
-        .card-title {
-            position: relative;
-            margin: -57px 0 0 0;
-            text-align: center;
-        }
-        .card-subtitle {
-            @extend %subtitle-font;
-        }
-        .card-subname {
-            margin: 0 0 10px 0;
-            padding: 1px 5px;
-            display: inline-block;
-            vertical-align: top;
-            background: #efefef;
-            font-size: 13px;
-            color: $font-color;
-            border-radius: 2px;
-        }
-        .card-content {
-            margin-bottom: 0;
-        }
-    }
-    .card-icon {
-        margin: 0 auto;
-        position: relative;
-        display: block;
-        overflow: hidden;
-        width: 62px;
-        height: 62px;
-        line-height: 62px;
-        background: $color-gradient;
-        border-radius: 62px;
-        box-shadow: $box-shadow;
-        color: white;
-        .icon-url {
-            width: 30px;
-            height: 30px;
-            background-size: contain !important;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            margin: auto;
-        }
-    }
-    .section {
-        text-align: center;
-        padding: 35px 0;
-        .title {
-            @extend %title-font;
-        }
-    }
-    .main-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        max-width: 1100px;
-        @media (max-width: $width-desktop) {
-            margin: 0 20px;
-        }
-        @media (max-width: $width-mobile-xs) {
-            margin: 0 15px;
-        }
-    }
-    .row {
-        padding-bottom: 0;
-        margin: 0 -10px;
-        padding: 0 0 30px 0;
     }
     .section.intro {
         background-attachment: fixed;
@@ -372,7 +237,7 @@ body.about-me {
                             text-align: center;
                             background: $color-accent;
                             border-radius: 51%;
-                            box-shadow: $box-shadow;
+                            box-shadow: $box-shadow-heavy;
                             .tooltiptext {
                                 bottom: 40px;
                             }
@@ -407,17 +272,17 @@ body.about-me {
     .section.expertise {
         .material {
             min-height: 200px;
-            .card-title {
-                .card-icon {
-                    .icon-url.strategy {
-                        background: url($baseurl + '/about-me/img/chess.svg') no-repeat center;
-                    }
-                    .icon-url.ux {
-                        background: url($baseurl + '/about-me/img/design-tool.svg') no-repeat center;
-                    }
-                    .icon-url.code {
-                        background: url($baseurl + '/about-me/img/code-programing-symbol.svg') no-repeat center;
-                    }
+        }
+        .card-title {
+            .card-icon {
+                .icon-url.strategy {
+                    background: url($baseurl + '/about-me/img/chess.svg') no-repeat center;
+                }
+                .icon-url.ux {
+                    background: url($baseurl + '/about-me/img/design-tool.svg') no-repeat center;
+                }
+                .icon-url.code {
+                    background: url($baseurl + '/about-me/img/code-programing-symbol.svg') no-repeat center;
                 }
             }
         }
@@ -467,17 +332,24 @@ body.about-me {
                         text-align: center;
                         background: $color-accent;
                         border-radius: 26px;
-                        box-shadow: $box-shadow;
+                        box-shadow: $box-shadow-heavy;
                     }
                 }
             }
         }
     }
     .section.experience {
-        text-align: center;
         position: relative;
+        max-width: $page-max-width;
+        margin: 0 auto;
         @media (max-width: $width-mobile) {
             bottom: 40px;
+        }
+        @media (max-width: $width-desktop) {
+            margin: 0 20px;
+        }
+        @media (max-width: $width-mobile-xs) {
+            margin: 0 10px;
         }
         .card-icon {
             margin: 0 0 0 -31px;
@@ -598,14 +470,14 @@ body.about-me {
                                 left: 0;
                             }
                         }
-                        .card-subtitle {
-                            margin: 0 0 10px 0;
-                            padding: 0;
-                            text-align: left;
-                        }
                         p {
                             margin: 0;
                         }
+                    }
+                    .card-subtitle {
+                        margin: 0 0 10px 0;
+                        padding: 0;
+                        text-align: left;
                     }
                 }
                 .point {
@@ -619,7 +491,7 @@ body.about-me {
                     text-align: center;
                     background: $color-accent;
                     border-radius: 26px;
-                    box-shadow: $box-shadow;
+                    box-shadow: $box-shadow-heavy;
                     @media (max-width: $width-mobile) {
                         margin: 0;
                         left: 17px;
@@ -683,15 +555,15 @@ body.about-me {
                     height: 100px;
                     bottom: 20px;
                 }
-                .card-subtitle {
-                    margin-top: 0px;
-                }
                 .card-subname {
                     padding: 2px 5px;
                     background: $color-gradient;
                     color: $color-main;
                     font-weight: 400;
                 }
+            }
+            .card-subtitle {
+                margin-top: 0px;
             }
         }
         .social.content {
