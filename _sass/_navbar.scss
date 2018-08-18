@@ -1,8 +1,12 @@
-.navbar-menu {
+.navbar-bg {
     background-color: $nav-color-prime;
+    border-bottom: $nav-border-bottom;
+}
+
+.navbar-menu {
+    transition: top 0.3s ease-in-out;
     width: calc(100%);
     height: 55px;
-    border-bottom: $nav-border-bottom;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -87,18 +91,19 @@
     }
     .navbar-1 {
         .nav-homepage {
-            font-size: 20px;
+            // font-size: 20px;
+            @extend %app-title-font;
         }
         .nav-menu-options a {
-            font-size: 17px;
+            @extend %app-platform-font;
         }
         a:not(.nav-hamburger):hover {
             background-color: $nav-color-second;
             color: $nav-color-prime;
         }
-        .nav-menu-options {
-            background-color: $nav-color-prime;
-        }
+        // .nav-menu-options {
+        //     transition: top 0.3s ease-in-out;
+        // }
     }
     .navbar-2 {
         width: 100%;
@@ -144,8 +149,7 @@
         transition: 0.4s all ease-out;
         opacity: 1 !important;
     }
-  
-    a:hover:after{
+    a:hover:after {
         background: $nav-color-prime !important;
     }
 }
@@ -183,7 +187,7 @@
 @media screen and (max-width: 750px) {
     .navbar-menu {
         .navbar-2 {
-            a{
+            a {
                 opacity: 1;
             }
             .label {

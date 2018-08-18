@@ -61,6 +61,9 @@ experience:
 {% include header.html title="Jerry Factory" %}
 
 <body class='about-me'>
+     {% assign homepage_links = site.data.navbar_links['about'] %} {% include navbar_template.html links = homepage_links
+    %}
+
     <div class='section intro'>
         <div class="overlay"></div>
         <div class='content'>

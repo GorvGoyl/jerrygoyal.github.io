@@ -2,4 +2,8 @@ homepage:
   - {title: Jerry Factory, href: "/"}
   - {title: Apps, href: "#apps"}
   - {title: About Me, href: "/about-me"}
+  - {title: Contact, href: "/about-me"}
+about:
+  - {title: Jerry Factory, href: "/"}
+  - {title: Apps, href: "/apps"}
   - {title: Contact, href: "#contact"}
