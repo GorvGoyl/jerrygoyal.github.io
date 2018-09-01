@@ -49,11 +49,12 @@ var jgMainClass = function () {
            *  ENABLE SMOOTH SCROLLING FOR #LINKS  *
     \************************************************/
 
+    //clicking on local hyperlinks will scroll the page to the link address
     function enableSmoothScrolling() {
         // Add smooth scrolling to all links
         $("a").on('click', function (event) {
             if (this.hash !== "") {
-                event.preventDefault();
+                // event.preventDefault();
                 scrollTo(this.hash);
             }
         });
@@ -62,9 +63,9 @@ var jgMainClass = function () {
     function scrollTo(hash) {
         var stickyNavHeight = 0;
         if ($(hash).length > 0) {
-            if ($('.navbar-menu').length > 0) {
-                stickyNavHeight = $('.navbar-menu').height();
-            }
+            // if ($('.navbar-menu').length > 0) {
+            //     stickyNavHeight = $('.navbar-menu').height();
+            // }
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - stickyNavHeight
             }, 500, function () {
