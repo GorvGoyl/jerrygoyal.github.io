@@ -19,13 +19,14 @@ $(document).ready(function () {
 
 var jgMainClass = function () {
 
-    //**** Variables declaration ****\\
+    //**** Variables declaration after doc ready ****\\
     var self = this;
     var isMobile = $(".nav-menu-select").is(":visible");
     var navbarBG_cl = 'navbar-bg';
     var navbarEl = $('.navbar-bg-toggle');
     var makeNavBGVisible = false;
-
+    var introHeaderHeight = $(".intro").outerHeight();
+    var navbarHeight = $(".nav-menu-options").height();
     self.init = function () {
         // enable smooth scrolling for #links
         enableSmoothScrolling();
@@ -145,87 +146,44 @@ var jgMainClass = function () {
     \************************************************/
 
     function handleScrollEvents() {
-        var introHeaderHeight = $(".intro").outerHeight();
-        var navbarHeight = $(".nav-menu-options").height();
         var prevScroll = 0;
-        $(window).scroll(function () {
-            var curScroll = window.pageYOffset || document.documentElement.scrollTop;
+        var curScroll = 0;
+        //set navbar on doc ready
+        //1. remove bg from navbar when top of page
+        //2. hide navbar when scroll down, show when scroll-up
+        fadeInOutNavOnScroll(curScroll, prevScroll);
 
-            //1. remove bg from navbar when top of page
-            //2. hide navbar when scroll down, show when scroll-up
-            fadeInOutNavOnScroll(introHeaderHeight, navbarHeight, navbarEl, curScroll, prevScroll, isMobile);
+        // set navbar whenever mouse scrolls
+        $(window).scroll(function () {
+            curScroll = window.pageYOffset || document.documentElement.scrollTop;
+            fadeInOutNavOnScroll(curScroll, prevScroll);
             prevScroll = curScroll <= 0 ? 0 : curScroll; // For Mobile or negative scrolling
         });
     }
 
     //1. remove bg from navbar when top of page
     //2. hide navbar when scroll down, show when scroll-up
-    function fadeInOutNavOnScroll(introHeaderHeight, navbarHeight, navbarEl, curScroll, prevScroll, isMobile) {
-
+    function fadeInOutNavOnScroll(curScroll, prevScroll) {
         makeNavBGVisible = $(window).scrollTop() > (introHeaderHeight - navbarHeight);
-        if (makeNavBGVisible) {
-
-
-
-            // hide & show nav on scroll
-            if (curScroll > prevScroll) {
-                // downscroll
-                navbarEl[0].style.top = "-" + navbarHeight + "px";
-            } else {
-                // upscroll
-                navbarEl[0].style.top = 0;
-
-                //add BG
+        var showNavbar = (curScroll <= prevScroll) || !makeNavBGVisible;
+        // upscroll or page on intro div so show navbar
+        if (showNavbar) {
+            if (makeNavBGVisible) {
+                //add BG if upscrolling and not on intro div
                 NavbarBG_Show();
+
+            } else {
+                //hide BG when on page top
+                NavbarBG_Hide();
             }
-
-        } else {
-            //hide BG when on page top
-            NavbarBG_Hide();
-
+            // show navbar
             navbarEl[0].style.top = 0;
 
-        };
-    }
-
-    //**** Hamburger click ****\\
-    function initNavbar() {
-        //old code
-        var hidden = true;
-        $(".nav-hamburger").on("click", function () {
-            $(this).toggleClass('change');
-            var el = $(".nav-menu-options");
-            if (hidden === true) {
-                // expand navbar
-                //add BG
-                NavbarBG_Show();
-
-                el.slideDown("slow");
-                hidden = false;
-            } else {
-                // collapse navbar
-                el.slideUp("slow", function () {
-                    if (makeNavBGVisible) {
-                        NavbarBG_Show();
-                    } else {
-                        NavbarBG_Hide();
-                    }
-                });
-                hidden = true;
-
-            }
-        });
-
-        // make 2nd navbar sticky when scroll down in desktop
-        if ($('.navbar-2 .nav-homepage').is(":visible")) {
-            var navbar = $(".navbar-menu");
-            navbar.css('position', 'static')
-            var navHeight = navbar.height();
-            stickNavbar(navHeight, navbar)
-            window.onscroll = function () { stickNavbar(navHeight, navbar) };
+        } else {
+            // downscroll and not on intro div so hide navbar
+            navbarEl[0].style.top = "-" + navbarHeight + "px";
         }
 
-        //old code end
     }
 
     function NavbarBG_Hide() {
@@ -240,6 +198,48 @@ var jgMainClass = function () {
         });
     }
 
+    //**** Hamburger click for mobile navbar ****\\
+    function initNavbar() {
+        var hidden = true;
+        // mobile navbar
+        if ($(".nav-hamburger").is(":visible")) {
+            $(".nav-hamburger").on("click", function () {
+                $(this).toggleClass('change');
+                var el = $(".nav-menu-options");
+                if (hidden === true) {
+                    // expand navbar
+                    //add BG
+                    NavbarBG_Show();
+
+                    el.slideDown("slow");
+                    hidden = false;
+                } else {
+                    // collapse navbar
+                    el.slideUp("slow", function () {
+                        if (makeNavBGVisible) {
+                            NavbarBG_Show();
+                        } else {
+                            NavbarBG_Hide();
+                        }
+                    });
+                    hidden = true;
+
+                }
+            });
+        }
+
+        // below is the 2nd navbar for flash clipboard page
+        // make 2nd navbar sticky when scroll down in desktop
+        if ($('.navbar-2 .nav-homepage').is(":visible")) {
+            var navbar = $(".navbar-menu");
+            navbar.css('position', 'static')
+            var navHeight = navbar.height();
+            stickNavbar(navHeight, navbar);
+            window.onscroll = function () { stickNavbar(navHeight, navbar) };
+        }
+    }
+
+    // it's for 2nd navbar for flash clipboard page
     function stickNavbar(navHeight, navbar) {
         if ($('.navbar-2 .nav-homepage').is(":visible")) {
             var nav2 = $('.navbar-2');
