@@ -25,8 +25,12 @@ var jgMainClass = function () {
     var navbarBG_cl = 'navbar-bg';
     var navbarEl = $('.navbar-bg-toggle');
     var makeNavBGVisible = false;
+    var navMenuEl = $(".nav-menu-options");
+    var hamburgerEl = $(".nav-hamburger");
     var introHeaderHeight = $(".intro").outerHeight();
     var navbarHeight = $(".nav-menu-options").height();
+    var isHamburgerCollapsed = true;
+
     self.init = function () {
         // enable smooth scrolling for #links
         enableSmoothScrolling();
@@ -158,6 +162,10 @@ var jgMainClass = function () {
             curScroll = window.pageYOffset || document.documentElement.scrollTop;
             fadeInOutNavOnScroll(curScroll, prevScroll);
             prevScroll = curScroll <= 0 ? 0 : curScroll; // For Mobile or negative scrolling
+
+            if (!isHamburgerCollapsed) {
+                toggleHamburger();
+            }
         });
     }
 
@@ -200,33 +208,10 @@ var jgMainClass = function () {
 
     //**** Hamburger click for mobile navbar ****\\
     function initNavbar() {
-        var hidden = true;
         // mobile navbar
-        if ($(".nav-hamburger").is(":visible")) {
-            $(".nav-hamburger").on("click", function () {
-                $(this).toggleClass('change');
-                var el = $(".nav-menu-options");
-                if (hidden === true) {
-                    // expand navbar
-                    //add BG
-                    NavbarBG_Show();
-
-                    el.slideDown("slow");
-                    hidden = false;
-                } else {
-                    // collapse navbar
-                    el.slideUp("slow", function () {
-                        if (makeNavBGVisible) {
-                            NavbarBG_Show();
-                        } else {
-                            NavbarBG_Hide();
-                        }
-                    });
-                    hidden = true;
-
-                }
-            });
-        }
+        hamburgerEl.on("click", function () {
+            toggleHamburger()
+        });
 
         // below is the 2nd navbar for flash clipboard page
         // make 2nd navbar sticky when scroll down in desktop
@@ -239,6 +224,39 @@ var jgMainClass = function () {
         }
     }
 
+    //toggle hamburger
+    function toggleHamburger() {
+        hamburgerEl.toggleClass('change');
+        if (isHamburgerCollapsed === true) {
+            // expand navbar
+            //add BG
+            NavbarBG_Show();
+
+            navMenuEl.slideDown("slow");
+            isHamburgerCollapsed = false;
+        } else {
+            // collapse navbar
+            navMenuEl.slideUp("slow", function () {
+                if (makeNavBGVisible) {
+                    NavbarBG_Show();
+                } else {
+                    NavbarBG_Hide();
+                }
+            });
+            isHamburgerCollapsed = true;
+
+        }
+    }
+
+    // collapse the hamburger menu
+    function collapseHamburger() {
+
+    }
+
+    // expand the hamburger menu
+    function expandHamburger() {
+
+    }
     // it's for 2nd navbar for flash clipboard page
     function stickNavbar(navHeight, navbar) {
         if ($('.navbar-2 .nav-homepage').is(":visible")) {

@@ -1,9 +1,9 @@
 homepage:
-  - {title: Jerry Factory, href: "/"}
+  - {title: Jerrygoyal, href: "/"}
   - {title: Apps, href: "#apps"}
   - {title: About Me, href: "/about-me"}
   - {title: Contact, href: "/about-me/#contact"}
 about:
-  - {title: Jerry Factory, href: "/"}
+  - {title: Jerrygoyal, href: "/"}
   - {title: Apps, href: "/#apps"}
   - {title: Contact, href: "#contact"}
