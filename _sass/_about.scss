@@ -338,6 +338,75 @@ body.about-me {
             }
         }
     }
+    .section.apps{
+        .appcard-container {
+            position: relative;
+        }
+        .appcard.material {
+            display: inline-block;
+            padding: 0;
+            border-radius: 19px;
+            box-shadow: $box-shadow-heavy;
+            overflow: hidden;
+            .appcard-title {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                .appcard-name {
+                    @extend %app-title-font;
+                    @extend %color-invert;
+                    display: inline-block;
+                    padding: 10px;
+                    position: relative;
+                    bottom: 20px;
+                    box-shadow: $box-shadow-heavy;
+                }
+            }
+            .appcard-content {
+                position: relative;
+                .appcard-logo {
+                    margin: 75px 60px 145px 60px;
+                    .appcard-img {
+                        width: 150px;
+                        height: 150px;
+                        background-size: contain;
+                    }
+                }
+                .appcard-platforms {
+                    border-radius: 0 0 19px 19px;
+                    background: $color-gradient;
+                    position: absolute;
+                    width: 100%;
+                    bottom: -40px;
+                    transform: translateY(100%);
+                    transition: all 0.5s ease;
+                    .card-platform {
+                        padding: 25px;
+                        display: inline-block;
+                        img {
+                            width: 30px;
+                        }
+                        .platform-name {
+                            @extend %app-platform-font;
+                        }
+                    }
+                }
+                .card-desc p {
+                    @extend %desc-font;
+                    color: $color-main;
+                    margin: 0 15px 15px 15px;
+                }
+            }
+            &:focus,
+            &:active,
+            &:hover {
+                .appcard-platforms {
+                    bottom: -145px;
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
     .section.experience {
         position: relative;
         max-width: $page-max-width;

@@ -204,6 +204,35 @@ Add location
             </div>
 
         </div>
+
+        <div class="section apps">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Portfolio</div>
+                </div>
+                <div class='content row'>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[0] %} {% include appcard_template.html card_data = cards_data %}
+                    </div>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[1] %} {% include appcard_template.html card_data = cards_data %}
+                    </div>
+                </div>
+                <div class='content row'>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[2] %} {% include appcard_template.html card_data = cards_data %}
+                
+                    </div>
+                    <!-- <div class='col-6'>
+                                     {% assign cards_data = site.data.cards_data[3] %} 
+                                     {% include appcard_template.html card_data = cards_data %}
+                
+                                </div> -->
+                </div>
+            </div>
+        
+        </div>
+
         <div class="section experience">
             <div class='title'> Experience
                 <span class='card-icon'>

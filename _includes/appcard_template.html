@@ -13,22 +13,22 @@
 
                 {% for platform in include.card_data .downloads %} {% case platform %} {% when 'win' %}
                 <div class='card-platform'>
-                    <img src="/img/win.svg" title="Windows">
+                    <img src="../img/win.svg" title="Windows">
                     <div class='platform-name'>Windows</div>
                 </div>
                 {% when 'mac' %}
                 <div class='card-platform'>
-                    <img src="img/mac.svg" title="Mac">
+                    <img src="../img/mac.svg" title="Mac">
                     <div class='platform-name'>Mac</div>
                 </div>
                 {% when 'linux' %}
                 <div class='card-platform'>
-                    <img src="img/linux.svg" title="Linux">
+                    <img src="../img/linux.svg" title="Linux">
                     <div class='platform-name'>Linux</div>
                 </div>
                 {% when 'chrome' %}
                 <div class='card-platform'>
-                    <img src="img/chrome.svg" title="Chrome Extension">
+                    <img src="../img/chrome.svg" title="Chrome Extension">
                     <div class='platform-name'>Chrome Extension</div>
                 </div>
                 {% endcase %} {% endfor %}

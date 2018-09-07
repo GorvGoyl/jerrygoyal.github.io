@@ -1,5 +1,5 @@
 - title: Flash Clipboard
-  image: flash-clipboard/img/flash_clipboard.svg
+  image: ../img/flash_clipboard.svg
   desc: "Best ever Clipboard Manager for your desktop. Copy once and paste later. It saves history of all copied text. Paste any text with a shortcut. It's quick, it's efficient, and it's free. #productivity"
   href: /flash-clipboard
   downloads:
@@ -7,14 +7,14 @@
     - mac
     
 - title: Popup Notes
-  image: img/popup_notes128.svg
+  image: ../img/popup_notes128.svg
   desc: "Take notes without leaving current tab in Google Chrome!</br> Quickly note down copied text, phone numbers, links, to-do items etc while browsing internet. #productivity"
   href: https://chrome.google.com/webstore/detail/popup-notes/pakngoacmndjaomplokegbepmohpfofb?hl=en
   downloads:
     - chrome
 
 - title: Dynalist Allstar
-  image: dynalist-allstar/img/dynalist_allstar.svg
+  image: ../img/dynalist_allstar.svg
   desc: "Chrome browser extension for a notes taking web app https://Dynalist.io </br> It adds cool features to Dynalist like open 2 notes side by side and work simultaneously. #productivity"
   href: https://chrome.google.com/webstore/detail/dynalist-allstar/kljpaieidlmmnigjigfbmfbhabolpkbl?hl=en
   downloads:

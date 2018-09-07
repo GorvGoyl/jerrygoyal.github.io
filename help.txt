@@ -23,7 +23,6 @@ To RUN:
 
 Bugs:
     - add top padding to apps & software on hp for # scroll
-    - in mobile - navbar click link not closing navbar
 
 To-do:
     - bottom border of navbar
