@@ -25,10 +25,10 @@ Jekyll Cheatsheet:
     - https://devhints.io/jekyll
 
 Bugs:
-    - add top padding to apps & software on hp when # scroll
 
 To-do:
     - bottom border of navbar
+    - favicon
     - hire me when console open
     - minified css
     - SEO

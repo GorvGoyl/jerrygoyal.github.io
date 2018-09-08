@@ -1,6 +1,7 @@
 .navbar-bg {
     background-color: $nav-color-prime;
-    border-bottom: $nav-border-bottom;
+    // border-bottom: $nav-border-bottom;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 4px 0px;
 }
 
 .navbar-menu {
@@ -38,9 +39,9 @@
         width: 100%;
         margin: 0px;
         padding: 0px;
-        border-bottom: $nav-border-bottom;
-        position: relative;
-        bottom: 1px;
+        // border-bottom: $nav-border-bottom;
+        // position: relative;
+        // bottom: 1px;
         /* equal to the bottom border of navbar */
         li a {
             display: block;
@@ -141,7 +142,7 @@
     background-color: $nav-color-second;
     top: 0;
     z-index: 10;
-    border-bottom: $nav-border-bottom;
+    // border-bottom: $nav-border-bottom;
     transition: 0.4s all ease-out;
     a {
         color: $nav-color-prime;
@@ -175,7 +176,7 @@
     }
     .nav-menu-options {
         display: block !important;
-        border-bottom: 0 !important;
+        // border-bottom: 0 !important;
         li {
             display: inline-block;
         }

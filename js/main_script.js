@@ -28,7 +28,10 @@ var jgMainClass = function () {
     var navMenuEl = $(".nav-menu-options");
     var hamburgerEl = $(".nav-hamburger");
     var introHeaderHeight = $(".intro").outerHeight();
-    var navbarHeight = $(".nav-menu-options").height();
+
+    //calculate box-shadow and add it to navbar total height
+    var navBoxShadow = 4;
+    var navbarHeight = navMenuEl.height() + navBoxShadow;
     var isHamburgerCollapsed = true;
 
     self.init = function () {
