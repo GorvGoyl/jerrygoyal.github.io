@@ -1,13 +1,15 @@
 .navbar-bg {
     background-color: $nav-color-prime;
     // border-bottom: $nav-border-bottom;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 4px 0px;
+    .nav-menu-options,.nav-menu-select{
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 7px -1px;
+    }
 }
 
 .navbar-menu {
     transition: top 0.3s ease-in-out;
     width: calc(100%);
-    height: 55px;
+    height: 58.67px;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -31,7 +33,7 @@
     .nav-menu-select {
         margin: 0;
         text-align: right;
-        height: 55px;
+        height: 58.67px;
     }
     .nav-menu-options {
         display: block;
@@ -101,6 +103,7 @@
         a:not(.nav-hamburger):hover {
             background-color: $nav-color-second;
             color: $nav-color-prime;
+            font-weight: 400;
         }
         // .nav-menu-options {
         //     transition: top 0.3s ease-in-out;

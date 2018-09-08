@@ -27,7 +27,6 @@ Jekyll Cheatsheet:
 Bugs:
 
 To-do:
-    - bottom border of navbar
     - favicon
     - hire me when console open
     - minified css

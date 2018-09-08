@@ -23,15 +23,16 @@ var jgMainClass = function () {
     var self = this;
     var isMobile = $(".nav-menu-select").is(":visible");
     var navbarBG_cl = 'navbar-bg';
-    var navbarEl = $('.navbar-bg-toggle');
+    var navbarEl = $('.navbar-menu');
+    var navbarToggleEl = $('.navbar-bg-toggle');
     var makeNavBGVisible = false;
-    var navMenuEl = $(".nav-menu-options");
+    var navbarMenuEl = $(".nav-menu-options");
     var hamburgerEl = $(".nav-hamburger");
     var introHeaderHeight = $(".intro").outerHeight();
 
     //calculate box-shadow and add it to navbar total height
-    var navBoxShadow = 4;
-    var navbarHeight = navMenuEl.height() + navBoxShadow;
+    var navBoxShadow = 6;
+    var navbarHeight = navbarEl.height() + navBoxShadow;
     var isHamburgerCollapsed = true;
 
     self.init = function () {
@@ -188,23 +189,23 @@ var jgMainClass = function () {
                 NavbarBG_Hide();
             }
             // show navbar
-            navbarEl[0].style.top = 0;
+            navbarToggleEl[0].style.top = 0;
 
         } else {
             // downscroll and not on intro div so hide navbar
-            navbarEl[0].style.top = "-" + navbarHeight + "px";
+            navbarToggleEl[0].style.top = "-" + navbarHeight + "px";
         }
 
     }
 
     function NavbarBG_Hide() {
-        navbarEl.each(function () {
+        navbarToggleEl.each(function () {
             $(this).removeClass(navbarBG_cl);
         });
     }
 
     function NavbarBG_Show() {
-        navbarEl.each(function () {
+        navbarToggleEl.each(function () {
             $(this).addClass(navbarBG_cl);
         });
     }
@@ -235,11 +236,11 @@ var jgMainClass = function () {
             //add BG
             NavbarBG_Show();
 
-            navMenuEl.slideDown("slow");
+            navbarMenuEl.slideDown("slow");
             isHamburgerCollapsed = false;
         } else {
             // collapse navbar
-            navMenuEl.slideUp("slow", function () {
+            navbarMenuEl.slideUp("slow", function () {
                 if (makeNavBGVisible) {
                     NavbarBG_Show();
                 } else {
