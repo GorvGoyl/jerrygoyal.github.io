@@ -49,6 +49,14 @@ $page-max-width:1100px;
     line-height: 1.4;
 }
 
+%section-subtitle-font{
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    bottom: 45px;
+    letter-spacing: 0.03em;
+}
+
 %subtitle-font {
     font-size: 17px;
     margin: 20px 0;
@@ -117,6 +125,21 @@ a {
     display: none;
 }
 
+footer{
+    padding: 0 0 30px 0;
+    a{
+        color:$para-color;
+        &:focus,
+        &:active,
+        &:hover {
+            border-bottom: 0.5px solid;
+        }
+    }
+    .info{
+        text-align: center;
+    font-size: 14px;
+    }
+}
 /*****************************************************      
                  * COMMON CSS END*
 *****************************************************/
@@ -196,6 +219,9 @@ a {
     padding: 35px 0;
     .title {
         @extend %title-font;
+    }
+    .subtitle {
+        @extend %section-subtitle-font;
     }
 }
 
@@ -398,15 +424,6 @@ img.sshots_img {
     text-align: center;
     vertical-align: top;
 }
-
-/* FOOTER */
-
-/* MAIN PAGE */
-
-
-
-
-
 
 /*****************************************************      
                  FLASH CLIPBOARD END

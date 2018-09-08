@@ -614,6 +614,7 @@ body.about-me {
             }
         }
         .vcard.content {
+            padding-bottom: 0;
             .material {
                 position: relative;
                 top: 15px;
@@ -637,7 +638,8 @@ body.about-me {
         }
         .social.content {
             position: relative;
-            bottom: 45px;
+            bottom: 15px;
+            padding-bottom: 0;
             .material {
                 @extend %color-invert;
                 .container {
