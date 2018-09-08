@@ -26,8 +26,18 @@ Bugs:
 
 To-do:
     - bottom border of navbar
-    # - jerrygoyal icon
+    - hire me when console open
     - minified css
     - SEO
     - 404 page redirection
-    - hire me when console open
+    - analytics
+
+Could-Do:
+    - scroll up button
+    - font
+    - bg color
+    - blogs
+    - additional skills buttons
+    - hobbies/interest
+    - share social buttons
+    - jerrygoyal icon
