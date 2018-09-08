@@ -22,8 +22,12 @@ To RUN:
     - in mobile open local ip of laptop http://192.168.1.109:4000
 
 Bugs:
-    - add top padding to apps & software on hp for # scroll
+    - add top padding to apps & software on hp when # scroll
 
 To-do:
     - bottom border of navbar
-    - jerrygoyal icon
+    # - jerrygoyal icon
+    - minified css
+    - SEO
+    - 404 page redirection
+    - hire me when console open

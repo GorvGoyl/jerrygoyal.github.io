@@ -1,0 +1,55 @@
+--- 
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include header.html title="Jerrygoyal" %}
+
+<body class='home'>
+    {% assign homepage_links = site.data.navbar_links['homepage'] %} {% include navbar_template.html links = homepage_links %}
+    <div class="intro">
+        <div class='background'>
+        </div>
+    </div>
+    <div class='main-container'>
+        <div class='section name'>
+            <div class='content row'>
+                <div class='col-12'>
+                    <div class='card-icon'></div>
+                    <div class="main-title">Jerrygoyal</div>
+                    <div class="card-subtitle">Free and Open Source Apps</div>
+                </div>
+            </div>
+        </div>
+        <div class="section apps" id="apps">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Apps & Software</div>
+                </div>
+            </div>
+            <div class='content row'>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[0] %} {% include appcard_template.html card_data = cards_data %}
+                </div>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[1] %} {% include appcard_template.html card_data = cards_data %}
+                </div>
+            </div>
+            <div class='content row'>
+                <div class='col-6'>
+                    {% assign cards_data = site.data.cards_data[2] %} {% include appcard_template.html card_data = cards_data %}
+
+                </div>
+                <!-- <div class='col-6'>
+                     {% assign cards_data = site.data.cards_data[3] %} 
+                     {% include appcard_template.html card_data = cards_data %}
+
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    {% include scripts_include.html %}
+</body>
+
+</html>

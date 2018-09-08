@@ -1,54 +1,289 @@
---- 
+---
+permalink: /
+redirect_from:
+  - /About
+  - /about
+  - /About-Me
+  - /About-me
+  - /aboutme
+  - /resume
+
+skillset:
+  Professional:
+  - - C# (.Net)
+    - 90%
+  - - Java
+    - 60%
+  - - Frontend Technologies
+    - 77%
+  - - Node.JS
+    - 85%
+  - - SQL Database
+    - 70%
+  - - NoSQL Database
+    - 64%
+  Personal:
+  - - Creativity
+    - 93%
+  - - Communication
+    - 75%
+  - - Leadership
+    - 67%
+  - - Dedication
+    - 86%
+  - - Teamwork
+    - 70%
+  - - Language (English)
+    - 87%
+experience:
+- date: 2017-present
+  company: Samsung R&D
+  role: Software Engineer
+  desc: Making Bixby smarter day by day. Bixby is the next level personal assistant just like Siri but for Samsung phones. I'm part of the Bixby team and currently integrating Bixby with various home appliances like TV, AC, washing machine, fridge. Users can control and operate these devices by voice only.
+- date: 2016-2017
+  company: Honeywell Technology Solutions Lab
+  role: Back-end Developer
+  desc: Member of the IoT Cloud team who built the back-end to supports millions of devices which connect to cloud for Home Automation. These include security devices, comfort devices, and awareness devices.
+- date: 2015-2016
+  company: Leadsquared (Startup)
+  role: Full-stack Developer
+  desc:  Proud member of a small but vibrant team of 25+ developers who've built the complete CRM & Marketing Automation web-app from scratch. As a full-stack developer, I was responsible for many phases of the software development lifecycle including but not limited to technical research, presenting ideas, implementing new features, participating in code reviews, deployment, and maintaining the product once it’s up and running.
+- date: 2014
+  company: Air India Airline Company
+  role: College Intern
+  desc:  Worked closely with the IT department, understood their process and as per their need, I built an internal database tool for storing passengers details. This tool helped them by reducing the possibility of false report generation, detecting frauds and saving overall time.
+
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 {% include header.html title="Jerrygoyal" %}
 
-<body class='home'>
-    {% assign homepage_links = site.data.navbar_links['homepage'] %} {% include navbar_template.html links = homepage_links %}
-    <div class="intro">
-        <div class='background'>
+<body class='about-me'>
+    {% assign homepage_links = site.data.navbar_links['about'] %} {% include navbar_template.html links =
+    homepage_links
+    %}
+
+    <div class='section intro'>
+        <div class="overlay"></div>
+        <div class='content'>
+            <div class="hello-world">Hello, World.</div>
+            <div class="my-name">I'm Gourav Goyal</div>
+            <p class="typewrite" data-period="2000" data-type='[ "FULL STACK DEVELOPER","UI/UX DESIGNER" ]'>
+                <span class="wrap"></span>
+            </p>
+            <a href='#profile' class="scroll-down">
+                <i></i>
+            </a>
         </div>
+
     </div>
+    <!-- social links:
+Add location
+
+<div class="section portfolio">
+
+<div class='section blog>
+-->
     <div class='main-container'>
-        <div class='section name'>
+        <div id="profile" class='section card'>
             <div class='content row'>
                 <div class='col-12'>
-                    <div class='card-icon'></div>
-                    <div class="main-title">Jerrygoyal</div>
-                    <div class="card-subtitle">Free and Open Source Apps</div>
+                    <div class='vcard material'>
+                        <div class='dp'></div>
+                        <div class='info'>
+                            <div class='main-title'>Gourav Goyal</div>
+                            <div class='card-subtitle'>Full Stack Developer</div>
+                            <div class='social ripple-effect'>
+                                {% include social_links_template.html %}
+                            </div>
+                            <p>
+                                Namaste, My name is Gourav Goyal. I've 3+ years of experience in building dynamic web
+                                projects, mobile apps, and desktop
+                                software. I love to build new products, create great user experiences and contribute to
+                                the open source
+                                software community.
+                                <!-- <br>I am always hungry for new challenges and innovations. -->
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="section apps" id="apps">
+
+        <div class='section expertise'>
             <div>
                 <div class='subject'>
-                    <div class='title'>Apps & Software</div>
+                    <div class='title'>Expertise</div>
+                    <!-- <div class='subtitle'>I've got chops in all phases of the development process.</div> -->
+                </div>
+
+                <div class='content row'>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>
+                                    <div class='icon-url strategy'></div>
+                                </div>
+                                <div class='card-subtitle'>Strategy</div>
+                            </div>
+                            <p class='card-content'>I collaborate with clients and peers to nurture and transform ideas
+                                into well thought out design
+                                specs. After all, that's where the majority of amazing user experiences start.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>
+                                    <div class='icon-url ux'></div>
+
+                                </div>
+                                <div class='card-subtitle'>UI/UX</div>
+                            </div>
+                            <p class='card-content'>
+                                I sketch and wireframe interfaces focusing on content structure, intuitive UI patterns,
+                                and simple interactions. I'm a minimalist
+                                who truly believes that less is more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='col-4'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>
+                                    <div class='icon-url code'></div>
+                                </div>
+                                <div class='card-subtitle'>Code</div>
+                            </div>
+                            <p class='card-content'>Having industrial experience of various programming languages and
+                                frameworks, I write well structured
+                                and optimized code which is the building block of a great product.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class='content row'>
-                <div class='col-6'>
-                    {% assign cards_data = site.data.cards_data[0] %} {% include appcard_template.html card_data = cards_data %}
+        </div>
+
+        <div class="section skills">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Skills</div>
                 </div>
-                <div class='col-6'>
-                    {% assign cards_data = site.data.cards_data[1] %} {% include appcard_template.html card_data = cards_data %}
-                </div>
-            </div>
-            <div class='content row'>
-                <div class='col-6'>
-                    {% assign cards_data = site.data.cards_data[2] %} {% include appcard_template.html card_data = cards_data %}
+                <div class='content row'>
+                    <div class='col-6'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>
+                                    <div class='icon-url pro'></div>
+                                </div>
+                                <div class='card-subtitle'>Professional</div>
+                            </div>
+                            <div class='skills'>
+                                {% include skills_template.html skillset = page.skillset.Professional %}
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class='col-6'>
+                        <div class='material'>
+                            <div class='card-title'>
+                                <div class='card-icon'>
+                                    <div class='icon-url personal'></div>
+                                </div>
+                                <div class='card-subtitle'>Personal</div>
+                            </div>
+                            <div class='skills'>
+                                {% include skills_template.html skillset = page.skillset.Personal %}
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <!-- <div class='col-6'>
-                     {% assign cards_data = site.data.cards_data[3] %} 
-                     {% include appcard_template.html card_data = cards_data %}
-
-                </div> -->
             </div>
 
         </div>
-    </div>
 
+        <div class="section apps">
+            <div>
+                <div class='subject'>
+                    <div class='title'>Portfolio</div>
+                </div>
+                <div class='content row'>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[0] %} {% include appcard_template.html card_data =
+                        cards_data %}
+                    </div>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[1] %} {% include appcard_template.html card_data =
+                        cards_data %}
+                    </div>
+                </div>
+                <div class='content row'>
+                    <div class='col-6'>
+                        {% assign cards_data = site.data.cards_data[2] %} {% include appcard_template.html card_data =
+                        cards_data %}
+
+                    </div>
+                    <!-- <div class='col-6'>
+                                     {% assign cards_data = site.data.cards_data[3] %} 
+                                     {% include appcard_template.html card_data = cards_data %}
+                
+                                </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section experience">
+            <div class='title'> Experience
+                <span class='card-icon'>
+                    <div class='icon-url exp'></div>
+                </span>
+            </div>
+
+            <div class='timeline'>
+                {% include timeline_template.html experience = page.experience %}
+            </div>
+        </div>
+
+        <div class="section contact" id="contact">
+            <div>
+                <div class='subject'>
+                    <div class='title'>
+                        Let's Connect
+                    </div>
+                </div>
+                <div class='vcard content row'>
+                    <div class='col-12'>
+                        <div class='material'>
+                            <div class="card-title">
+                                <div class="card-icon"></div>
+                                <div class="card-subtitle">Gourav Goyal</div>
+                                <div class="card-subname">1gouravgg@gmail.com</div>
+                            </div>
+                            <div class='card-content'>
+                                Got something exciting to work for? or maybe a casual chat. I'm up!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='social content row'>
+                    <div class='col-12'>
+                        <div class='material'>
+                            {% include social_links_template.html %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% include scripts_include.html %}
 </body>
 
