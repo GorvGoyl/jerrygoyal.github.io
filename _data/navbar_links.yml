@@ -1,9 +1,9 @@
-homepage:
-  - {title: Jerrygoyal, href: "/"}
-  - {title: Apps, href: "#apps"}
-  - {title: About Me, href: "/about-me"}
-  - {title: Contact, href: "/about-me/#contact"}
+# homepage:
+#   - {title: Jerrygoyal, href: "/"}
+#   - {title: Apps, href: "#apps"}
+#   - {title: About Me, href: "/about-me"}
+#   - {title: Contact, href: "/about-me/#contact"}
 about:
   - {title: Jerrygoyal, href: "/"}
-  - {title: Apps, href: "/#apps"}
-  - {title: Contact, href: "#contact"}
+  - {title: Portfolio, href: "#portfolio"}
+  - {title: Contact Me, href: "#contact"}

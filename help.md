@@ -21,6 +21,9 @@ To RUN:
     - website: http://127.0.0.1:4000/
     - in mobile open local ip of laptop http://192.168.1.109:4000
 
+Jekyll Cheatsheet:
+    - https://devhints.io/jekyll
+
 Bugs:
     - add top padding to apps & software on hp when # scroll
 
