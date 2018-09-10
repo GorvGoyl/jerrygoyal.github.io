@@ -27,7 +27,6 @@ Jekyll Cheatsheet:
 Bugs:
 
 To-do:
-    - favicon
     - hire me when console open
     - minified css
     - SEO

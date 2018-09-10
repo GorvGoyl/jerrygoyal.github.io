@@ -31,6 +31,11 @@
                     <img src="../img/chrome.svg" title="Chrome Extension">
                     <div class='platform-name'>Chrome Extension</div>
                 </div>
+                {% when 'vscode' %}
+                <div class='card-platform'>
+                    <img src="../img/vscode.svg" title="VSCode Extension">
+                    <div class='platform-name'>VSCode Extension</div>
+                </div>
                 {% endcase %} {% endfor %}
                 <div class='card-desc'>
                     <p>{{include.card_data.desc}}</p>

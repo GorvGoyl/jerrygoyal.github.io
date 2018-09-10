@@ -20,3 +20,9 @@
   downloads:
     - chrome
 
+- title: Shortcut Menu Bar
+  image: ../img/menubar.svg
+  desc: "Visual Studio Code extension which adds buttons like beautify, list files, save file etc to the editor menu bar."
+  href: https://marketplace.visualstudio.com/items?itemName=jerrygoyal.shortcut-menu-bar
+  downloads:
+    - vscode
