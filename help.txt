@@ -26,6 +26,9 @@ Jekyll Cheatsheet:
 
 Bugs:
 
+Test:
+    - different browsers - mac safari, firefox, chrome
+    - test in phone - android, iPhone
 To-do:
     - hire me when console open
     - minified css
