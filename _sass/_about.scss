@@ -195,7 +195,7 @@ body.about-me {
         position: relative;
         .vcard {
             @extend %vcard-width;
-            height: 350px;
+            height: 390px;
             display: inline-block;
             &:before {
                 //content: '';
@@ -208,7 +208,7 @@ body.about-me {
                 z-index: 1;
             }
             .dp {
-                height: 350px;
+                height: 390px;
                 float: left;
                 width: 200px;
                 position: relative;
