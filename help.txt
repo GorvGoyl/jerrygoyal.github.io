@@ -30,6 +30,8 @@ Test:
     - different browsers - mac safari, firefox, chrome
     - test in phone - android, iPhone
 To-do:
+    - name of company as hyperlink... maybe icon also
+    - dark theme toggle button
     - hire me when console open
     - minified css
     - SEO
