@@ -3,6 +3,19 @@
 /*****************************************************      
                  * COMMON VARIABLES *
 *****************************************************/
+//gradients
+.sample.gradients{
+
+    background-image: linear-gradient( 111.5deg, rgba(228,247,255,1) 21.9%, rgba(255,216,194,1) 92.2% );
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: linear-gradient( 94.5deg, #3f51b552 -1.2%, #f4433652 119.2% );
+    background-image: linear-gradient( 90.7deg,  rgba(255,253,218,1) 1.9%, rgba(246,210,255,1) 39.3%, rgba(152,222,254,1) 64.7%, rgba(251,255,210,1) 100.8% );
+    background-image: linear-gradient( 93deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8% );
+    //good rotates: 103 deg
+    background-image: linear-gradient( 103deg,  rgba(235,225,188,1) 7.2%, rgba(232,188,234,1) 57.5%, rgba(203,209,244,1) 90.7% );
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
 
 
 // COLORS //
@@ -13,6 +26,8 @@ $color-gradient:linear-gradient(to right, #396afc, #2948ff);
 $font-color:#363636;
 $para-color:#868686;
 $color-background:#eeeeee;
+$background-image: linear-gradient( 95deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8% );
+
 $box-shadow-heavy:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 $box-shadow-light:0 1px 4px 0 rgba(0, 0, 0, 0.14);
 %color-invert {
@@ -108,6 +123,7 @@ body {
     margin: 0;
     padding: 0;
     background: $color-background;
+    background: $background-image;
     font-size: 16px;
     color: $para-color;
     line-height: 20px;
@@ -174,6 +190,7 @@ footer{
     margin: 0 auto;
     position: relative;
     background: $color-background;
+    background: $background-image;
 }
 
 .main-title {
