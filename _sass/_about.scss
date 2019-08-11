@@ -106,7 +106,7 @@ body.about-me {
         }
     }
     .section.intro {
-        background-attachment: fixed;
+        background-attachment: fixed !important;
         width: 100%;
         height: 100vh; // min-height: 768px;
         display: table;
