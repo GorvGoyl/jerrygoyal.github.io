@@ -26,7 +26,7 @@ $color-gradient:linear-gradient(to right, #396afc, #2948ff);
 $font-color:#363636;
 $para-color:#868686;
 $color-background:#eeeeee;
-$background-image: linear-gradient( 95deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8% );
+$background-image: linear-gradient(95deg, rgb(255, 253, 218) 1.9%, rgb(246, 210, 255) 39.3%, rgb(152, 222, 254) 64.7%, rgb(251, 255, 210) 100.8%);
 
 $box-shadow-heavy:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 $box-shadow-light:0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -189,8 +189,6 @@ footer{
 .main-container {
     margin: 0 auto;
     position: relative;
-    background: $color-background;
-    background: $background-image;
 }
 
 .main-title {
