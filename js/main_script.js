@@ -52,6 +52,8 @@ var jgMainClass = function () {
         //handle scroll events
         // fade in out navbar on scroll
         handleScrollEvents();
+
+        console.log("site so good, I would've done the same ♥")
     };
 
     /************************************************\
