@@ -10,6 +10,7 @@ var jgMainIns;
 $(document).ready(function () {
     jgMainIns = jgMainIns || new jgMainClass();
     jgMainIns.init();
+    mixpanel.track("Video play");
 });
 
 /************************************************\
