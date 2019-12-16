@@ -23,7 +23,6 @@ body.home .main-container .apps .appcard.material .appcard-content .card-desc p,
 /*****************************************************       COMMON CSS START * */
 * { box-sizing: border-box; }
 
-/* html { scroll-behavior: smooth } */
 body { font-family: 'Roboto', sans-serif, helvetica; margin: 0; padding: 0; background: #eeeeee; background: linear-gradient(95deg, #fffdda9e 1.9%, #f6d2ff91 39.3%, #98defe75 64.7%, #fbffd2 100.8%); font-size: 16px; color: #868686; line-height: 20px; letter-spacing: 0.01em; font-weight: 300; }
 
 a { text-decoration: none; }
@@ -269,9 +268,9 @@ body.about-me { /* Ripple Out */ }
 
 body.about-me .social-icon { display: inline-block; width: 20px; height: 20px; background-size: contain !important; }
 
-body.about-me .social-icon.ml { background: url("/about-me/img/mail.svg") no-repeat center; }
-
 body.about-me .social-icon.in { background: url("/about-me/img/linkedin.svg") no-repeat center; }
+
+body.about-me .social-icon.ml { background: url("/about-me/img/twitter.svg") no-repeat center; }
 
 body.about-me .social-icon.so { background: url("/about-me/img/so.svg") no-repeat center; }
 

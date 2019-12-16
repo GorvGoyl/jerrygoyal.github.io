@@ -10,12 +10,12 @@ body.about-me {
         height: 20px;
         background-size: contain !important;
     }
-    .social-icon.ml {
-        background: url($baseurl + '/about-me/img/mail.svg') no-repeat center;
-    }
     .social-icon.in {
         background: url($baseurl + '/about-me/img/linkedin.svg') no-repeat center;
     }
+                .social-icon.ml {
+                    background: url($baseurl + '/about-me/img/twitter.svg') no-repeat center;
+                }
     .social-icon.so {
         background: url($baseurl + '/about-me/img/so.svg') no-repeat center;
     }
