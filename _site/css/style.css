@@ -1,5 +1,5 @@
 /*****************************************************       COMMON VARIABLES * */
-.sample.gradients { background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); background-image: linear-gradient(111.5deg, #e4f7ff 21.9%, #ffd8c2 92.2%); background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); background-image: linear-gradient(94.5deg, #3f51b552 -1.2%, #f4433652 119.2%); background-image: linear-gradient(90.7deg, #fffdda 1.9%, #f6d2ff 39.3%, #98defe 64.7%, #fbffd2 100.8%); background-image: linear-gradient(93deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8%); background-image: linear-gradient(103deg, #ebe1bc 7.2%, #e8bcea 57.5%, #cbd1f4 90.7%); background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); }
+.sample.gradients { background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); background-image: linear-gradient(111.5deg, #e4f7ff 21.9%, #ffd8c2 92.2%); background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); background-image: linear-gradient(94.5deg, #3f51b552 -1.2%, #f4433652 119.2%); background-image: linear-gradient(90.7deg, #fffdda 1.9%, #f6d2ff 39.3%, #98defe 64.7%, #fbffd2 100.8%); background-image: linear-gradient(93deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8%); background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); }
 
 body.home .main-container .apps .appcard.material .appcard-title .appcard-name, body.about-me .section.apps .appcard.material .appcard-title .appcard-name, body.about-me .section.contact .social.content .material { background: linear-gradient(to right, #396afc, #2948ff); color: #fefefe; }
 
@@ -23,7 +23,7 @@ body.home .main-container .apps .appcard.material .appcard-content .card-desc p,
 /*****************************************************       COMMON CSS START * */
 * { box-sizing: border-box; }
 
-body { font-family: 'Roboto', sans-serif, helvetica; margin: 0; padding: 0; background: #eeeeee; background: linear-gradient(95deg, #fffdda9e 1.9%, #f6d2ff91 39.3%, #98defe75 64.7%, #fbffd2 100.8%); font-size: 16px; color: #868686; line-height: 20px; letter-spacing: 0.01em; font-weight: 300; }
+body { font-family: 'Roboto', sans-serif, helvetica; margin: 0; padding: 0; background: #eeeeee; background: linear-gradient(95deg, #fffdda9e 1.9%, #f6d2ff91 39.3%, #98defe75 64.7%, #fbffd2a3 100.8%); font-size: 16px; color: #868686; line-height: 20px; letter-spacing: 0.01em; font-weight: 300; }
 
 a { text-decoration: none; }
 
