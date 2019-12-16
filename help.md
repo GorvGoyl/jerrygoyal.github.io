@@ -1,6 +1,4 @@
-## install jekyll 
-    https://jekyllrb.com/docs/windows/
-
+# JEKYLL ----------------------------------------------------------------------------
 ## UPDATE PKGs (avoid IPv6)
     - bash
     - jekyll -v
@@ -10,15 +8,32 @@
     - sudo gem update jekyll
 
 ## To RUN:
-    -run in VScode: 
-    - bash
+    - bundle exec jekyll serve --strict_front_matter
     - bundle exec jekyll serve --host 0.0.0.0
     - website: http://127.0.0.1:4000/
     - in mobile open local ip of laptop http://192.168.1.109:4000
 
+## Build
+    - bundle exec jekyll build
+
 ## Jekyll Cheatsheet:
+
     - https://devhints.io/jekyll
     - https://learn.cloudcannon.com/jekyll-cheat-sheet/
+
+## Resources
+
+- https://github.com/planetjekyll/awesome-jekyll-plugins
+- https://github.com/digitalsparky/jekyll-minifier
+- https://github.com/souldanger/jekyll-pwa-workbox
+- https://github.com/gemfarmer/jekyll-debug
+- https://github.com/jekyll/jekyll-seo-tag
+- https://github.com/jekyll/jekyll-sitemap - done
+
+## production env, deployment
+
+- https://jekyllrb.com/docs/step-by-step/10-deployment/
+- https://jekyllrb.com/docs/configuration/environments/
 
 ## Bugs:
 
