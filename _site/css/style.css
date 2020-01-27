@@ -266,7 +266,7 @@ body.about-me .section.card .vcard, body.about-me .section.contact .content .mat
 
 body.about-me { /* Ripple Out */ }
 
-body.about-me .social-icon { display: inline-block; width: 20px; height: 20px; background-size: contain !important; }
+body.about-me .social-icon { display: inline-block !important; width: 20px; height: 20px; background-size: contain !important; }
 
 body.about-me .social-icon.in { background: url("/about-me/img/linkedin.svg") no-repeat center; }
 

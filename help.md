@@ -1,5 +1,25 @@
+# FIREBASE -------------------------------------------------------------
+
+## DEPLOY
+
+bundle exec jekyll build
+firebase deploy -m "added x feature"
+firebase deploy --only hosting //for hosting
+firebase deploy --only functions //for cloud functions
+firebase deploy --only functions,hosting
+gitacp "code deployed"
+
+shortcut for jk build,deply hosting, gitacp
+
+- jkBuild_FbHost_GitAcp my_message
+
+https://firebase.google.com/docs/cli#deploy_specific_functions
+firebase deploy --only functions:function1,functions:function2
+
 # JEKYLL ----------------------------------------------------------------------------
+
 ## UPDATE PKGs (avoid IPv6)
+
     - bash
     - jekyll -v
     -- use -o Acquire::ForceIPv4=true
@@ -8,12 +28,14 @@
     - sudo gem update jekyll
 
 ## To RUN:
+
     - bundle exec jekyll serve --strict_front_matter
     - bundle exec jekyll serve --host 0.0.0.0
     - website: http://127.0.0.1:4000/
     - in mobile open local ip of laptop http://192.168.1.109:4000
 
 ## Build
+
     - bundle exec jekyll build
 
 ## Jekyll Cheatsheet:
@@ -38,9 +60,12 @@
 ## Bugs:
 
 ## Test:
+
     - different browsers - mac safari, firefox, chrome
     - test in phone - android, iPhone
+
 ## To-do:
+
     - name of company as hyperlink... maybe icon also
     - dark theme toggle button
     - hire me when console open
@@ -50,6 +75,7 @@
     - analytics
 
 ## Could-Do:
+
     - scroll up button
     - font
     - bg color
