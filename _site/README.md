@@ -6,7 +6,6 @@ bundle exec jekyll build
 firebase deploy --only hosting -m "added x feature"
 gitacp "added x feature"
 
-firebase deploy -m "added x feature"
 shortcut for jk build,deply hosting, gitacp
 
 - jkBuild_FbHost_GitAcp my_message
