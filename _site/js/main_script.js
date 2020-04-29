@@ -7,7 +7,7 @@
 \************************************************/
 var jgMainIns;
 
-$(document).ready(function() {
+$(document).ready(function () {
   jgMainIns = jgMainIns || new jgMainClass();
   jgMainIns.init();
   // mixpanel.track("Video play");
@@ -17,7 +17,7 @@ $(document).ready(function() {
        *  MAIN CLASS  *
 \************************************************/
 
-var jgMainClass = function() {
+var jgMainClass = function () {
   //**** Variables declaration after doc ready ****\\
   var self = this;
   var isMobile = $(".nav-menu-select").is(":visible");
@@ -34,7 +34,7 @@ var jgMainClass = function() {
   var navbarHeight = navbarEl.height() + navBoxShadow;
   var isHamburgerCollapsed = true;
 
-  self.init = function() {
+  self.init = function () {
     // enable smooth scrolling for #links
     enableSmoothScrolling();
 
@@ -62,7 +62,7 @@ var jgMainClass = function() {
   //clicking on local hyperlinks will scroll the page to the link address
   function enableSmoothScrolling() {
     // Add smooth scrolling to all links
-    $("a").on("click", function(event) {
+    $("a").on("click", function (event) {
       if (this.hash !== "") {
         // event.preventDefault();
         scrollTo(this.hash);
@@ -78,10 +78,10 @@ var jgMainClass = function() {
       // }
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top - stickyNavHeight
+          scrollTop: $(hash).offset().top - stickyNavHeight,
         },
         500,
-        function() {
+        function () {
           // Add hash (#) to URL when done scrolling
           //window.location.hash = hash;
         }
@@ -93,7 +93,7 @@ var jgMainClass = function() {
            *  TYPEWRITER EFFECTS  *
     \************************************************/
 
-  var TxtType = function(el, toRotate, period) {
+  var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -103,7 +103,7 @@ var jgMainClass = function() {
     this.isDeleting = false;
   };
 
-  TxtType.prototype.tick = function() {
+  TxtType.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
 
@@ -131,7 +131,7 @@ var jgMainClass = function() {
       delta = 500;
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
       that.tick();
     }, delta);
   };
@@ -168,7 +168,7 @@ var jgMainClass = function() {
     fadeInOutNavOnScroll(curScroll, prevScroll);
 
     // set navbar whenever mouse scrolls
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       curScroll = window.pageYOffset || document.documentElement.scrollTop;
       fadeInOutNavOnScroll(curScroll, prevScroll);
       prevScroll = curScroll <= 0 ? 0 : curScroll; // For Mobile or negative scrolling
@@ -202,13 +202,13 @@ var jgMainClass = function() {
   }
 
   function NavbarBG_Hide() {
-    navbarToggleEl.each(function() {
+    navbarToggleEl.each(function () {
       $(this).removeClass(navbarBG_cl);
     });
   }
 
   function NavbarBG_Show() {
-    navbarToggleEl.each(function() {
+    navbarToggleEl.each(function () {
       $(this).addClass(navbarBG_cl);
     });
   }
@@ -216,7 +216,7 @@ var jgMainClass = function() {
   //**** Hamburger click for mobile navbar ****\\
   function initNavbar() {
     // mobile navbar
-    hamburgerEl.on("click", function() {
+    hamburgerEl.on("click", function () {
       toggleHamburger();
     });
 
@@ -227,7 +227,7 @@ var jgMainClass = function() {
       navbar.css("position", "static");
       var navHeight = navbar.height();
       stickNavbar(navHeight, navbar);
-      window.onscroll = function() {
+      window.onscroll = function () {
         stickNavbar(navHeight, navbar);
       };
     }
@@ -245,7 +245,7 @@ var jgMainClass = function() {
       isHamburgerCollapsed = false;
     } else {
       // collapse navbar
-      navbarMenuEl.slideUp("slow", function() {
+      navbarMenuEl.slideUp("slow", function () {
         if (makeNavBGVisible) {
           NavbarBG_Show();
         } else {

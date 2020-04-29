@@ -5,7 +5,7 @@
 *****************************************************/
 //gradients
 .sample.gradients{
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    background-image: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     
     background-image: linear-gradient( 111.5deg, rgba(228,247,255,1) 21.9%, rgba(255,216,194,1) 92.2% );
     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
@@ -20,13 +20,14 @@
 
 // COLORS //
 $color-main:#fefefe;
-$color-accent: #2948ff;
+$color-accent: hsl(200, 19%, 18%);
 $color-hello-world:#4ad7d1;
-$color-gradient:linear-gradient(to right, #396afc, #2948ff);
+$color-gradient:$color-accent;
 $font-color:#363636;
-$para-color:#868686;
+$para-color:#6c757d;
 $color-background:#eeeeee;
-$background-image: linear-gradient(95deg,#fffdda9e 1.9%,#f6d2ff91 39.3%,#98defe75 64.7%,#fbffd2a3 100.8%);
+$background-image:#eeeeee;// linear-gradient(95deg,#fffdda9e 1.9%,#f6d2ff91 39.3%,#98defe75 64.7%,#fbffd2a3 100.8%);
+// $background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 $box-shadow-heavy:0 6px 10px 0 rgba(0, 0, 0, 0.2);
 $box-shadow-light:0 1px 4px 0 rgba(0, 0, 0, 0.14);
 %color-invert {
@@ -66,7 +67,7 @@ $page-max-width:1100px;
 
 %section-subtitle-font{
     font-size: 20px;
-    font-weight: 100;
+    // font-weight: 100;
     position: relative;
     bottom: 45px;
     letter-spacing: 0.03em;
@@ -132,6 +133,10 @@ body {
         @extend %para-font;
     }
 }
+::selection {
+    color: white;
+    background: $color-accent;
+  }
 
 a {
     text-decoration: none;

@@ -1,37 +1,84 @@
-## Welcome to GitHub Pages
+# FIREBASE -------------------------------------------------------------
 
-You can use the [editor on GitHub](https://github.com/JerryGoyal/jerrygoyal.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## DEPLOY
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+bundle exec jekyll build
+firebase deploy -m "added x feature"
+firebase deploy --only hosting "added x feature"
+gitacp "code deployed"
 
-### Markdown
+shortcut for jk build,deply hosting, gitacp
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- jkBuild_FbHost_GitAcp my_message
 
-```markdown
-Syntax highlighted code block
+https://firebase.google.com/docs/cli#deploy_specific_functions
+firebase deploy --only functions:function1,functions:function2
 
-# Header 1
-## Header 2
-### Header 3
+# JEKYLL ----------------------------------------------------------------------------
 
-- Bulleted
-- List
+## UPDATE PKGs (avoid IPv6)
 
-1. Numbered
-2. List
+    - bash
+    - jekyll -v
+    -- use -o Acquire::ForceIPv4=true
+    -sudo apt-get update -y && sudo apt-get upgrade -y -o Acquire::ForceIPv4=true
+    - sudo bundle update
+    - sudo gem update jekyll
 
-**Bold** and _Italic_ and `Code` text
+## To RUN:
 
-[Link](url) and ![Image](src)
-```
+    - bundle exec jekyll serve --strict_front_matter
+    - bundle exec jekyll serve --host 0.0.0.0
+    - website: http://127.0.0.1:4000/
+    - in mobile open local ip of laptop http://192.168.1.109:4000
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Build
 
-### Jekyll Themes
+    - bundle exec jekyll build
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JerryGoyal/jerrygoyal.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Jekyll Cheatsheet:
 
-### Support or Contact
+    - https://devhints.io/jekyll
+    - https://learn.cloudcannon.com/jekyll-cheat-sheet/
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Resources
+
+- https://github.com/planetjekyll/awesome-jekyll-plugins
+- https://github.com/digitalsparky/jekyll-minifier
+- https://github.com/souldanger/jekyll-pwa-workbox
+- https://github.com/gemfarmer/jekyll-debug
+- https://github.com/jekyll/jekyll-seo-tag
+- https://github.com/jekyll/jekyll-sitemap - done
+
+## production env, deployment
+
+- https://jekyllrb.com/docs/step-by-step/10-deployment/
+- https://jekyllrb.com/docs/configuration/environments/
+
+## Bugs:
+
+## Test:
+
+    - different browsers - mac safari, firefox, chrome
+    - test in phone - android, iPhone
+
+## To-do:
+
+    - name of company as hyperlink... maybe icon also
+    - dark theme toggle button
+    - hire me when console open
+    - minified css
+    - SEO
+    - 404 page redirection
+    - analytics
+
+## Could-Do:
+
+    - scroll up button
+    - font
+    - bg color
+    - blogs
+    - additional skills buttons
+    - hobbies/interest
+    - share social buttons
+    - jerrygoyal icon

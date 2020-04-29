@@ -1,7 +1,7 @@
 /*****************************************************       COMMON VARIABLES * */
-.sample.gradients { background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); background-image: linear-gradient(111.5deg, #e4f7ff 21.9%, #ffd8c2 92.2%); background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); background-image: linear-gradient(94.5deg, #3f51b552 -1.2%, #f4433652 119.2%); background-image: linear-gradient(90.7deg, #fffdda 1.9%, #f6d2ff 39.3%, #98defe 64.7%, #fbffd2 100.8%); background-image: linear-gradient(93deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8%); background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); }
+.sample.gradients { background-image: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); background-image: linear-gradient(111.5deg, #e4f7ff 21.9%, #ffd8c2 92.2%); background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); background-image: linear-gradient(94.5deg, #3f51b552 -1.2%, #f4433652 119.2%); background-image: linear-gradient(90.7deg, #fffdda 1.9%, #f6d2ff 39.3%, #98defe 64.7%, #fbffd2 100.8%); background-image: linear-gradient(93deg, rgba(255, 253, 218, 0.61) 1.9%, rgba(246, 210, 255, 0.56) 39.3%, rgba(152, 222, 254, 0.47) 64.7%, rgba(251, 255, 210, 0.6) 100.8%); background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); }
 
-body.home .main-container .apps .appcard.material .appcard-title .appcard-name, body.about-me .section.apps .appcard.material .appcard-title .appcard-name, body.about-me .section.contact .social.content .material { background: linear-gradient(to right, #396afc, #2948ff); color: #fefefe; }
+body.home .main-container .apps .appcard.material .appcard-title .appcard-name, body.about-me .section.apps .appcard.material .appcard-title .appcard-name, body.about-me .section.contact .social.content .material { background: #253137; color: #fefefe; }
 
 .main-title { font-size: 42px; font-weight: 100; line-height: 44px; color: #363636; }
 
@@ -9,7 +9,7 @@ body.home .main-container .apps .appcard.material .appcard-title .appcard-name, 
 
 .navbar-menu .navbar-1 .nav-homepage, body.home .main-container .apps .appcard.material .appcard-title .appcard-name, body.about-me .section.apps .appcard.material .appcard-title .appcard-name { font-size: 20px; font-weight: 400; line-height: 29px; }
 
-.section .subtitle { font-size: 20px; font-weight: 100; position: relative; bottom: 45px; letter-spacing: 0.03em; }
+.section .subtitle { font-size: 20px; position: relative; bottom: 45px; letter-spacing: 0.03em; }
 
 .card-subtitle { font-size: 17px; margin: 20px 0; display: block; font-weight: 400; color: #363636; }
 
@@ -23,7 +23,9 @@ body.home .main-container .apps .appcard.material .appcard-content .card-desc p,
 /*****************************************************       COMMON CSS START * */
 * { box-sizing: border-box; }
 
-body { font-family: 'Roboto', sans-serif, helvetica; margin: 0; padding: 0; background: #eeeeee; background: linear-gradient(95deg, #fffdda9e 1.9%, #f6d2ff91 39.3%, #98defe75 64.7%, #fbffd2a3 100.8%); font-size: 16px; color: #868686; line-height: 20px; letter-spacing: 0.01em; font-weight: 300; }
+body { font-family: 'Roboto', sans-serif, helvetica; margin: 0; padding: 0; background: #eeeeee; background: #eeeeee; font-size: 16px; color: #6c757d; line-height: 20px; letter-spacing: 0.01em; font-weight: 300; }
+
+::selection { color: white; background: #253137; }
 
 a { text-decoration: none; }
 
@@ -31,7 +33,7 @@ a { text-decoration: none; }
 
 footer { padding: 0 0 30px 0; }
 
-footer a { color: #868686; }
+footer a { color: #6c757d; }
 
 footer a:focus, footer a:active, footer a:hover { border-bottom: 0.5px solid; }
 
@@ -49,7 +51,7 @@ footer .info { text-align: center; font-size: 14px; }
 
 .card-title { position: relative; margin: -57px 0 0 0; text-align: center; }
 
-.card-icon { margin: 0 auto; position: relative; display: block; overflow: hidden; width: 62px; height: 62px; line-height: 62px; background: linear-gradient(to right, #396afc, #2948ff); border-radius: 51%; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); color: #fefefe; }
+.card-icon { margin: 0 auto; position: relative; display: block; overflow: hidden; width: 62px; height: 62px; line-height: 62px; background: #253137; border-radius: 51%; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); color: #fefefe; }
 
 .card-icon .icon-url { width: 30px; height: 30px; background-size: contain !important; left: 0; right: 0; top: 0; bottom: 0; position: absolute; margin: auto; }
 
@@ -82,7 +84,7 @@ footer .info { text-align: center; font-size: 14px; }
 
 /*****************************************************       BOOTSTRAP END */
 /*****************************************************       NAV BAR START */
-.navbar-bg { background-color: #2948ff; }
+.navbar-bg { background-color: #253137; }
 
 .navbar-bg .nav-menu-options, .navbar-bg .nav-menu-select { box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 7px -1px; }
 
@@ -112,7 +114,7 @@ footer .info { text-align: center; font-size: 14px; }
 
 .navbar-menu .change .bar3 { transform: rotate(45deg) translate(-4px, -5px); }
 
-.navbar-menu .navbar-1 a:not(.nav-hamburger):hover { background-color: #fefefe; color: #2948ff; font-weight: 400; }
+.navbar-menu .navbar-1 a:not(.nav-hamburger):hover { background-color: #fefefe; color: #253137; font-weight: 400; }
 
 .navbar-menu .navbar-2 { width: 100%; }
 
@@ -128,9 +130,9 @@ footer .info { text-align: center; font-size: 14px; }
 
 .nav-2-sticky { position: fixed !important; background-color: #fefefe; top: 0; z-index: 10; transition: 0.4s all ease-out; }
 
-.nav-2-sticky a { color: #2948ff; font-size: 130% !important; transition: 0.4s all ease-out; opacity: 1 !important; }
+.nav-2-sticky a { color: #253137; font-size: 130% !important; transition: 0.4s all ease-out; opacity: 1 !important; }
 
-.nav-2-sticky a:hover:after { background: #2948ff !important; }
+.nav-2-sticky a:hover:after { background: #253137 !important; }
 
 .nav-2-un-sticky { position: absolute; transition: 0.2s all ease-out; }
 
@@ -144,8 +146,8 @@ footer .info { text-align: center; font-size: 14px; }
 
 /* MOBILE */
 @media screen and (max-width: 750px) { .navbar-menu .navbar-2 a { opacity: 1; }
-  .navbar-menu .navbar-2 .label { display: block; color: rgba(41, 72, 255, 0.8); background-color: #fefefe; cursor: default; font-size: 20px !important; letter-spacing: 2px; border-bottom: 22px solid #2948ff; }
-  .navbar-menu .navbar-2 .links-2 { background-color: #2948ff; }
+  .navbar-menu .navbar-2 .label { display: block; color: rgba(37, 49, 55, 0.8); background-color: #fefefe; cursor: default; font-size: 20px !important; letter-spacing: 2px; border-bottom: 22px solid #253137; }
+  .navbar-menu .navbar-2 .links-2 { background-color: #253137; }
   .navbar-menu .navbar-2 .nav-homepage { display: none; }
   .navbar-menu .navbar-2 .nav-menu-options { /* hide bottom border of 1st navbar */ bottom: 2px; z-index: 10; }
   .navbar-menu .navbar-2 .label:after { pointer-events: none; position: absolute; content: ''; border-style: solid; left: calc(50% - 30px); top: 50px; border-color: #fefefe transparent transparent transparent; border-width: 30px; margin: 0px !important; height: 0; }
@@ -155,7 +157,7 @@ footer .info { text-align: center; font-size: 14px; }
   .navbar-menu .nav-menu-options li { display: block; } }
 
 /*****************************************************       NAV BAR END */
-body.home .intro { position: fixed; top: 0; left: 0; width: 100%; height: 320px; background: #2948ff; }
+body.home .intro { position: fixed; top: 0; left: 0; width: 100%; height: 320px; background: #253137; }
 
 @media (max-width: 768px) { body.home .intro { height: 202px; } }
 
@@ -189,7 +191,7 @@ body.home .main-container .apps .appcard.material .appcard-content .appcard-logo
 
 body.home .main-container .apps .appcard.material .appcard-content .appcard-logo .appcard-img { width: 150px; height: 150px; background-size: contain; }
 
-body.home .main-container .apps .appcard.material .appcard-content .appcard-platforms { border-radius: 0 0 19px 19px; background: linear-gradient(to right, #396afc, #2948ff); position: absolute; width: 100%; bottom: -40px; transform: translateY(100%); transition: all 0.5s ease; }
+body.home .main-container .apps .appcard.material .appcard-content .appcard-platforms { border-radius: 0 0 19px 19px; background: #253137; position: absolute; width: 100%; bottom: -40px; transform: translateY(100%); transition: all 0.5s ease; }
 
 body.home .main-container .apps .appcard.material .appcard-content .appcard-platforms .card-platform { padding: 25px; display: inline-block; }
 
@@ -209,7 +211,7 @@ body.home .main-container .apps .appcard.material:focus .appcard-platforms, body
 
 /*****************************************************       DOWNLOAD BUTTONS END * */
 /* GETTING STARTED SECTION*/
-.row.started { background-color: #2948ff; text-align: center; vertical-align: top; }
+.row.started { background-color: #253137; text-align: center; vertical-align: top; }
 
 img.sshots_img { height: auto; max-width: 381px; width: 85%; -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75); }
 
@@ -221,7 +223,7 @@ img.sshots_img { height: auto; max-width: 381px; width: 85%; -webkit-box-shadow:
 .row.see_action { background-color: #056cd8; text-align: center; vertical-align: top; }
 
 /* FEATURES */
-.row.features { background-color: #2948ff; text-align: center; vertical-align: top; }
+.row.features { background-color: #253137; text-align: center; vertical-align: top; }
 
 .features_ul li { color: #fefefe; font-size: 20px; text-align: left; margin-bottom: 20px; }
 
@@ -280,7 +282,7 @@ body.about-me .social-icon.md { background: url("/about-me/img/medium.svg") no-r
 
 body.about-me .social-icon.ig { background: url("/about-me/img/instagram.svg") no-repeat center; }
 
-body.about-me .ripple-effect .tooltip:before { content: ''; position: absolute; border: #2948ff solid 6px; top: 0; right: 0; bottom: 0; left: 0; border-radius: 51%; opacity: 0; }
+body.about-me .ripple-effect .tooltip:before { content: ""; position: absolute; border: #253137 solid 6px; top: 0; right: 0; bottom: 0; left: 0; border-radius: 51%; opacity: 0; }
 
 body.about-me .tooltip { display: inline-block; position: relative; }
 
@@ -306,7 +308,7 @@ body.about-me .tooltip .tooltiptext { transform: scale(0); z-index: 999; transfo
 
 body.about-me .section.intro { background-attachment: fixed !important; width: 100%; height: 100vh; display: table; position: relative; text-align: center; background: url("/about-me/img/intro.jpg") no-repeat center bottom; background-size: cover; }
 
-body.about-me .section.intro .overlay { background: linear-gradient(120deg, #290000 0%, #000836 90%, #000836 100%); opacity: 0.9; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+body.about-me .section.intro .overlay { background: #253137; background: radial-gradient(circle, rgba(37, 49, 55, 0.980392) 0%, rgba(37, 49, 55, 0.92) 100%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
 
 body.about-me .section.intro .content { display: table-cell; vertical-align: middle; text-align: center; -webkit-transform: translateY(-2.1rem); -ms-transform: translateY(-2.1rem); transform: translateY(-2.1rem); color: #ffffff; }
 
@@ -314,7 +316,7 @@ body.about-me .section.intro .content .hello-world { color: #4ad7d1; font-size: 
 
 body.about-me .section.intro .content .my-name { font-size: 75px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; line-height: 1.1; letter-spacing: 2px; }
 
-body.about-me .section.intro .content .typewrite { color: #4ad7d1; text-transform: uppercase; letter-spacing: .2rem; font-size: 20px; margin-bottom: 30px; text-align: center; font-weight: 400; }
+body.about-me .section.intro .content .typewrite { color: #4ad7d1; text-transform: uppercase; letter-spacing: 0.2rem; font-size: 20px; margin-bottom: 30px; text-align: center; font-weight: 400; }
 
 body.about-me .section.intro .content .typewrite .wrap { animation: caret 1s steps(1) infinite; border-right: 0.08em solid #fff; padding-right: 1px; }
 
@@ -334,15 +336,15 @@ body.about-me .section.card .vcard { height: 415px; display: inline-block; }
 
 body.about-me .section.card .vcard:before { position: absolute; border-style: solid; border-width: 0 18px 380px 76px; border-color: transparent white white transparent; top: 0; left: 123px; z-index: 1; }
 
-body.about-me .section.card .vcard .dp { height: 415px; float: left; width: 200px; position: relative; bottom: 25px; right: 25px; background-size: cover !important; background: url("/about-me/img/me.jpg") no-repeat center; }
+body.about-me .section.card .vcard .dp { height: 415px; float: left; width: 250px; position: relative; bottom: 25px; right: 25px; background-size: cover !important; background: url("/about-me/img/me.jpg") no-repeat center; }
 
 body.about-me .section.card .vcard .info .card-subtitle { margin: 15px 0 0 0; font-size: 16px; }
 
 body.about-me .section.card .vcard .info .social { margin: 25px 0; }
 
-body.about-me .section.card .vcard .info .social .container { width: 10%; display: inline-block; }
+body.about-me .section.card .vcard .info .social .container { width: 11%; display: inline-block; }
 
-body.about-me .section.card .vcard .info .social .container a { position: relative; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 46px; text-align: center; background: #2948ff; border-radius: 51%; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
+body.about-me .section.card .vcard .info .social .container a { position: relative; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 46px; text-align: center; background: #253137; border-radius: 51%; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
 
 body.about-me .section.card .vcard .info .social .container a .tooltiptext { bottom: 40px; }
 
@@ -370,9 +372,9 @@ body.about-me .section.skills .skill-container .skill-name { margin: 0 0 6px 0; 
 
 body.about-me .section.skills .skill-container .skill-bar { position: relative; display: block; width: 100%; height: 8px; background: rgba(0, 0, 0, 0.1); border-radius: 2px; }
 
-body.about-me .section.skills .skill-container .skill-bar .percent { position: absolute; top: 0; left: 0; width: 70%; height: 8px; background: linear-gradient(to right, #396afc, #2948ff); border-radius: 2px; }
+body.about-me .section.skills .skill-container .skill-bar .percent { position: absolute; top: 0; left: 0; width: 70%; height: 8px; background: #253137; border-radius: 2px; }
 
-body.about-me .section.skills .skill-container .skill-bar .percent .dot { position: absolute; top: -9px; right: 0; height: 26px; width: 26px; line-height: 26px; text-align: center; background: #2948ff; border-radius: 26px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
+body.about-me .section.skills .skill-container .skill-bar .percent .dot { position: absolute; top: -9px; right: 0; height: 26px; width: 26px; line-height: 26px; text-align: center; background: #253137; border-radius: 26px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
 
 body.about-me .section.apps .appcard-container { position: relative; }
 
@@ -388,7 +390,7 @@ body.about-me .section.apps .appcard.material .appcard-content .appcard-logo { m
 
 body.about-me .section.apps .appcard.material .appcard-content .appcard-logo .appcard-img { width: 150px; height: 150px; background-size: contain; }
 
-body.about-me .section.apps .appcard.material .appcard-content .appcard-platforms { border-radius: 0 0 19px 19px; background: linear-gradient(to right, #396afc, #2948ff); position: absolute; width: 100%; bottom: -40px; transform: translateY(100%); transition: all 0.5s ease; }
+body.about-me .section.apps .appcard.material .appcard-content .appcard-platforms { border-radius: 0 0 19px 19px; background: #253137; position: absolute; width: 100%; bottom: -40px; transform: translateY(100%); transition: all 0.5s ease; }
 
 body.about-me .section.apps .appcard.material .appcard-content .appcard-platforms .card-platform { padding: 25px; display: inline-block; }
 
@@ -417,7 +419,7 @@ body.about-me .section.experience .title { position: relative; z-index: 3; }
 
 body.about-me .section.experience .timeline { margin: 30px 0 0 0; padding: 50px 0 0 0; position: relative; }
 
-body.about-me .section.experience .timeline:before { content: ''; margin: 0 0 0 -2px; position: absolute; top: 0; left: 50%; width: 3px; height: 100%; background: #2948ff; }
+body.about-me .section.experience .timeline:before { content: ""; margin: 0 0 0 -2px; position: absolute; top: 0; left: 50%; width: 3px; height: 100%; background: #253137; }
 
 @media (max-width: 768px) { body.about-me .section.experience .timeline { margin: 0; }
   body.about-me .section.experience .timeline:before { left: 31px; } }
@@ -430,18 +432,18 @@ body.about-me .section.experience .timeline .block:after { content: ""; display:
 
 body.about-me .section.experience .timeline .block .content { position: relative; width: 46%; }
 
-body.about-me .section.experience .timeline .block .content:before { content: ''; position: absolute; top: 19px; left: 100%; height: 0; width: 0; border: 7px solid transparent; border-left: 7px solid #fefefe; z-index: 2; }
+body.about-me .section.experience .timeline .block .content:before { content: ""; position: absolute; top: 19px; left: 100%; height: 0; width: 0; border: 7px solid transparent; border-left: 7px solid #fefefe; z-index: 2; }
 
-body.about-me .section.experience .timeline .block .content:after { content: ''; position: absolute; top: 18px; left: 100%; height: 16px; width: 9px; z-index: 1; }
+body.about-me .section.experience .timeline .block .content:after { content: ""; position: absolute; top: 18px; left: 100%; height: 16px; width: 9px; z-index: 1; }
 
 @media (max-width: 768px) { body.about-me .section.experience .timeline .block .content { margin-left: 60px; padding-top: 60px; position: relative; width: auto; }
   body.about-me .section.experience .timeline .block .content:before, body.about-me .section.experience .timeline .block .content:after { display: none; } }
 
 body.about-me .section.experience .timeline .block .content .material { margin: 0; text-align: left; }
 
-body.about-me .section.experience .timeline .block .content .material .date { margin: 0; position: absolute; top: 13px; padding: 1px 5px; display: inline-block; vertical-align: top; background: #2948ff; font-size: 13px; color: #fefefe; border-radius: 2px; border-color: transparent; left: calc(100% + 80px); white-space: nowrap; }
+body.about-me .section.experience .timeline .block .content .material .date { margin: 0; position: absolute; top: 13px; padding: 1px 5px; display: inline-block; vertical-align: top; background: #253137; font-size: 13px; color: #fefefe; border-radius: 2px; border-color: transparent; left: calc(100% + 80px); white-space: nowrap; }
 
-body.about-me .section.experience .timeline .block .content .material .date:before { content: ''; margin: -6px 0 0 0; position: absolute; top: 50%; right: 100%; height: 0; width: 0; border: 6px solid transparent; border-right: 6px solid #2948ff; }
+body.about-me .section.experience .timeline .block .content .material .date:before { content: ""; margin: -6px 0 0 0; position: absolute; top: 50%; right: 100%; height: 0; width: 0; border: 6px solid transparent; border-right: 6px solid #253137; }
 
 @media (max-width: 768px) { body.about-me .section.experience .timeline .block .content .material .date { right: auto; left: 0; } }
 
@@ -449,7 +451,7 @@ body.about-me .section.experience .timeline .block .content .material p { margin
 
 body.about-me .section.experience .timeline .block .content .card-subtitle { margin: 0 0 10px 0; padding: 0; text-align: left; }
 
-body.about-me .section.experience .timeline .block .point { margin: 0 0 0 -13px; position: absolute; top: 12px; left: 50%; width: 26px; height: 26px; line-height: 26px; text-align: center; background: #2948ff; border-radius: 26px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
+body.about-me .section.experience .timeline .block .point { margin: 0 0 0 -13px; position: absolute; top: 12px; left: 50%; width: 26px; height: 26px; line-height: 26px; text-align: center; background: #253137; border-radius: 26px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2); }
 
 @media (max-width: 768px) { body.about-me .section.experience .timeline .block .point { margin: 0; left: 17px; } }
 
@@ -461,10 +463,10 @@ body.about-me .section.experience .timeline .block:nth-child(even) .content:afte
 
 body.about-me .section.experience .timeline .block:nth-child(even) .content .date { left: auto; right: calc(100% + 80px); }
 
-body.about-me .section.experience .timeline .block:nth-child(even) .content .date:before { right: auto; left: 100%; border-right: none; border-left: 6px solid #2948ff; }
+body.about-me .section.experience .timeline .block:nth-child(even) .content .date:before { right: auto; left: 100%; border-right: none; border-left: 6px solid #253137; }
 
 @media (max-width: 768px) { body.about-me .section.experience .timeline .block:nth-child(even) .content .date { right: auto; left: 0; }
-  body.about-me .section.experience .timeline .block:nth-child(even) .content .date:before { left: auto; right: 100%; border-left: none; border-right: 6px solid #2948ff; } }
+  body.about-me .section.experience .timeline .block:nth-child(even) .content .date:before { left: auto; right: 100%; border-left: none; border-right: 6px solid #253137; } }
 
 body.about-me .section.contact .content .material { display: inline-block; }
 
@@ -474,13 +476,13 @@ body.about-me .section.contact .vcard.content .material { position: relative; to
 
 body.about-me .section.contact .vcard.content .material .card-icon { background: url("/about-me/img/me_round.jpg") no-repeat center; background-size: contain; width: 100px; height: 100px; bottom: 20px; }
 
-body.about-me .section.contact .vcard.content .material .card-subname { padding: 2px 5px; background: linear-gradient(to right, #396afc, #2948ff); color: #fefefe; font-weight: 400; }
+body.about-me .section.contact .vcard.content .material .card-subname { padding: 2px 5px; background: #253137; color: #fefefe; font-weight: 400; }
 
 body.about-me .section.contact .vcard.content .card-subtitle { margin-top: 0px; }
 
 body.about-me .section.contact .social.content { position: relative; bottom: 15px; padding-bottom: 0; }
 
-body.about-me .section.contact .social.content .material .container { width: 15%; display: inline-block; }
+body.about-me .section.contact .social.content .material .container { width: 17%; display: inline-block; }
 
 body.about-me .section.contact .social.content .material .container a .social-icon { position: relative; top: 3px; }
 
