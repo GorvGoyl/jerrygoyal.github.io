@@ -3,8 +3,7 @@
 ## DEPLOY
 
 bundle exec jekyll build
-firebase deploy -m "added x feature"
-firebase deploy --only hosting "added x feature"
+firebase deploy --only hosting -m "added x feature"
 gitacp "added x feature"
 
 shortcut for jk build,deply hosting, gitacp
