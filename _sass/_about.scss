@@ -204,7 +204,7 @@ body.about-me {
     position: relative;
     .vcard {
       @extend %vcard-width;
-      height: 415px;
+      height: 440px;
       display: inline-block;
       &:before {
         //content: '';
@@ -217,7 +217,7 @@ body.about-me {
         z-index: 1;
       }
       .dp {
-        height: 415px;
+        height: 440px;
         float: left;
         width: 250px;
         position: relative;
@@ -225,6 +225,9 @@ body.about-me {
         right: 25px;
         background-size: cover !important;
         background: url($baseurl + "/about-me/img/me.jpg") no-repeat center;
+        filter: grayscale(85%);
+-webkit-filter: grayscale(85%);
+-moz-filter: grayscale(85%);
       }
       .info {
         .card-subtitle {
@@ -635,6 +638,9 @@ body.about-me {
         .card-icon {
           background: url($baseurl + "/about-me/img/me_round.jpg") no-repeat
             center;
+            filter: grayscale(85%);
+            -webkit-filter: grayscale(85%);
+            -moz-filter: grayscale(85%);
           background-size: contain;
           width: 100px;
           height: 100px;

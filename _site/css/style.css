@@ -332,11 +332,11 @@ body.about-me .section.intro .content .scroll-down i { padding: 50px 20px 0px 20
 
 body.about-me .section.card { position: relative; }
 
-body.about-me .section.card .vcard { height: 415px; display: inline-block; }
+body.about-me .section.card .vcard { height: 440px; display: inline-block; }
 
 body.about-me .section.card .vcard:before { position: absolute; border-style: solid; border-width: 0 18px 380px 76px; border-color: transparent white white transparent; top: 0; left: 123px; z-index: 1; }
 
-body.about-me .section.card .vcard .dp { height: 415px; float: left; width: 250px; position: relative; bottom: 25px; right: 25px; background-size: cover !important; background: url("/about-me/img/me.jpg") no-repeat center; }
+body.about-me .section.card .vcard .dp { height: 440px; float: left; width: 250px; position: relative; bottom: 25px; right: 25px; background-size: cover !important; background: url("/about-me/img/me.jpg") no-repeat center; filter: grayscale(85%); -webkit-filter: grayscale(85%); -moz-filter: grayscale(85%); }
 
 body.about-me .section.card .vcard .info .card-subtitle { margin: 15px 0 0 0; font-size: 16px; }
 
@@ -474,7 +474,7 @@ body.about-me .section.contact .vcard.content { padding-bottom: 0; }
 
 body.about-me .section.contact .vcard.content .material { position: relative; top: 15px; }
 
-body.about-me .section.contact .vcard.content .material .card-icon { background: url("/about-me/img/me_round.jpg") no-repeat center; background-size: contain; width: 100px; height: 100px; bottom: 20px; }
+body.about-me .section.contact .vcard.content .material .card-icon { background: url("/about-me/img/me_round.jpg") no-repeat center; filter: grayscale(85%); -webkit-filter: grayscale(85%); -moz-filter: grayscale(85%); background-size: contain; width: 100px; height: 100px; bottom: 20px; }
 
 body.about-me .section.contact .vcard.content .material .card-subname { padding: 2px 5px; background: #253137; color: #fefefe; font-weight: 400; }
 
