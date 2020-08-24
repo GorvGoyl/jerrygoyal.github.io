@@ -275,5 +275,3 @@ var jgMainClass = function () {
     }
   }
 };
-
-/* I welcome new opportunities at: 1gouravgg@gmail.com */

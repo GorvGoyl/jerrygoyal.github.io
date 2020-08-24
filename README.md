@@ -1,19 +1,20 @@
-# FIREBASE -------------------------------------------------------------
+# PROJECT
 
-## DEPLOY
+## RUN:
 
-bundle exec jekyll build
-firebase deploy --only hosting -m "added x feature"
-gitacp "added x feature"
+`npm run start`
+`npm run start:mobile`
 
-shortcut for jk build,deply hosting, gitacp
+- website: http://127.0.0.1:4000/
+- in mobile open local ip of laptop http://192.168.1.109:4000
 
-- jkBuild_FbHost_GitAcp my_message
+## BUILD && DEPLOY
 
-https://firebase.google.com/docs/cli#deploy_specific_functions
-firebase deploy --only functions:function1,functions:function2
+`npm run deploy`
 
-# JEKYLL ----------------------------------------------------------------------------
+# JEKYLL
+
+---
 
 ## UPDATE PKGs (avoid IPv6)
 
@@ -23,17 +24,6 @@ firebase deploy --only functions:function1,functions:function2
     -sudo apt-get update -y && sudo apt-get upgrade -y -o Acquire::ForceIPv4=true
     - sudo bundle update
     - sudo gem update jekyll
-
-## To RUN:
-
-    - bundle exec jekyll serve --strict_front_matter
-    - bundle exec jekyll serve --host 0.0.0.0
-    - website: http://127.0.0.1:4000/
-    - in mobile open local ip of laptop http://192.168.1.109:4000
-
-## Build
-
-    - bundle exec jekyll build
 
 ## Jekyll Cheatsheet:
 
@@ -53,8 +43,6 @@ firebase deploy --only functions:function1,functions:function2
 
 - https://jekyllrb.com/docs/step-by-step/10-deployment/
 - https://jekyllrb.com/docs/configuration/environments/
-
-## Bugs:
 
 ## Test:
 

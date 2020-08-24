@@ -1,0 +1,25 @@
+{
+  "name": "jerrygoyal.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "bundle exec jekyll serve --strict_front_matter",
+    "start:mobile": "bundle exec jekyll serve --host 0.0.0.0",
+    "build": "bundle exec jekyll build",
+    "deploy": "npm run build && firebase deploy --only hosting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerryGoyal/jerrygoyal.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JerryGoyal/jerrygoyal.github.io/issues"
+  },
+  "homepage": "https://github.com/JerryGoyal/jerrygoyal.github.io#readme"
+}
