@@ -4,6 +4,6 @@
 #   - {title: About Me, href: "/about-me"}
 #   - {title: Contact, href: "/about-me/#contact"}
 about:
-  - {title: Jerrygoyal, href: "/"}
-  - {title: Portfolio, href: "#portfolio"}
-  - {title: Contact Me, href: "#contact"}
+  - { title: Gourav Goyal, href: "/" }
+  - { title: Portfolio, href: "#portfolio" }
+  - { title: Contact Me, href: "#contact" }

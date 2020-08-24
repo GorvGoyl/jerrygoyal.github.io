@@ -1,4 +1,4 @@
-title: Jerrygoyal
+title: Gourav Goyal
 email: 1gouravgg@gmail.com
 description: Developer profile of Gourav Goyal.
 twitter_username: iamjerrygoyal
@@ -12,6 +12,6 @@ plugins:
 #   style: compressed
 
 exclude:
-    - functions/
-    - help.md
-    - firebase-debug.log
+  - functions/
+  - help.md
+  - firebase-debug.log

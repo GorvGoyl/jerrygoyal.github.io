@@ -3,4 +3,6 @@
 .jekyll-cache
 .jekyll-metadata
 vendor
-node_modules/
+node_modules
+.firebase
+_site
