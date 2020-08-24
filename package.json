@@ -2,9 +2,7 @@
   "name": "jerrygoyal.github.io",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "firebase-functions": "^3.11.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "start": "bundle exec jekyll serve --strict_front_matter",
