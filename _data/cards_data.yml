@@ -1,11 +1,11 @@
 - title: Flash Clipboard
   image: ../img/flash_clipboard.svg
   desc: "Best ever Clipboard Manager for your desktop. Copy once and paste later. It saves history of all copied text. Paste any text with a shortcut. It's quick, it's efficient, and it's free. #productivity"
-  href: https://github.com/JerryGoyal/Flash-Clipboard
+  href: https://github.com/GorvGoyl/Flash-Clipboard
   downloads:
     - win
     - mac
-    
+
 - title: Popup Notes
   image: ../img/popup_notes128.svg
   desc: "Take notes without leaving current tab in Google Chrome!</br> Quickly note down copied text, phone numbers, links, to-do items etc while browsing internet. #productivity"

@@ -2,9 +2,9 @@ title: Gourav Goyal
 email: 1gouravgg@gmail.com
 description: Developer profile of Gourav Goyal.
 twitter_username: GorvGoyl
-github_username: jerrygoyal
+github_username: GorvGoyl
 livereload: true
-url: "https://www.jerrygoyal.com" # the base hostname & protocol for your site
+url: "https://Gourav.io" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
